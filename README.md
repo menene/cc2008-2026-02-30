@@ -1,3 +1,3 @@
-# cc2005 - 2026 - 02 - 40
+# cc2008 - 2026 - 02 - 30
 
-Curso que introduce a estudiantes de ciencias e ingeniería en el diseño y aplicación de algoritmos para resolver problemas, utilizando Python para validar dichas soluciones. Combina teoría y práctica para la aplicación inmediata de conceptos, cerrando con un proyecto integrador de análisis, diseño e implementación.
+Curso que introduce el paradigma de Programación Orientada a Objetos (Java) como complemento a Algoritmos y Programación Básica, cubriendo desde clases y encapsulamiento hasta herencia, polimorfismo y principios de diseño SOLID.
