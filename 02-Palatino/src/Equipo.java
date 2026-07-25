@@ -1,6 +1,6 @@
 public class Equipo {
     private String nombre;
-    private int lugar;
+    private Int lugar;
     private int tirosEsquina;
     private int juegosGanados;
     private int juegosPerdidos;
@@ -9,10 +9,8 @@ public class Equipo {
     private int tarjetasAmarillas;
     private int tarjetasRojas;
     private int faltas;
-
-    public Equipo(String nombre, int lugar, int tirosEsquina, int juegosGanados,
-                  int juegosPerdidos, int tirosAGol, int goles,
-                  int tarjetasAmarillas, int tarjetasRojas, int faltas) {
+// Lugar es un string no un int
+    public Equipo(String nombre, Int lugar, int tirosEsquina, int juegosGanados,int juegosPerdidos, int tirosAGol, int goles,int tarjetasAmarillas, int tarjetasRojas, int faltas) {
         this.nombre = nombre;
         this.lugar = lugar;
         this.tirosEsquina = tirosEsquina;
