@@ -49,8 +49,9 @@ public class ControladorTorneo {
         Equipo e1 = vista.leerDatosEquipo();
         Equipo e2 = vista.leerDatosEquipo();
         Equipo e3 = vista.leerDatosEquipo();
-
-        torneo = new Torneo(nombre, e1, e2, e3);
+        Equipo e4 = vista.leerDatosEquipo();
+        Equipo e5 = vista.leerDatosEquipo();
+        torneo = new Torneo(nombre, e1, e2, e3, e4, e5);
     }
 
     private void resumen() {
