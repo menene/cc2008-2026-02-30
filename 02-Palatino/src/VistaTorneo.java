@@ -18,7 +18,7 @@ public class VistaTorneo {
         System.out.print("Nombre del equipo: ");
         String nombre = sc.nextLine();
         System.out.print("Lugar: ");
-        String lugar = Integer.parseInt(sc.nextLine());
+        int lugar = Integer.parseInt(sc.nextLine());
         System.out.print("Tiros de esquina: ");
         int tirosEsquina = Integer.parseInt(sc.nextLine());
         System.out.print("Juegos ganados: ");
@@ -36,7 +36,8 @@ public class VistaTorneo {
         System.out.print("Faltas: ");
         int faltas = Integer.parseInt(sc.nextLine());
 
-        return new Equipo(nombre, lugar, tirosEsquina, juegosGanados, juegosPerdidos,tirosAGol, goles, tarjetasAmarillas, tarjetasRojas, faltas);
+        return new Equipo(nombre, lugar, tirosEsquina, juegosGanados, juegosPerdidos,
+                          tirosAGol, goles, tarjetasAmarillas, tarjetasRojas, faltas);
     }
 
     public String leerNombreTorneo() {
