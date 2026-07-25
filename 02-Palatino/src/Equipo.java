@@ -45,11 +45,37 @@ public class Equipo {
         return tarjetasRojas;
     }
 
+    public int getJuegosGanados() {
+        return juegosGanados;
+    }
+    
+    public int getJuegosPerdidos() {
+        return juegosPerdidos;
+    }
+    
+    public int getLugar() {
+        return lugar;
+    }
+
+    public int getFaltas() {
+        return faltas;
+    }
+
+    public int getTirosAGol() {
+        return tirosAGol;
+    }
+
     public String resumen() {
         return "----- ESTADISTICAS DE " + nombre + " -----\n"
+             + "Puesto:             " + lugar + "\n"
+             + "Juegos ganados:     " + juegosGanados + "\n"
+             + "Juegos perdidos:    " + juegosPerdidos + "\n"
+             + "Tiros a gol:        " + tirosAGol + "\n"
              + "Goles:              " + goles + "\n"
              + "Tiros de esquina:   " + tirosEsquina + "\n"
              + "Tarjetas amarillas: " + tarjetasAmarillas + "\n"
-             + "Tarjetas rojas:     " + tarjetasRojas;
+             + "Tarjetas rojas:     " + tarjetasRojas + "\n"
+             + "Faltas:             " + faltas;
+
     }
 }
