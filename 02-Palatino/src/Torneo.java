@@ -47,7 +47,7 @@ public class Torneo {
              + "2. " + e2.getNombre() + "\n"
              + "3. " + e3.getNombre() + "\n"
              + "4. " + e4.getNombre() + "\n"
-             + "5. " + e5.getNombre() + "\n";
+             + "5. " + e5.getNombre();
     }
 
     public String estadisticasEquipo(int numero) {
@@ -75,7 +75,6 @@ public class Torneo {
     }
 
     public void setNombre(String nombre) {
-        // Aquí podrías agregar validaciones si las necesitas
         this.nombre = nombre;
     }
 }

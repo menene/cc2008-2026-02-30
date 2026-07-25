@@ -7,26 +7,9 @@ public class ControladorTorneo {
         registrarEquipos();
 
         boolean continuar = true;
-        
+
         while (continuar) {
             int opcion = vista.mostrarMenu();
-            
-            // switch (opcion) {
-            //     case 1:
-            //         resumen();
-            //         break;
-
-            //     case 2:
-            //         consultaEquipo();
-            //         break;
-
-            //     case 0:
-            //         continuar = false;
-            //         break;
-
-            //     default:
-            //         System.out.println("Opcion invalida. Intentalo nuevamente");
-            // }
 
             if (opcion == 1) {
                 resumen();
@@ -37,9 +20,6 @@ public class ControladorTorneo {
             } else {
                 System.out.println("Opcion invalida. Intentalo nuevamente");
             }
-
-            // esto siempre se va a ejecutar aunque el usuario
-            // seleccione 0
         }
     }
 
