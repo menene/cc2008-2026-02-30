@@ -35,9 +35,11 @@ public class VistaTorneo {
         int tarjetasRojas = Integer.parseInt(sc.nextLine());
         System.out.print("Faltas: ");
         int faltas = Integer.parseInt(sc.nextLine());
+        System.out.print("Amonestaciones: ");
+        int amonestaciones = Integer.parseInt(sc.nextLine());
 
         return new Equipo(nombre, lugar, tirosEsquina, juegosGanados, juegosPerdidos,
-                          tirosAGol, goles, tarjetasAmarillas, tarjetasRojas, faltas);
+                        tirosAGol, goles, tarjetasAmarillas, tarjetasRojas, faltas);
     }
 
     public String leerNombreTorneo() {

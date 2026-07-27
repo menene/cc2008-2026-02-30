@@ -11,8 +11,8 @@ public class Equipo {
     private int faltas;
 
     public Equipo(String nombre, int lugar, int tirosEsquina, int juegosGanados,
-                  int juegosPerdidos, int tirosAGol, int goles,
-                  int tarjetasAmarillas, int tarjetasRojas, int faltas) {
+                int juegosPerdidos, int tirosAGol, int goles,
+                int tarjetasAmarillas, int tarjetasRojas, int faltas) {
         this.nombre = nombre;
         this.lugar = lugar;
         this.tirosEsquina = tirosEsquina;
@@ -40,16 +40,16 @@ public class Equipo {
     public int getTarjetasAmarillas() {
         return tarjetasAmarillas;
     }
-
+ 
     public int getTarjetasRojas() {
         return tarjetasRojas;
     }
 
     public String resumen() {
         return "----- ESTADISTICAS DE " + nombre + " -----\n"
-             + "Goles:              " + goles + "\n"
-             + "Tiros de esquina:   " + tirosEsquina + "\n"
-             + "Tarjetas amarillas: " + tarjetasAmarillas + "\n"
-             + "Tarjetas rojas:     " + tarjetasRojas;
+            + "Goles:              " + goles + "\n"
+            + "Tiros de esquina:   " + tirosEsquina + "\n"
+            + "Tarjetas amarillas: " + tarjetasAmarillas + "\n"
+            + "Tarjetas rojas:     " + tarjetasRojas;
     }
 }
