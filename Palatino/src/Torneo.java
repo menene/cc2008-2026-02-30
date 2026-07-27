@@ -48,6 +48,15 @@ public class Torneo {
         if (numero == 2) {
             return e2.resumen();
         }
+        if (numero == 3) {
+            return e3.resumen();
+        }
+        if (numero == 4) {
+            return e4.resumen();
+        }
+        if (numero == 5) {
+            return e5.resumen();
+        }
         return "Numero de equipo invalido.";
     }
 

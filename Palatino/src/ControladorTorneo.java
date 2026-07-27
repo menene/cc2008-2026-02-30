@@ -11,32 +11,32 @@ public class ControladorTorneo {
         while (continuar) {
             int opcion = vista.mostrarMenu();
             
-            // switch (opcion) {
-            //     case 1:
-            //         resumen();
-            //         break;
+            switch (opcion) {
+                case 1:
+                    resumen();
+                    break;
 
-            //     case 2:
-            //         consultaEquipo();
-            //         break;
+                case 2:
+                    consultaEquipo();
+                    break;
 
-            //     case 0:
-            //         continuar = false;
-            //         break;
+                case 0:
+                    continuar = false;
+                    break;
 
-            //     default:
-            //         System.out.println("Opcion invalida. Intentalo nuevamente");
-            // }
-
-            if (opcion == 1) {
-                resumen();
-            } else if (opcion == 2) {
-                consultaEquipo();
-            } else if (opcion == 0) {
-                continuar = false;
-            } else {
-                System.out.println("Opcion invalida. Intentalo nuevamente");
+                default:
+                    System.out.println("Opcion invalida. Intentalo nuevamente");
             }
+
+            // if (opcion == 1) {
+            //     resumen();
+            // } else if (opcion == 2) {
+            //     consultaEquipo();
+            // } else if (opcion == 0) {
+            //     continuar = false;
+            // } else {
+            //     System.out.println("Opcion invalida. Intentalo nuevamente");
+            // }
 
             // esto siempre se va a ejecutar aunque el usuario
             // seleccione 0
