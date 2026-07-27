@@ -1,0 +1,4 @@
+Ejercicio Palatino
+Actualmente el ejercicio cuenta con dos equipos en produccion pero necesitamos añadir un total de 5 equipos
+Lo que se: Se como manejarme en el modelo MVC mecanicamente aunque realmente no lo pueda crear desde cero.
+Lo que no se: Por que hago lo que hago dentro del modelo MVC
