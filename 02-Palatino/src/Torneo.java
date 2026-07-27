@@ -75,6 +75,7 @@ public class Torneo {
     }
 
     public void setNombre(String nombre) {
+        // validaciones
         this.nombre = nombre;
     }
 }
