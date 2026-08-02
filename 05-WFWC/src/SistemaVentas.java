@@ -73,34 +73,53 @@ public class SistemaVentas {
 
     public boolean validarEspacio() {
         Localidad localidad = compradorActual.getTicket().getLocalidadAsignada();
-        return localidad.getBoletosDisponibles() >= compradorActual.getCantidadBoletos();
+        return localidad.getBoletosDisponibles() > 0;
+    }
+
+    public int calcularBoletosAVender() {
+        Localidad localidad = compradorActual.getTicket().getLocalidadAsignada();
+
+        int solicitados = compradorActual.getCantidadBoletos();
+        int disponibles = localidad.getBoletosDisponibles();
+        int presupuesto = (int)(compradorActual.getPresupuestoMaximo() / localidad.getPrecio());
+
+        return Math.min(
+                solicitados,
+                Math.min(disponibles, presupuesto)
+        );
     }
 
     public void venderBoletos() {
         Localidad localidad = compradorActual.getTicket().getLocalidadAsignada();
-        localidad.venderBoletos(compradorActual.getCantidadBoletos());
+        localidad.venderBoletos(calcularBoletosAVender());
+    }
+
+    public boolean validarPresupuesto() {
+        Localidad localidad = compradorActual.getTicket().getLocalidadAsignada();
+        
+        return compradorActual.getPresupuestoMaximo() >= localidad.getPrecio();
     }
 
     public String consultarDisponibilidadTotal() {
-        return "Localidad 1: " + localidad1.getBoletosDisponibles()
-                + "\nLocalidad 5: " + localidad5.getBoletosDisponibles()
-                + "\nLocalidad 10: " + localidad10.getBoletosDisponibles();
+        return "\n  Localidad 1:  " + localidad1.getBoletosDisponibles()
+                + "\n  Localidad 5:  " + localidad5.getBoletosDisponibles()
+                + "\n  Localidad 10: " + localidad10.getBoletosDisponibles();
     }
 
     public String consultarDisponibilidadLocalidad(String nombreLocalidad) {
         if (nombreLocalidad.equalsIgnoreCase("Localidad 1")) {
-            return "Disponibles: " + localidad1.getBoletosDisponibles() + " espacios.";
+            return "\n  Disponibles: " + localidad1.getBoletosDisponibles() + " espacios.";
         }
 
         if (nombreLocalidad.equalsIgnoreCase("Localidad 5")) {
-            return "Disponibles: " + localidad5.getBoletosDisponibles() + " espacios.";
+            return "\n  Disponibles: " + localidad5.getBoletosDisponibles() + " espacios.";
         }
 
         if (nombreLocalidad.equalsIgnoreCase("Localidad 10")) {
-            return "Disponibles: " + localidad10.getBoletosDisponibles() + " espacios.";
+            return "\n  Disponibles: " + localidad10.getBoletosDisponibles() + " espacios.";
         }
 
-        return "Localidad no encontrada :(.";
+        return "\n  Localidad no encontrada :(.";
     }
 
     public String generarReporteCaja() {
@@ -109,6 +128,6 @@ public class SistemaVentas {
                 + localidad5.getBoletosVendidos() * localidad5.getPrecio()
                 + localidad10.getBoletosVendidos() * localidad10.getPrecio();
 
-        return "Total generado: $" + total;
+        return "\n  Total generado: $" + total;
     }  
 }

@@ -38,7 +38,7 @@ public class ControladorMundial {
                     break;
 
                 case 0:
-                    vista.mostrarMensaje("Gracias por utilizar el sistema ;) Que tenga un buen día.");
+                    vista.mostrarMensaje("\nGracias por utilizar el sistema ;) Que tenga un buen día.");
                     break;
 
                 default:
@@ -70,7 +70,7 @@ public class ControladorMundial {
     private void nuevaSolicitud() {
 
         if (sistemaVentas.getCompradorActual() == null) {
-            vista.mostrarMensaje("Primero debe registrar un comprador.");
+            vista.mostrarMensaje("\n    Primero debe registrar un comprador -_-.");
             return;
         }
 
@@ -88,9 +88,83 @@ public class ControladorMundial {
             return;
         }
 
-        sistemaVentas.venderBoletos();
-        vista.mostrarMensaje("Compra realizada exitosamente. Espero que lo disfute.");
+        if (!sistemaVentas.validarPresupuesto()) {
+            vista.mostrarMensaje("El presupuesto es insuficiente para realizar la compra.");
+            return;
+        }
 
+        Localidad localidad = sistemaVentas
+                              .getCompradorActual()
+                              .getTicket()
+                              .getLocalidadAsignada();
+
+        int vendidos = sistemaVentas.calcularBoletosAVender();
+        boolean compraParcial = vendidos < sistemaVentas    
+                                            .getCompradorActual()
+                                            .getCantidadBoletos();
+        double total = vendidos * localidad.getPrecio();
+
+        sistemaVentas.venderBoletos();
+
+        //Vista linda con buen mensaje
+        String mensaje;
+
+            if (compraParcial) {
+
+                mensaje =
+                        "\n=========================================\n"
+                        + "Compra realizada parcialmente.\n\n"
+                        + "Ticket: "
+                        + sistemaVentas.getCompradorActual().getTicket().getNumeroAleatorio()
+                        + "\n\n"
+                        + "Localidad: "
+                        + localidad.getNombreLocalidad()
+                        + "\n"
+                        + "Boletos solicitados: "
+                        + sistemaVentas.getCompradorActual().getCantidadBoletos()
+                        + "\n"
+                        + "Boletos vendidos: "
+                        + vendidos
+                        + "\n"
+                        + "Precio por boleto: $"
+                        + localidad.getPrecio()
+                        + "\n"
+                        + "Total pagado: $"
+                        + total
+                        + "\n\n"
+                        + " Solo fue posible vender "
+                        + vendidos
+                        + " boletos\n porque eran los últimos disponibles "
+                        + "o\n porque el presupuesto no alcanzaba para más.\n\n"
+                        + "¡Gracias por su compra ;)!\n"
+                        + "=========================================";
+
+            } else {
+
+                mensaje =
+                        "\n=========================================\n"
+                        + "Compra realizada exitosamente.\n\n"
+                        + "Ticket: "
+                        + sistemaVentas.getCompradorActual().getTicket().getNumeroAleatorio()
+                        + "\n\n"
+                        + "Localidad: "
+                        + localidad.getNombreLocalidad()
+                        + "\n"
+                        + "Boletos comprados: "
+                        + vendidos
+                        + "\n"
+                        + "Precio por boleto: $"
+                        + localidad.getPrecio()
+                        + "\n"
+                        + "Total pagado: $"
+                        + total
+                        + "\n\n"
+                        + "¡Gracias por su compra! Esperamos que disfrute el evento :).\n"
+                        + "=========================================";
+
+            }
+
+            vista.mostrarMensaje(mensaje);
     }
 
     private void consultarDisponibilidadTotal() {
