@@ -14,6 +14,7 @@ public class Torneo {
 
     public String resumen() {
 
+<<<<<<< HEAD
         
         int totalGoles = e1.getGoles() + e2.getGoles() + e3.getGoles() + e4.getGoles() + e5.getGoles();
         int totalTirosEsquina = e1.getTirosEsquina() + e2.getTirosEsquina() + e3.getTirosEsquina() 
@@ -21,6 +22,12 @@ public class Torneo {
         int totalTarjetasAmarillas = e1.getTarjetasAmarillas() + e2.getTarjetasAmarillas()  
         + e3.getTarjetasAmarillas() + e4.getTarjetasAmarillas() + e5.getTarjetasAmarillas();
         int totalTarjetasRojas = e1.getTarjetasRojas() + e2.getTarjetasRojas() + e3.getTarjetasRojas() + e4.getTarjetasRojas() + e5.getTarjetasRojas();
+=======
+        int totalGoles = e1.getGoles() + e2.getGoles() + e3.getGoles();
+        int totalTirosEsquina = e1.getTirosEsquina() + e2.getTirosEsquina();
+        int totalTarjetasAmarillas = e1.getTarjetasAmarillas() + e2.getTarjetasAmarillas();
+        int totalTarjetasRojas = e1.getTarjetasRojas() + e2.getTarjetasRojas();
+>>>>>>> origin/main
 
         String texto = "Torneo: " + nombre + "\n";
         texto += "Total de goles del torneo:   " + totalGoles + "\n";
@@ -61,7 +68,11 @@ public class Torneo {
     }
 
     public void setNombre(String nombre) {
+<<<<<<< HEAD
         
+=======
+        // validaciones
+>>>>>>> origin/main
         this.nombre = nombre;
     }
 }
