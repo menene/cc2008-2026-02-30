@@ -119,14 +119,34 @@ public class ControladorEvento {
                 }
             }
     private void consultarDisponibilidadTotal() {
-        // Aquí programaremos la opción 3 más adelante
+        vista_evento.mostrarMensaje("\n--- DISPONIBILIDAD TOTAL ---");
+        
+        // Le pedimos al evento que haga las sumas
+        int disponibles = this.evento.calcularDisponibilidadTotal();
+        int vendidos = this.evento.calcularVendidosTotal();
+        
+        // La vista imprime los resultados
+        vista_evento.mostrarMensaje("Boletos vendidos en total: " + vendidos);
+        vista_evento.mostrarMensaje("Boletos disponibles en total: " + disponibles);
     }
 
     private void consultarDisponibilidadLocalidad() {
-        // Aquí programaremos la opción 4 más adelante
+        vista_evento.mostrarMensaje("\n--- DISPONIBILIDAD POR LOCALIDAD ---");
+        
+        // Usamos un ciclo for para revisar las 3 localidades una por una
+        for (int i = 1; i <= 3; i++) {
+            Localidad loc = this.evento.getLocalidadPorId(i);
+            vista_evento.mostrarMensaje("Localidad " + i + " (Precio: $" + loc.getPrecio() + "):");
+            vista_evento.mostrarMensaje("  - Vendidos: " + loc.getBoletos_vendidos());
+            vista_evento.mostrarMensaje("  - Disponibles: " + loc.getBoletos_disponibles());
+        }
     }
 
     private void reporteCaja() {
-        // Aquí programaremos la opción 5 más adelante
+        vista_evento.mostrarMensaje("\n--- REPORTE DE CAJA ---");
+        
+        // Le pedimos al evento que sume todo el dinero
+        float totalCaja = this.evento.calcularCajaTotal();
+        vista_evento.mostrarMensaje("El total de dinero recaudado en el evento es: $" + totalCaja);
     }
         }
