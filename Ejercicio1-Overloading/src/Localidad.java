@@ -55,13 +55,18 @@ public class Localidad {
         }
     }
 
+    //Calcula el costo de la venta multiplicando los boletos a vender por el precio
+    public float calcularCostoVenta(int cantidadBoletos) {
+        return cantidadBoletos * this.Precio;
+    }
+
     //Actualiza los contadores cuando se concreta una compra
     public void registrarVenta(int cantidad) {
         this.Boletos_vendidos = this.Boletos_vendidos + cantidad;
         this.Boletos_disponibles = this.Boletos_disponibles - cantidad;
     }
 
-    //Clacula el dinero generado por la venta de boletos multiplicando el precio por la cantidad
+    //Calcula el dinero generado por la venta de boletos multiplicando el precio por la cantidad
     public float generarGananciaLocalidad() {
         return this.Precio * this.Boletos_vendidos;
     }

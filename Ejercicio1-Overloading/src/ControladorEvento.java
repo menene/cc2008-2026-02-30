@@ -95,7 +95,7 @@ public class ControladorEvento {
                 //Calculo de costo total
                 //Primero se valida con la localidad cuantos boletos se le pueden vender al usuario
                 int boletosAVender = localidadAsignada.calcularBoletosAVender(this.User.getBoletos_A_Comprar());
-                float costoTotal = boletosAVender * localidadAsignada.getPrecio();
+                float costoTotal = localidadAsignada.calcularCostoVenta(boletosAVender); //se delega la multiplicacion a la localidad para un mvc puro
 
                 //Comprobacion de si el presupuesto del user es mayor o igual al costo total
                 if (this.User.getPresupuesto() >= costoTotal) {
@@ -103,10 +103,11 @@ public class ControladorEvento {
                     //En caso de que todo bien se registra la venta en la localidad
                     localidadAsignada.registrarVenta(boletosAVender);
                     vista_evento.mostrarMensaje("¡Compra exitosa! Se han vendido " + boletosAVender + " boletos.");
-                    vista_evento.mostrarMensaje("Total pagado: $" + costoTotal);} 
-                    
-                    //en caso de que no alcance el presupuesto del usuario
-                    else {
+                    vista_evento.mostrarMensaje("Total pagado: $" + costoTotal);
+                } 
+                
+                //en caso de que no alcance el presupuesto del usuario
+                else {
                     vista_evento.mostrarMensaje("Lo sentimos, tu presupuesto de $" + this.User.getPresupuesto() + " no alcanza para pagar $" + costoTotal + ".");
                 }
                //En caso de que se quede sin lugar el usuario 
@@ -116,8 +117,9 @@ public class ControladorEvento {
             //En caso de que el usuario no quede con un ticket valido
         } else {
             vista_evento.mostrarMensaje("Mala suerte. Tu ticket no quedó en el rango ganador. Intenta de nuevo.");
-                }
-            }
+        }
+    }
+    
     private void consultarDisponibilidadTotal() {
         vista_evento.mostrarMensaje("\n--- DISPONIBILIDAD TOTAL ---");
         
@@ -149,4 +151,4 @@ public class ControladorEvento {
         float totalCaja = this.evento.calcularCajaTotal();
         vista_evento.mostrarMensaje("El total de dinero recaudado en el evento es: $" + totalCaja);
     }
-        }
+}
