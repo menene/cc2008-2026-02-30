@@ -82,6 +82,9 @@ public class SistemaVenta {
         }
 
         localidad.venderBoletos(comprador.getCantidadBoletos());
+        System.out.println("Compra realizada con exito");
+        System.out.println("Localidad asignada: " + localidad.getNumero());
+        System.out.println("Boletos comprados: " + comprador.getCantidadBoletos());
     
 
     
