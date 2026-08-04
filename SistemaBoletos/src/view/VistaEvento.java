@@ -6,8 +6,10 @@ import java.util.Scanner;
 import model.Comprador;
 
 public class VistaEvento {
+    //Atributos
     public Scanner sc = new Scanner(System.in);
 
+    // Métodos
     public int mostrarMenu(String nombreEvento) {
         System.out.println();
         System.out.println("---------------------------------------");
@@ -24,6 +26,7 @@ public class VistaEvento {
         return sc.nextInt();
     }
 
+    // Lee datos del comprador 
     public Comprador leerComprador() {
         sc.nextLine();
         System.out.println();
@@ -49,6 +52,7 @@ public class VistaEvento {
         return sc.nextFloat();
     }
 
+    //Muestra mensaje de compra exitosa o compra parcial
     public void mostrarCompra(boolean esParcial, String localidad, int cantidad, float total) {
         DecimalFormat df = new DecimalFormat("$ #,##0.00");
         System.out.println(String.format(
@@ -66,6 +70,7 @@ public class VistaEvento {
         ));
     }
 
+    // Muestra mensaje de compra rechazada
     public void mostrarCompraRechazada(int motivo) {
         String mensaje;
         switch (motivo) {

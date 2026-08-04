@@ -1,11 +1,13 @@
 package model;
 
 public class Comprador {
+    // Atributos
     private String nombre;
     private String correo;
     private int cantidad;
     private float presupuesto;
 
+    // Métodos
     public Comprador(String nombre, String correo) {
         this.nombre = nombre;
         this.correo = correo;
@@ -27,6 +29,7 @@ public class Comprador {
         return this.presupuesto;
     }
 
+    // Método par asignar valores a cantidad y presupuesto
     public void setCantidadYPresupuesto(int cantidad, float presupuesto) {
         this.cantidad = cantidad;
         this.presupuesto = presupuesto;

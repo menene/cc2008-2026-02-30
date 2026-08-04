@@ -3,11 +3,14 @@ package model;
 import java.text.DecimalFormat;
 
 public class Evento {
+    // Atributos
     private String nombre;
     private Localidad localidad1;
     private Localidad localidad5;
     private Localidad localidad10;
 
+    // Métodos
+    // Constructor de evento
     public Evento(String nombre, Localidad loc1, Localidad loc5, Localidad loc10) {
         this.nombre = nombre;
         this.localidad1 = loc1;
@@ -15,6 +18,7 @@ public class Evento {
         this.localidad10 = loc10;
     }
 
+    // Disponibilidad general
     public String disponibilidad() {
         int total = localidad1.getBoletosDisponibles() + localidad5.getBoletosDisponibles() + localidad10.getBoletosDisponibles(); 
         int totalVendidos = vendidos();
@@ -32,6 +36,7 @@ public class Evento {
         return localidad1.getBoletosVendidos() + localidad5.getBoletosVendidos() + localidad10.getBoletosVendidos();
     }
 
+    // Disponibilidad por local
     public String disponibilidadPorLocalidad(int localidad) {
         int disponibilidad;
         int vendidos;
@@ -62,8 +67,8 @@ public class Evento {
         );
     }
 
-
-   public String reporteCaja() {
+    // Envía String formateado del reporte de caja
+    public String reporteCaja() {
         DecimalFormat df = new DecimalFormat("$ #,##0.00");
 
         float totalGanancia = localidad1.getGanancia()
@@ -88,6 +93,7 @@ public class Evento {
         );
     }
 
+    // Retorna un String formateado con el listado de localidades
     public String nombreLocalidades() {
         return String.format(
                 "- %s%n" +
@@ -103,6 +109,7 @@ public class Evento {
         return this.nombre;
     }
 
+    // Regresa el objeto Localidad según la opción que se ingrese
     public Localidad getLocalidad(int opcion) {
         switch (opcion) {
             case 1:

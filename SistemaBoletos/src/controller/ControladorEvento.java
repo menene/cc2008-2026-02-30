@@ -5,11 +5,14 @@ import model.*;
 import view.VistaEvento;
 
 public class ControladorEvento {
+    // Atributos
     private Evento evento;
     private VistaEvento vista = new VistaEvento();
     private Comprador comprador;
     private Ticket ticket;
 
+    // Métodos
+    // Se crea el evento y las localidades en el constructor.
     public ControladorEvento() {
         Localidad loc1 = new Localidad("Localidad 1", 100, 20);
         Localidad loc5 = new Localidad("Localidad 5", 500, 20);
@@ -17,6 +20,7 @@ public class ControladorEvento {
         evento = new Evento("2027 FIFA Women´s World Cup", loc1, loc5, loc10);
     }
 
+    // Inicia el flujo del programa
     public void iniciar() {
 
         boolean continuar = true;
@@ -57,10 +61,12 @@ public class ControladorEvento {
 
     }
 
+    // Asigna una nueva instancia de comprador al actual
     private void nuevoComprador() {
         comprador = vista.leerComprador();
     }
 
+    // Método que maneja toda la lógica y validación de una solicitud de compra
     private void solicitudCompra() {
         comprador.setCantidadYPresupuesto(vista.leerCantidadBoletosAComprar(), vista.leerPresupuesto());
         ticket = new Ticket();
@@ -108,6 +114,7 @@ public class ControladorEvento {
         }
     }
 
+    // Métodos que llaman a metodos de la vista y muestran datos en la terminal
     private void disponibilidad() {
         vista.mostrarDisponibilidad(evento.disponibilidad());
     }
