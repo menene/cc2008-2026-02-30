@@ -100,12 +100,12 @@ public class Controlador {
 
                 case 6:
                     //salir
-                    vista.mostrarMensaje("Gracias por utilizar el sistema.");
+                    vista.mostrarMensaje("Gracias por usar mi programa :)");
                     break;
 
                 default:
                     //x si no es ninguna 
-                    vista.mostrarMensaje("Opción inválida.");
+                    vista.mostrarMensaje("Opción inválida");
                     break;
 
             }
@@ -134,12 +134,12 @@ public class Controlador {
         int cantidadBoletos = vista.getScanner().nextInt();
 
         //presupuesto
-        vista.mostrarMensaje("Ingrese el presupuesto máximo:");
+        vista.mostrarMensaje("Ingrese el presupuesto maximo:");
         float presupuestoMaximo = vista.getScanner().nextFloat();
 
         //ahroa le da esos datos a comprador y hace uno nuevo
         comprador = new Comprador(nombre, email, cantidadBoletos, presupuestoMaximo);
-        vista.mostrarMensaje("listo, comprador registrado");
+        vista.mostrarMensaje("listo ya estas registrado");
 
         }
 
@@ -163,7 +163,7 @@ public class Controlador {
 
         //! significa que no, osea SI el ticket no esta en el rango, entonces no puede
         if (!ticket.validarTicket(numeroTicket)) {
-            vista.mostrarMensaje("Quedas fuera del rango, no puedes comprar");
+            vista.mostrarMensaje("Quedas fuera del rango, no puedes comprar :(");
             //y te regresa
             return;
         }
@@ -175,7 +175,7 @@ public class Controlador {
         if (localidadAleatoria == 1) {
 
             if (!localidad1.hayEspacio()) {
-                vista.mostrarMensaje("La localidad 1 esta llena.");
+                vista.mostrarMensaje("La localidad 1 esta llena");
                 return;
             }
 
@@ -188,13 +188,13 @@ public class Controlador {
             int total = boletos * localidad1.getPrecioLocalidad();
 
             if (total > comprador.getPresupuestoMaximo()) {
-                vista.mostrarMensaje("El presupuesto no alcanza.");
+                vista.mostrarMensaje("El presupuesto no te alcanza");
                 return;
             }
 
             localidad1.setBoletosVendidos(localidad1.getBoletosVendidos() + boletos);
 
-            vista.mostrarMensaje("Compra realizada.");
+            vista.mostrarMensaje("Compra realizada :)");
             vista.mostrarMensaje("Ticket: " + numeroTicket);
             vista.mostrarMensaje("Localidad: " + localidad1.getLocalidad());
             vista.mostrarMensaje("Boletos comprados: " + boletos);
@@ -206,7 +206,7 @@ public class Controlador {
         else if (localidadAleatoria == 2) {
 
             if (!localidad5.hayEspacio()) {
-                vista.mostrarMensaje("La localidad 5 esta llena.");
+                vista.mostrarMensaje("La localidad 5 esta llena :(");
                 return;
             }
 
@@ -219,13 +219,13 @@ public class Controlador {
             int total = boletos * localidad5.getPrecioLocalidad();
 
             if (total > comprador.getPresupuestoMaximo()) {
-                vista.mostrarMensaje("El presupuesto no alcanza.");
+                vista.mostrarMensaje("El presupuesto no alcanza");
                 return;
             }
 
             localidad5.setBoletosVendidos(localidad5.getBoletosVendidos() + boletos);
 
-            vista.mostrarMensaje("Compra realizada.");
+            vista.mostrarMensaje("Compra realizada :)");
             vista.mostrarMensaje("Ticket: " + numeroTicket);
             vista.mostrarMensaje("Localidad: " + localidad5.getLocalidad());
             vista.mostrarMensaje("Boletos comprados: " + boletos);
@@ -237,7 +237,7 @@ public class Controlador {
         else {
 
             if (!localidad10.hayEspacio()) {
-                vista.mostrarMensaje("La localidad 10 esta llena.");
+                vista.mostrarMensaje("La localidad 10 esta llena :(");
                 return;
             }
 
@@ -250,13 +250,13 @@ public class Controlador {
             int total = boletos * localidad10.getPrecioLocalidad();
 
             if (total > comprador.getPresupuestoMaximo()) {
-                vista.mostrarMensaje("El presupuesto no alcanza.");
+                vista.mostrarMensaje("El presupuesto no alcanza");
                 return;
             }
 
             localidad10.setBoletosVendidos(localidad10.getBoletosVendidos() + boletos);
 
-            vista.mostrarMensaje("Compra realizada.");
+            vista.mostrarMensaje("Compra realizada:)");
             vista.mostrarMensaje("Ticket: " + numeroTicket);
             vista.mostrarMensaje("Localidad: " + localidad10.getLocalidad());
             vista.mostrarMensaje("Boletos comprados: " + boletos);
