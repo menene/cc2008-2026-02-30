@@ -101,5 +101,4 @@ public class GestorVentas {
     public void setCompradorActual(Comprador compradorActual) {
         this.compradorActual = compradorActual;
     }
-
 }
