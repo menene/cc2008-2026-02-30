@@ -28,6 +28,9 @@ public class Localidad {
     public double getIngreso(){
         return vendidos * precio;
     }
+    public int getNumero(){
+        return numero;
+    }
 
 
 }
