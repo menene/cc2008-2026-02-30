@@ -1,11 +1,11 @@
-public class Localidad{
+public class Localidad {
 
     private int numero;
     private double precio;
     private int capacidad;
     private int vendidos;
 
-    public Localidad(int numero, double precio, int capacidad){
+    public Localidad(int numero, double precio, int capacidad) {
 
         this.numero = numero;
         this.precio = precio;
@@ -25,7 +25,7 @@ public class Localidad{
         return capacidad - vendidos;
     }
 
-    public double getIngresos(){
+    public double getIngreso(){
         return vendidos * precio;
     }
 
