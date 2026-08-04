@@ -23,18 +23,16 @@ public class Comprador {
 
 
     //getter del nombre
-    public String getNombre(String nombre) {
+    public String getNombre() {
         return nombre;
     }    
     //setter de nombre
     public void setNombre(String nombre) {
-        //validacionn
         this.nombre = nombre;
     }
     
     //getter email
-    public String getEmail(String email) {
-        //validar
+    public String getEmail() {
         return email;
     }
     //setter email
@@ -43,7 +41,7 @@ public class Comprador {
     }
 
     //getter cantidadBoletos
-    public int getCantidadBoletos(int cantidadBoletos) {
+    public int getCantidadBoletos() {
         return cantidadBoletos;
     }
 
@@ -53,7 +51,7 @@ public class Comprador {
     }
 
     //getter presupuestoMaximo
-    public float getPresupuestoMaximo(float presupuestoMaximo) {
+    public float getPresupuestoMaximo() {
         return presupuestoMaximo;
     }
 
@@ -61,7 +59,7 @@ public class Comprador {
         this.presupuestoMaximo = presupuestoMaximo;
     }
 
-    public int getTicket(int ticket) {
+    public int getTicket() {
         return ticket;
     }
 
