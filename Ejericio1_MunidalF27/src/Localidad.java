@@ -32,5 +32,9 @@ public class Localidad {
         return numero;
     }
 
+    public double getPrecio() {
+        return precio;
+    }
+
 
 }
