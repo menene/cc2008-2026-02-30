@@ -27,7 +27,13 @@ public class VistaEvento {
         System.out.print("Elige una opción: ");
 
         //Se lee el texto y se convierte a numero para evitar errores de salto de linea
-        return Integer.parseInt(teclado.nextLine());
+        try {
+            return Integer.parseInt(teclado.nextLine());
+        } catch (NumberFormatException e){
+            //Si el usuario da Enter vacío o escribe letras, devolvemos un -1
+            //Así el 'switch' del controlador caerá en la opción 'default' y volverá a preguntar.
+            return -1;
+        }
     }
 
     //Metodo para que el controlador pueda imprimir cualquier mensaje (¡Había desaparecido!)
