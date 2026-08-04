@@ -10,11 +10,12 @@ public class Localidad {
 
     }
 
-    public Localidad(int localidad, int precioLocalidad, int capacidadMaxima, int boletosVendidos) {
+    public Localidad(int localidad, int precioLocalidad, int capacidadMaxima) {
         this.localidad = localidad;
         this.precioLocalidad = precioLocalidad;
         this.capacidadMaxima = capacidadMaxima;
-        this.boletosVendidos = boletosVendidos;
+        //los puse en 0 porque al inicio no hay boletos vendidos y me daba error en controlador
+        this.boletosVendidos = 0;
     }
 
     //localidad
@@ -36,7 +37,7 @@ public class Localidad {
     }
 
     //capacidadMaxima
-    public int capacidadMaxima() {
+    public int getCapacidadMaxima() {
         return capacidadMaxima;
     }
 

@@ -16,6 +16,13 @@ public class Ticket {
         //por lo que entiendo, es el numero entre 15000 y 1
     }
 
+    //tampoco lo inclui en mi analisis, sorry
+    public int generarLocalidad() {
+        return random.nextInt(3) + 1;
+        //genera un numero aleatorio entre 1 y 3
+    }
+
+
     public void generarRango() {
         int num1 = random.nextInt(15000) + 1;
         int num2 = random.nextInt(15000) + 1;

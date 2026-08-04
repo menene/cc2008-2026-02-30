@@ -1,4 +1,8 @@
 public class Main {
-    Controlador controlador;
-    
+    public static void main(String[] args) {
+
+        Controlador controlador = new Controlador();
+        controlador.iniciar();
+    }
+
 }
