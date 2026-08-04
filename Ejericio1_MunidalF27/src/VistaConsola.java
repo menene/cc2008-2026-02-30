@@ -4,7 +4,7 @@ public class VistaConsola {
 
     private Scanner scanner = new Scanner(System.in);
 
-    private void mostrarMenu(){
+    public void mostrarMenu(){
         System.out.println("==== Menu ====");
         System.out.println("1. Nuevo comprador");
         System.out.println("2. Solicitud de entradas");
