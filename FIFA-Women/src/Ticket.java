@@ -5,7 +5,8 @@ public class Ticket {
     private int numA;
     private int numB;
 
-    Ticket miTicket = new Ticket();
+    public Ticket() {
+    }
 
     //getters y setters de ticket
     public int getNumTicket() 
