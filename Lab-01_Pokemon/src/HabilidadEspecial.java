@@ -1,6 +1,6 @@
 import java.util.Random;
 
-public class HabilidadEspecial{
+public class HabilidadEspecial {
 
     private String nombre;
     private int probabilidadActivacion;
