@@ -21,7 +21,6 @@ public class Ronda {
 
     public void calcularResultado(int bonoTipo, int potenciadorAtaque, int potenciadorDefensa) {
         this.bonoTipo = bonoTipo;
- 
         double ataqueEfectivo = pokemonAtacante.getAtaque()
                 + (pokemonAtacante.getAtaque() * potenciadorAtaque / 100.0);
         double defensaEfectiva = pokemonDefensor.getDefensa()
