@@ -3,6 +3,7 @@ public class HabilidadEspecial{
     private String nombre;
     private byte probabilidad; 
 
+    //constructor
     public HabilidadEspecial(String nombre, byte probabilidad) {
         this.nombre = nombre;
         this.probabilidad = probabilidad;
