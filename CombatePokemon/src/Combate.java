@@ -133,7 +133,6 @@ public class Combate {
         }
 
 
-
         //ahora variables para saber si se activan las habilidades
         boolean habilidadAtacanteOn;
         boolean habilidadDefensorOn;
@@ -149,16 +148,15 @@ public class Combate {
         int potenciadorDefensor = 0;
 
         //reviso al 1er atacante
-        if (habilidadAtacanteOn) { //osea, que si 
-        potenciadorAtacante = pokemonAt.getHabilidadEspecial().generarPotenciador();
+        if (habilidadAtacanteOn) { //osea, que si
+            potenciadorAtacante = pokemonAt.getHabilidadEspecial().generarPotenciador();
         }
         else { //si es false, pues entonces es 0
             potenciadorAtacante = 0;
         }
 
 
-
-        //ahora el potenciador 
+        //ahora el potenciador
         if (habilidadDefensorOn) {
             potenciadorDefensor = pokemonDe.getHabilidadEspecial().generarPotenciador();
         }
@@ -178,41 +176,67 @@ public class Combate {
 
         //aca ya calculo el ataque total
         double ataqueTotal = ataqueEfectivo + bonoTipo - defensaEfectiva;
-        
+
+
+        //ahora si, guardar toda la informacion de la ronda
+        String resultado = "";
+
+        resultado += "Ronda " + numeroRonda + "\n";
+        resultado += "Pokemon atacante: " + pokemonAt.getNombre() + "\n";
+        resultado += "Pokemon defensor: " + pokemonDe.getNombre() + "\n";
+
+        resultado += "Habilidad de " + pokemonAt.getNombre() + ": "
+                + pokemonAt.getHabilidadEspecial().getNombre() + "\n";
+
+        if (habilidadAtacanteOn) {
+            resultado += "La habilidad se activo\n";
+            resultado += "Potenciador: " + potenciadorAtacante + "%\n";
+        }
+        else {
+            resultado += "La habilidad no se activo\n";
+        }
+
+        resultado += "Habilidad de " + pokemonDe.getNombre() + ": "
+                + pokemonDe.getHabilidadEspecial().getNombre() + "\n";
+
+        if (habilidadDefensorOn) {
+            resultado += "La habilidad se activo\n";
+            resultado += "Potenciador: " + potenciadorDefensor + "%\n";
+        }
+        else {
+            resultado += "La habilidad no se activo\n";
+        }
+
 
         //ahora si, determinar quien gano
-        String resultado;
-
-        //si entrendaro 1 gana, se le suma a rondas ganadas y se imprime gana la ronda
         if (ataqueTotal > 0) {
             if (jugador1Ataca) {
                 entrenador1.incrementarRondasGanadas();
-                resultado = "Gana la ronda " + entrenador1.getNombre();
+                resultado += "Gana la ronda " + entrenador1.getNombre();
             }
             else {
                 entrenador2.incrementarRondasGanadas();
-                resultado = "Gana la ronda " + entrenador2.getNombre();
+                resultado += "Gana la ronda " + entrenador2.getNombre();
             }
-
         }
         else if (ataqueTotal < 0) {
 
             if (jugador1Ataca) {
                 entrenador2.incrementarRondasGanadas();
-                resultado = "Gana la ronda " + entrenador2.getNombre();
+                resultado += "Gana la ronda " + entrenador2.getNombre();
             }
             else {
                 entrenador1.incrementarRondasGanadas();
-                resultado = "Gana la ronda " + entrenador1.getNombre();
+                resultado += "Gana la ronda " + entrenador1.getNombre();
             }
-
         }
         else {
-            resultado = "Empate";
+            resultado += "Empate";
         }
 
+
         //alternar atacante para la otra ronda
-        //! es para decir que es diferente, que pasa de true a false y viceversa
+        //! es para decir que no es igual
         jugador1Ataca = !jugador1Ataca;
 
         //avanzar de ronda
@@ -220,10 +244,10 @@ public class Combate {
 
         //devolver resultado
         return resultado;
+    }
 
 
-    }    
-
+    
 
     //metodo determinar ganador
     public String determinarGanador() {

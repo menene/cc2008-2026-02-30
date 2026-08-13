@@ -1,12 +1,12 @@
 public class Vista {
 
-    //constructor vista, vacio al inicio
+    //constructor vista
     public Vista() {
 
     }
 
 
-    //mostrar  inicio del combate
+    //mostrar el inicio del combate
     public void mostrarInicioCombate(String entrenador1, String entrenador2) {
 
         System.out.println("Combate Pokemon");
@@ -15,7 +15,7 @@ public class Vista {
     }
 
 
-    //mostrar la ronda y los pokemon que van a participar
+    //mostrar la ronda y los pokemon que participan
     public void mostrarRonda(int numeroRonda, String atacante, String defensor) {
 
         System.out.println("Ronda " + numeroRonda);
