@@ -39,8 +39,9 @@ public class Controlador {
         vista.mostrarMensaje("inicia el combate pokemon");
         vista.mostrarMensaje("=================================\n");
         
-        //inicia el combate
-        combateActual.coordinarCombate(jugador1, jugador2);
+        //inicia el combate y obtenemos la narrativa
+        String narracionCompleta = combateActual.coordinarCombate(jugador1, jugador2);
+        vista.mostrarMensaje(narracionCompleta);
         
         //se evaluan los resultados
         determinarGanadorFinal();
@@ -48,9 +49,12 @@ public class Controlador {
 
     //metodo para ver quien gano al final
     public void determinarGanadorFinal() {
+        byte empates = (byte) (4 - jugador1.getRondasGanadas() - jugador2.getRondasGanadas());
+
         vista.mostrarMensaje("--- resultados finales ---");
         vista.mostrarMensaje(jugador1.getNombre() + " gano " + jugador1.getRondasGanadas() + " rondas.");
-        vista.mostrarMensaje(jugador2.getNombre() + " gano " + jugador2.getRondasGanadas() + " rondas.\n");
+        vista.mostrarMensaje(jugador2.getNombre() + " gano " + jugador2.getRondasGanadas() + " rondas.");
+        vista.mostrarMensaje("Rondas empatadas: " + empates + "\n");
 
         if (jugador1.getRondasGanadas() > jugador2.getRondasGanadas()) {
             vista.mostrarMensaje("el ganador es " + jugador1.getNombre());
