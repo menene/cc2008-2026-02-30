@@ -73,7 +73,7 @@ public class Entrenador {
     }
 
     //S rondas ganadas, aumentarle
-    public void incrementarRondasGanadas(int rondasGanadas) {
+    public void incrementarRondasGanadas() {
         //para sumarle 1 a la misma variable
         rondasGanadas ++;
     }
