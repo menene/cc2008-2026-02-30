@@ -17,4 +17,16 @@ public class TorneoView{
         System.out.println("Ganador: "+ganador);
     }
 
+    public void Resultados(Jugador jugador, Jugador jugador1){
+        System.out.println("========== RESULTADOS ==========");
+        System.out.println(jugador.getVictorias()+" Victorias");
+        System.out.println(jugador1.getVictorias()+" Victorias");
+        System.out.println("================================");
+    }
+
+    public void MostrarGanador(Jugador ganador){
+        System.out.println("=> GANADOR DEL TORNEO"+ganador.getNombre());
+        System.out.println("Victorias: "+ganador.getVictorias());
+    }
+
 }

@@ -55,5 +55,14 @@ public class TorneoController {
             vista.Ganador("Empate");
         }
 
+        if(entrenador.victorias > entrenador1.victorias){
+            vista.MostrarGanador(entrenador);
+        }else {
+            vista.MostrarGanador(entrenador1);
+        }
+
+        vista.Resultados(entrenador, entrenador1);
+        
+
     }
 }
