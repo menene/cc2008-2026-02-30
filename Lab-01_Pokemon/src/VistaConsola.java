@@ -4,7 +4,7 @@ public class VistaConsola {
         Entrenador entrenador1,
         Entrenador entrenador2
     ) {
-        System.out.println("\n==== POKEMONS SELECCIONADOS ====");
+        System.out.println("\n====== POKEMONES SELECCIONADOS ======");
         System.out.println("\n" + entrenador1.getNombre() + ":");
         Pokemon[] pokemones1 = entrenador1.getPokemones();
 
@@ -28,12 +28,12 @@ public class VistaConsola {
         int Ronda, Pokemon atacante, Pokemon defensor, Entrenador entrenadorAtacante, 
         Entrenador entrenadorDefensor
     ) {
-        System.out.println("\n==== RONDA " + Ronda + "====");
+        System.out.println("\n====== RONDA " + Ronda + " ======");
 
-        System.out.println("\n" + entrenadorAtacante.getNombre() + "Ataca con " + atacante.getNombre() 
+        System.out.println("\n" + entrenadorAtacante.getNombre() + " Ataca con " + atacante.getNombre() 
         + " (" + atacante.getTipo() + ")");
 
-        System.out.println(entrenadorDefensor.getNombre() + "Defiende con " + defensor.getNombre() 
+        System.out.println(entrenadorDefensor.getNombre() + " Defiende con " + defensor.getNombre() 
         + " (" + defensor.getTipo() + ")");
 
      }
@@ -43,7 +43,7 @@ public class VistaConsola {
 
             System.out.println("\n--- Ataque ---");
 
-            System.out.println(atacante.getNombre() + " tiene" + atacante.getAtaque() + " de ataque base");
+            System.out.println(atacante.getNombre() + " tiene " + atacante.getAtaque() + " de ataque base");
 
             if(habilidadActiva) {
 
@@ -54,7 +54,7 @@ public class VistaConsola {
                 System.out.println("Bono de ataque: +" + bonoAtaque);
 
             } else{
-                System.out.println("La habilidad " + atacante.getHabilidadEspecial().getNombre() + "no se activa");
+                System.out.println("La habilidad " + atacante.getHabilidadEspecial().getNombre() + " no se activa");
             }
 
             System.out.println("Ataque efectivo: " + ataqueEfectivo);
@@ -65,7 +65,7 @@ public class VistaConsola {
 
                 System.out.println("\n--- Defensa ---");
 
-                System.out.println(defensor.getNombre() + " tiene" + defensor.getDefensa() + " de defenda base");
+                System.out.println(defensor.getNombre() + " tiene " + defensor.getDefensa() + " de defenda base");
 
                 if (habilidadActiva){
                     System.out.println("La habilidad " + defensor.getHabilidadEspecial().getNombre() + " se activa");
@@ -141,5 +141,5 @@ public class VistaConsola {
                     System.out.println("La batalla termina en empate");
                 }
             }
-            
+
 }
