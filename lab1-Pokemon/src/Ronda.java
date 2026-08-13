@@ -73,7 +73,7 @@ public class Ronda {
         }
 
         // Si el atacante es Eléctrico
-        else if (tipoAtacante == 3) {
+        else if (tipoAtacante == 4) {
             // Si defensor es Agua
             if (tipoDefensor == 2) {
                 return 20;
