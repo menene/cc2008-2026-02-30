@@ -1,0 +1,61 @@
+@startuml
+
+class Pokemon {
+    - nombre : String
+    - tipo : String
+    - ATK : int
+    - DEF : int
+    - habilidadEspecial : EA
+    - setType() : String
+    - setAttribut() : void
+    + getNombre() : String
+    + getTipo() : String
+    + getATK() : int
+    + getDEF() : int
+    + getHabilidadEspecial() : EA
+    + Pokemon(name : String)
+}
+
+class EA {
+    - name : String
+    - prob : double
+    - setProb() : double
+    - setName() : String
+    + getName() : String
+    + getProb() : double
+    + EA()
+}
+
+class Entrenador {
+    - nombre : String
+    - pokemones : Pokemon[]
+    - rolActual : boolean
+    + Entrenador(name : String, pokemones : Pokemon[], rolActual : boolean)
+    + changeRol() : void
+    + getNombre() : String
+    + getPokemones() : Pokemon[]
+    + getRolActual() : boolean
+}
+
+class Arbitro {
+    - entrenadores : Entrenador[]
+    - iniciarCombate() : void
+    + getResultados() : String
+}
+
+class Vista {
+    + mostrarResultados(resultados : String) : void
+}
+
+class Main {
+    + main(args : String[]) : void
+}
+
+Pokemon *--  EA
+Entrenador *-- Pokemon
+Arbitro o--  Entrenador
+Vista o-- Arbitro
+Main o-- Vista
+Main o-- Arbitro
+
+@enduml

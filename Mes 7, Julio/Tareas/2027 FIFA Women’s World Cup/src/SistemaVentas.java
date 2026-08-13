@@ -43,7 +43,7 @@ public class SistemaVentas{
         }
 
         Ticket ticket = new Ticket();
-        random = new Random();
+            random = new Random();
         int a = random.nextInt(15000) + 1;
         int b = random.nextInt(15000) + 1;
 
