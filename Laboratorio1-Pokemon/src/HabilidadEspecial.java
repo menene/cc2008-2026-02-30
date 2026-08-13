@@ -24,5 +24,9 @@ public class HabilidadEspecial{
 
         }
     }
-}
 
+    //getter para consultar el nombre de la habilidad
+    public String getNombre() {
+        return nombre;
+    }
+}

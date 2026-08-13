@@ -48,4 +48,7 @@ public class Pokemon {
     public String getNombre() {
         return nombre;
     }
+    public String getNombreHabilidad() {
+        return habilidad.getNombre();
+    }
 }

@@ -21,6 +21,11 @@ public class Combate {
         bitacora += "[Ataca] " + jugador1.getNombre() + " envia a " + p1.getNombre() + " (Tipo: " + p1.getTipo() + ")\n";
         bitacora += "[Defiende] " + jugador2.getNombre() + " envia a " + p2.getNombre() + " (Tipo: " + p2.getTipo() + ")\n";
         
+        float poderP1 = p1.calcularAtaqueEfectivo();
+        if (poderP1 > 50.0f) {
+            bitacora += p1.getNombre() + " activo su habilidad especial " + p1.getNombreHabilidad() + ".\n";
+        }
+
         ronda1 = new Ronda(p1, p2);
         byte resultado1 = ronda1.ejecutarTurno();
         
@@ -46,6 +51,11 @@ public class Combate {
         bitacora += "[Ataca] " + jugador2.getNombre() + " envia a " + p2.getNombre() + " (Tipo: " + p2.getTipo() + ")\n";
         bitacora += "[Defiende] " + jugador1.getNombre() + " envia a " + p1.getNombre() + " (Tipo: " + p1.getTipo() + ")\n";
         
+        float poderP2 = p2.calcularAtaqueEfectivo();
+        if (poderP2 > 50.0f) {
+            bitacora += p2.getNombre() + " activo su habilidad especial " + p2.getNombreHabilidad() + ".\n";
+        }
+
         //se envia p2 primero para que sea el atacante
         ronda2 = new Ronda(p2, p1); 
         byte resultado2 = ronda2.ejecutarTurno();
@@ -71,6 +81,11 @@ public class Combate {
         bitacora += "[Ataca] " + jugador1.getNombre() + " envia a " + p1.getNombre() + " (Tipo: " + p1.getTipo() + ")\n";
         bitacora += "[Defiende] " + jugador2.getNombre() + " envia a " + p2.getNombre() + " (Tipo: " + p2.getTipo() + ")\n";
         
+        poderP1 = p1.calcularAtaqueEfectivo();
+        if (poderP1 > 50.0f) {
+            bitacora += p1.getNombre() + " activo su habilidad especial " + p1.getNombreHabilidad() + ".\n";
+        }
+
         ronda3 = new Ronda(p1, p2);
         byte resultado3 = ronda3.ejecutarTurno();
         
@@ -95,6 +110,11 @@ public class Combate {
         bitacora += "[Ataca] " + jugador2.getNombre() + " envia a " + p2.getNombre() + " (Tipo: " + p2.getTipo() + ")\n";
         bitacora += "[Defiende] " + jugador1.getNombre() + " envia a " + p1.getNombre() + " (Tipo: " + p1.getTipo() + ")\n";
         
+        poderP2 = p2.calcularAtaqueEfectivo();
+        if (poderP2 > 50.0f) {
+            bitacora += p2.getNombre() + " activo su habilidad especial " + p2.getNombreHabilidad() + ".\n";
+        }
+
         ronda4 = new Ronda(p2, p1);
         byte resultado4 = ronda4.ejecutarTurno();
         
