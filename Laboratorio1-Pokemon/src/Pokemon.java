@@ -4,7 +4,7 @@ public class Pokemon {
     private String tipo;
     private short ataque;
     private short defensa;
-    private Habilidad Especial habilidad;
+    private HabilidadEspecial habilidad;
     private boolean haPeleado;
 
     //constructor del pokemon
@@ -22,7 +22,7 @@ public class Pokemon {
     //calculo del daño total sumando el ataque base + el porcentaje
     //extra si se activa la habilidad
     public float calcularAtaqueEfectivo() {
-        float bono = habilidad.obtenerBonoPorcentaje
+        float bono = habilidad.obtenerBonoPorcentaje();
         return ataque + (ataque * bono);
     }
 
@@ -34,7 +34,7 @@ public class Pokemon {
     }
 
     //cambio de estado del Pokemon para que no se pueda volver a usar
-    publlic void marcarComoUsado() {
+    public void marcarComoUsado() {
         this.haPeleado = true;
     }
 
