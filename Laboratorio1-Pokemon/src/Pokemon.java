@@ -28,7 +28,7 @@ public class Pokemon {
 
     //calculo de la defensa total sumando la defensa base + el porcentaje
     //extra si se activa la habilidad
-    public float calculardefensaEfectiva() {
+    public float calcularDefensaEfectiva() {
         float bono = habilidad.obtenerBonoPorcentaje();
         return defensa + (defensa * bono);
     }
