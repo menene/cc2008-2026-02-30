@@ -13,7 +13,7 @@ public class VistaTorneo {
         return Integer.parseInt(sc.nextLine());
     }
 // mensaje menjase
-    public Equipo leerDatosEquipo() {
+    public EquipoPokemon leerDatosEquipo() {
         System.out.println("\n--- Datos del equipo ---");
         System.out.print("Nombre del equipo: ");
         String nombre = sc.nextLine();
@@ -36,7 +36,7 @@ public class VistaTorneo {
         System.out.print("Faltas: ");
         int faltas = Integer.parseInt(sc.nextLine());
 
-        return new Equipo(nombre, lugar, tirosEsquina, juegosGanados, juegosPerdidos,
+        return new EquipoPokemon(nombre, lugar, tirosEsquina, juegosGanados, juegosPerdidos,
                           tirosAGol, goles, tarjetasAmarillas, tarjetasRojas, faltas);
     }
 

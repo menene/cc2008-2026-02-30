@@ -46,11 +46,11 @@ public class ControladorTorneo {
     private void registrarEquipos() {
         String nombre = vista.leerNombreTorneo();
 
-        Equipo e1 = vista.leerDatosEquipo();
-        Equipo e2 = vista.leerDatosEquipo();
-        Equipo e3 = vista.leerDatosEquipo();
-        Equipo e4 = vista.leerDatosEquipo();
-        Equipo e5 = vista.leerDatosEquipo();
+        EquipoPokemon e1 = vista.leerDatosEquipo();
+        EquipoPokemon e2 = vista.leerDatosEquipo();
+        EquipoPokemon e3 = vista.leerDatosEquipo();
+        EquipoPokemon e4 = vista.leerDatosEquipo();
+        EquipoPokemon e5 = vista.leerDatosEquipo();
 
         torneo = new Torneo(nombre, e1, e2, e3, e4, e5);
     }

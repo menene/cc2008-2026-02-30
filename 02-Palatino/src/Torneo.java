@@ -1,9 +1,9 @@
 public class Torneo {
     private String nombre;
-    private Equipo e1, e2, e3, e4, e5;
+    private EquipoPokemon e1, e2, e3, e4, e5;
 
 
-    public Torneo(String nombre, Equipo e1, Equipo e2, Equipo e3, Equipo e4, Equipo e5) {
+    public Torneo(String nombre, EquipoPokemon e1, EquipoPokemon e2, EquipoPokemon e3, EquipoPokemon e4, EquipoPokemon e5) {
         this.nombre = nombre;
         this.e1 = e1;
         this.e2 = e2;
