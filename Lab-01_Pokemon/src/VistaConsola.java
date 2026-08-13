@@ -141,13 +141,5 @@ public class VistaConsola {
                     System.out.println("La batalla termina en empate");
                 }
             }
-
-        
-        
-
-
-        
-
-    
-    
+            
 }
