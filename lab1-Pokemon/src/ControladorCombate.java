@@ -36,7 +36,7 @@ public class ControladorCombate {
         Pokemon bellsprout = new Pokemon("Bellsprout", 3, 70, 45, hojaAfilada);
         Pokemon magnemite = new Pokemon("Magnemite", 4, 60, 80, impactoTrueno);
     
-        // Se crean los jugadores con los nombres ingresados anteriormente
+        // Se crean los jugadores con los nombres ingresados anteriormente y se les asignan los pokemones
         Jugador jugador1 = new Jugador(nombreJugador1, charmander, pikachu, squirtle, bulbasaur);
         Jugador jugador2 = new Jugador(nombreJugador2, vaporeon, vulpix, bellsprout, magnemite);
 
