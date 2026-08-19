@@ -1,0 +1,53 @@
+@startuml
+
+skinparam classAttributeIconSize 0
+
+class Main{
+    +main()
+}
+
+class Controlador{
+    -torneo : Torneo
+    -vista : Vista
+
+    +iniciar()
+}
+
+class Vista{
+    +menu()
+    +mostrar()
+}
+
+class Torneo{
+    -nombre : String
+    -lista : Lista
+
+    +agregarEquipo()
+    +buscarEquipo()
+    +mostrarResumen()
+}
+
+class Equipo{
+    -nombre : String
+    -lugar : int
+    -tirosEsquina : int
+    -juegosGanados : int
+    -juegosPerdidos : int
+    -tirosGol : int
+    -goles : int
+    -tarjetasAmarillas : int
+    -tarjetasRojas : int
+    -faltas : int
+
+    +getters()
+    +setters()
+}
+
+Main ....> Controlador
+
+Vista -* Controlador
+Torneo -* Controlador
+
+Torneo  o-  Equipo
+
+@enduml

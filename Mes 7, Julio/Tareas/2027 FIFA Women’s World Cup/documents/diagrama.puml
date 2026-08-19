@@ -1,0 +1,65 @@
+@startuml
+class Comprador{
+    -nombre: String
+    -email: String
+    -cantidadBoletos: int
+    -presupuesto: double
+    
+    +Comprador(nombre: String, email: String, cantidad: int, presupuesto: double)
+    +getNombre(): String
+    +getEmail(): String
+    +setEmail(email: String)
+    +getCantidadBoletos(): int
+    +setCantidadBoletos(cantidadBoletos: int)
+    +getPresupuesto(): double
+    +setPresupuesto(presupuesto: double)   
+}
+class Localidad{
+    -numero: int
+    -precio: double
+    -capacidad: int
+    -vendidos: int
+
+    +Localidad(numero: int, precio: double)
+    +hayEspacio(): boolean
+    +venderBoletos(cantidad: int)
+    +disponibles(): int
+    +getNumero(): int
+    +getRecaudacion(): double
+    +getPrecio(): double
+    +getVendidos(): int
+}
+class Ticket{
+    -numero: int
+
+    +Ticket()
+    +getNumero(): int
+}
+class SistemaVentas{
+    -compradorActual: Comprador
+    -localidades: Localidad[]
+
+    +SistemaVentas()
+    +nuevoComprador(nombre: String, email: String, cantidad: int, presupuesto: double)
+    +nuevaSolicitud()
+    +disponibilidadTotal(): Localidad[]
+    +disponibilidadLocalidad(localidad: int): Localidad
+    +reporteCaja(): double
+}
+class Vista{
+
+    +mostrarMenu(): int
+
+
+}
+class Main{
+    +main()
+}
+Main --> Vista
+Main --> SistemaVentas
+Vista --> SistemaVentas
+SistemaVentas o-- Comprador
+SistemaVentas *-- Localidad
+SistemaVentas ..> Ticket
+
+@enduml
