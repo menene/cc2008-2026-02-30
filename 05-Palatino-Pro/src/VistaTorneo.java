@@ -1,0 +1,33 @@
+import java.util.Scanner;
+
+public class VistaTorneo {
+    private Scanner sc = new Scanner(System.in);
+
+    public int mostrarMenu() {
+        System.out.println("\n===== MENU TORNEO =====");
+        System.out.println("1. Resumen general del torneo");
+        System.out.println("2. Consultar estadisticas de un equipo");
+        System.out.println("0. Salir");
+        System.out.print("Seleccione una opcion: ");
+
+        return Integer.parseInt(sc.nextLine());
+    }
+
+    public void resumen(Torneo t) {
+        System.out.println("\n----- RESUMEN GENERAL -----");
+        System.out.println(t);
+    }
+
+    public String leerNombreEquipo(Torneo t) {
+        System.out.println("\nEquipos disponibles:");
+        for (Equipo equipo : t.getEquipos()) {
+            System.out.println(equipo);
+        }
+        System.out.print("Escriba el nombre o alias del equipo: ");
+        return sc.nextLine();
+    }
+
+    public void estadisticasEquipo(Torneo t, String nombre) {
+        System.out.println("\n" + t.estadisticasEquipo(nombre));
+    }
+}
