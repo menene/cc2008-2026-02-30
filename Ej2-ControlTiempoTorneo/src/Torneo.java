@@ -8,7 +8,7 @@ public class Torneo {
 
     public Atleta getAtleta(int numeroParticipante){
         for (int i = 0; i < atletas.length; i++) {
-            if (atletas[i].numeroParticipante() == numeroParticipante){
+            if (atletas[i].getNumeroParticipante() == numeroParticipante){
                 return atletas[i];
             }
         }
@@ -20,7 +20,7 @@ public class Torneo {
         String resultado = "";
 
         for (int i = 0; i < atletas.length; i++) {
-            resultado += atletas[i].toString() + "\n";
+            resultado += atletas[i].getNumeroParticipante() + " - " + atletas[i].getNombre() + "\n";
         }
 
         return resultado;
