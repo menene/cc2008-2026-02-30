@@ -3,6 +3,6 @@ public class Main {
         
         ControladorTorneo controlador = new ControladorTorneo();
 
-        controlador.mostraMenuAtletas();
+        controlador.mostrarMenuAtletas();
     }
 }

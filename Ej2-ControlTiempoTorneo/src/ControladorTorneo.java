@@ -16,7 +16,7 @@ public class ControladorTorneo {
     }
 
     // Muestra los atletas disponibles y retorna el atleta seleccionado.
-    public void mostraMenuAtletas() {
+    public void mostrarMenuAtletas() {
 
         boolean salir = false;
 
@@ -112,7 +112,7 @@ public class ControladorTorneo {
         }
     }
 
-    public void modificarTiempo(float[] tiempos) {
+    private void modificarTiempo(float[] tiempos) {
 
         int intento = vista.pedirIntento();
 
