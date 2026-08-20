@@ -1,20 +1,28 @@
 public class Torneo {
-    private Atleta[] atletas; 
 
+    private Atleta[] atletas;
 
     public Torneo(Atleta[] atletas){
-
-        this.atletas = new Atleta[1];
-        atletas[0] = new Atleta("Juan", 17, 1, 10);
-    
+        this.atletas = atletas;
     }
+
     public Atleta getAtleta(int numeroParticipante){
+        for (int i = 0; i < atletas.length; i++) {
+            if (atletas[i].numeroParticipante() == numeroParticipante){
+                return atletas[i];
+            }
+        }
 
-        return atletas[(numeroParticipante - 1)];
+        return null;
     }
+
     public String toString(){
-        return "waza";
-    }
-        
+        String resultado = "";
 
+        for (int i = 0; i < atletas.length; i++) {
+            resultado += atletas[i].toString() + "\n";
+        }
+
+        return resultado;
+    }
 }
