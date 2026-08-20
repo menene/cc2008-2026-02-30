@@ -1,146 +1,96 @@
-public class Atleta {
-    //cantidad maxima de intentos permitidos para cada atleta
-    private static int MAX_INTENTOS = 10;
+import java.util.Scanner;
 
-    //atributos con la informacion personal del atleta
-    private String nombre;
-    private int numeroParticipante;
-    private int edad;
+public class VistaCarrera {
+    //scanner utilizado para leer todos los datos ingresados por el usuario
+    private Scanner scanner;
 
-    //arreglo que almacena los tiempos y contador de posiciones utilizadas
-    private double[] tiempos;
-    private int intentosRegistrados;
-
-    //constructor que inicializa al atleta sin intentos registrados
-    public Atleta(String nombre, int numeroParticipante, int edad) {
-        this.nombre = nombre;
-        this.numeroParticipante = numeroParticipante;
-        this.edad = edad;
-        this.tiempos = new double[MAX_INTENTOS];
-        this.intentosRegistrados = 0;
+    //constructor que prepara la lectura desde la consola
+    public VistaCarrera() {
+        scanner = new Scanner(System.in);
     }
 
-    //metodos para consultar los datos personales del atleta
-    public String getNombre() {
+    //muestra las nueve opciones disponibles en el sistema
+    public void mostrarMenu() {
+        System.out.println("\n--- Control de tiempos ---");
+        System.out.println("1. Nuevo atleta");
+        System.out.println("2. Registrar nuevo intento");
+        System.out.println("3. Consultar tiempos");
+        System.out.println("4. Consultar un intento");
+        System.out.println("5. Modificar tiempo");
+        System.out.println("6. Mostrar promedio");
+        System.out.println("7. Mostrar mejor y mayor tiempo");
+        System.out.println("8. Consultar intentos disponibles");
+        System.out.println("9. Salir");
+    }
+
+    //solicita y devuelve la opcion seleccionada en el menu
+    public int solicitarOpcionMenu() {
+        return leerEntero("Seleccione una opcion: ");
+    }
+
+    //solicita un nombre y evita que se ingrese una cadena vacia
+    public String solicitarNombreAtleta() {
+        String nombre;
+
+        do {
+            System.out.print("Ingrese el nombre del atleta: ");
+            nombre = scanner.nextLine().trim();
+
+            if (nombre.isEmpty()) {
+                mostrarMensaje("El nombre no puede estar vacio.");
+            }
+        } while (nombre.isEmpty());
+
         return nombre;
     }
 
-    public int getNumeroParticipante() {
-        return numeroParticipante;
+    //metodos para solicitar los datos necesarios al usuario
+    public int solicitarNumeroParticipante() {
+        return leerEntero("Ingrese el numero de participante: ");
     }
 
-    public int getEdad() {
-        return edad;
+    public int solicitarEdad() {
+        return leerEntero("Ingrese la edad del atleta: ");
     }
 
-    //registra el tiempo en la siguiente posicion disponible del arreglo
-    public boolean registrarIntento(double tiempo) {
-        //no se aceptan tiempos invalidos ni mas de 10 intentos
-        if (!esTiempoValido(tiempo) || intentosRegistrados >= MAX_INTENTOS) {
-            return false;
-        }
-
-        //el contador funciona como indice de la siguiente posicion disponible
-        tiempos[intentosRegistrados] = tiempo;
-        intentosRegistrados++;
-        return true;
+    public double solicitarTiempo() {
+        return leerDouble("Ingrese el tiempo en segundos: ");
     }
 
-    //devuelve una copia que contiene solamente los tiempos registrados
-    public double[] obtenerTiemposRegistrados() {
-        double[] tiemposRegistrados = new double[intentosRegistrados];
-
-        //se copia el arreglo para evitar que otras clases modifiquen el original
-        for (int i = 0; i < intentosRegistrados; i++) {
-            tiemposRegistrados[i] = tiempos[i];
-        }
-
-        return tiemposRegistrados;
+    public int solicitarNumeroIntento() {
+        return leerEntero("Ingrese el numero de intento: ");
     }
 
-    //obtiene el tiempo de un intento usando numeros del 1 al 10
-    public double getTiempo(int numeroIntento) {
-        if (!esIntentoRegistrado(numeroIntento)) {
-            return -1;
-        }
-
-        //se resta 1 porque los indices de los arreglos comienzan en 0
-        return tiempos[numeroIntento - 1];
+    //muestra cualquier resultado o notificacion del controlador
+    public void mostrarMensaje(String mensaje) {
+        System.out.println(mensaje);
     }
 
-    //modifica unicamente intentos registrados y con un tiempo valido
-    public boolean modificarTiempo(int numeroIntento, double nuevoTiempo) {
-        if (!esIntentoRegistrado(numeroIntento) || !esTiempoValido(nuevoTiempo)) {
-            return false;
-        }
+    //lee un entero y repite la solicitud cuando el formato es incorrecto
+    private int leerEntero(String mensaje) {
+        while (true) {
+            System.out.print(mensaje);
+            String entrada = scanner.nextLine().trim();
 
-        tiempos[numeroIntento - 1] = nuevoTiempo;
-        return true;
-    }
-
-    //calcula el promedio usando solo las posiciones registradas
-    public double calcularPromedio() {
-        if (intentosRegistrados == 0) {
-            return 0;
-        }
-
-        double suma = 0;
-        for (int i = 0; i < intentosRegistrados; i++) {
-            suma += tiempos[i];
-        }
-
-        return suma / intentosRegistrados;
-    }
-
-    //busca el tiempo menor porque representa el mejor resultado
-    public double obtenerMejorTiempo() {
-        if (intentosRegistrados == 0) {
-            return 0;
-        }
-
-        double mejorTiempo = tiempos[0];
-        for (int i = 1; i < intentosRegistrados; i++) {
-            if (tiempos[i] < mejorTiempo) {
-                mejorTiempo = tiempos[i];
+            try {
+                return Integer.parseInt(entrada);
+            } catch (NumberFormatException excepcion) {
+                mostrarMensaje("Entrada invalida. Debe ingresar un numero entero.");
             }
         }
-
-        return mejorTiempo;
     }
 
-    //busca el tiempo mas alto entre los intentos registrados
-    public double obtenerMayorTiempo() {
-        if (intentosRegistrados == 0) {
-            return 0;
-        }
+    //lee un numero decimal y repite la solicitud si no se puede convertir
+    private double leerDouble(String mensaje) {
+        while (true) {
+            System.out.print(mensaje);
+            String entrada = scanner.nextLine().trim();
 
-        double mayorTiempo = tiempos[0];
-        for (int i = 1; i < intentosRegistrados; i++) {
-            if (tiempos[i] > mayorTiempo) {
-                mayorTiempo = tiempos[i];
+            try {
+                return Double.parseDouble(entrada);
+            } catch (NumberFormatException excepcion) {
+                mostrarMensaje("Entrada invalida. Debe ingresar un numero.");
             }
         }
-
-        return mayorTiempo;
-    }
-
-    //devuelve la cantidad de intentos que ya se realizaron
-    public int getIntentosRegistrados() {
-        return intentosRegistrados;
-    }
-
-    //calcula cuantos espacios quedan disponibles en el arreglo
-    public int obtenerIntentosDisponibles() {
-        return MAX_INTENTOS - intentosRegistrados;
-    }
-
-    //verifica que el numero corresponda a un intento ya registrado
-    private boolean esIntentoRegistrado(int numeroIntento) {
-        return numeroIntento >= 1 && numeroIntento <= intentosRegistrados;
-    }
-
-    //rechaza valores menores o iguales a 0, infinitos y NaN
-    private boolean esTiempoValido(double tiempo) {
-        return Double.isFinite(tiempo) && tiempo > 0;
     }
 }
