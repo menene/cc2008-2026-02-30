@@ -49,6 +49,7 @@ public class VistaTorneo {
             6. Mostrar Mejor Y Mayor Tiempo
             7. Consultar Intentos Disponibles
             8. Cambiar Atleta
+
             0. Salir
             
             Seleccione una opción:

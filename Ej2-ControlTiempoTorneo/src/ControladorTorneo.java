@@ -131,7 +131,7 @@ public class ControladorTorneo {
         float nuevoTiempo = vista.pedirTiempo("Ingrese el nuevo tiempo: ");
 
         if (nuevoTiempo <= 0) {
-            vista.imprimirMensaje("El tiempo debe ser mayor a 0 XD.");
+            vista.imprimirMensaje("El tiempo debe ser mayor a 0 XD. No se modificó el tiempo.");
             return;
         }
 
@@ -198,7 +198,7 @@ public class ControladorTorneo {
         }
 
         if (cantidad == 0) {
-            vista.imprimirMensaje("No hay tiempos registrados :(");
+            vista.imprimirMensaje("No hay tiempos registrados para calcular el promedio :(");
             return;
         }
 
@@ -221,7 +221,7 @@ public class ControladorTorneo {
         }
 
         if (primeraPosicion == -1) {
-            vista.imprimirMensaje("No hay tiempos registrados :(");
+            vista.imprimirMensaje("No hay tiempos registrados para mostrar el mejor y el mayor tiempo :(");
             return;
         }
 
