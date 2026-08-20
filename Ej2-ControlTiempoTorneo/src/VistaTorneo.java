@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class VistaTorneo {
     public Scanner sc;
-
+    int error = 0;
     public VistaTorneo(){
         this.sc = new Scanner(System.in);
     }
@@ -24,10 +24,23 @@ public class VistaTorneo {
             """,
             datosAtletas
         );
+        int numeroParticipante = 0;
+        do{
+         System.out.print(mensaje);
+         if (sc.hasNextInt()) {
+            
+            numeroParticipante = sc.nextInt();
+             sc.nextLine();
+             error = 0;
 
-        System.out.print(mensaje);
-        int numeroParticipante = sc.nextInt();
-        sc.nextLine();
+            } else {
+             error = 1;
+             sc.nextLine(); 
+             System.out.println("Ingrese un número válido. WAZA ");
+
+            }
+        } while (error != 0);
+        
 
         return numeroParticipante;
     }
@@ -55,17 +68,48 @@ public class VistaTorneo {
             """,
             datosAtleta
         );
-        System.out.print(mensaje);
-        int opcion = sc.nextInt();
-        sc.nextLine();
+        int opcion = 0;
+
+        do{
+         System.out.print(mensaje);
+         if (sc.hasNextInt()) {
+            
+            opcion = sc.nextInt();
+             sc.nextLine();
+             error = 0;
+
+            } else {
+             error = 1;
+             sc.nextLine(); 
+             System.out.println("Ingrese un número válido. UnU ");
+
+            }
+        } while (error != 0);
+        
         return opcion;
     }
 
     public float pedirTiempo(String mensaje) {
-        System.out.print(mensaje);
+    
+        
+        float tiempo = 0;
 
-        float tiempo = sc.nextFloat();
-        sc.nextLine();
+        do{
+         System.out.print(mensaje);
+         if (sc.hasNextFloat()) {
+            
+            tiempo = sc.nextFloat();
+             sc.nextLine();
+             error = 0;
+
+            } else {
+             error = 1;
+             sc.nextLine(); 
+             System.out.println("Ingrese un número válido. Genio ");
+
+            }
+        } while (error != 0);
+        
 
         return tiempo;
     }
@@ -76,11 +120,23 @@ public class VistaTorneo {
     }
 
     public int pedirIntento() {
-        System.out.print("Ingrese el número de intento: ");
+        
+        int intento = 0;
 
-        int intento = sc.nextInt();
-        sc.nextLine();
+         do{
+         System.out.print("Ingrese el número de intento: ");
+         if (sc.hasNextInt()) {
+            intento = sc.nextInt();
+             sc.nextLine();
+             error = 0;
 
+            } else {
+             error = 1;
+             sc.nextLine(); 
+             System.out.println("Ingrese un número válido. ( ͡° ͜ʖ ͡°)");
+
+            }
+        } while (error != 0);
         return intento;
     }
 
