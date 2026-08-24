@@ -26,7 +26,7 @@ public class Main {
         while (continuar) {
             System.out.println("\n===== DEMOSTRACION DE EXCEPCIONES =====");
             System.out.println("1. Excepcion MANEJADA        (try / catch / finally)");
-            System.out.println("2. Excepcion PROPAGADA       (nace abajo y se atrapa arriba)");
+            System.out.println("2. Excepcion PROPAGADA       (nace abajo y se atrapa arriba: sin throws y con throws)");
             System.out.println("3. Excepcion PERSONALIZADA   (SaldoInsuficienteException)");
             System.out.println("4. Excepcion SIN MANEJAR     (viaja hasta main y termina el programa)");
             System.out.println("0. Salir");

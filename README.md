@@ -16,7 +16,7 @@ La rama `main` contiene los ejemplos vistos en clase. Cada carpeta es un proyect
 | `03-Aliases` | Referencias y alias: `==` contra `equals()`, objetos en memoria |
 | `04-Palatino-Plus` | Sobrescritura de `toString()` y búsqueda por nombre o alias |
 | `05-Palatino-Pro` | Enums: `NivelRendimiento` y clasificación por efectividad |
-| `06-Excepciones` | Manejo, propagación y creación de excepciones propias |
+| `06-Excepciones` | Manejo, propagación (`throws`, checked y unchecked) y excepciones propias |
 | `07-Palatino-Ultra` | `ArrayList`: agregar y eliminar equipos en tiempo de ejecución |
 
 ### Cómo compilar y ejecutar cualquier ejemplo
@@ -28,48 +28,87 @@ javac -d bin src/*.java
 java -cp bin Main
 ```
 
+### Cómo traer los ejemplos nuevos de clase
+
+El repositorio del curso crece cada semana. Para que su copia local tenga los ejemplos nuevos, se hace `pull` de la rama `main` del repositorio del curso, que se conoce como **`upstream`**.
+
+Primero, una sola vez, se registra ese repositorio como remoto:
+
+```bash
+# Ver que remotos tiene configurados
+git remote -v
+
+# Registrar el repositorio del curso como upstream (solo la primera vez)
+git remote add upstream git@github.com:menene/cc2008-2026-02-30.git
+```
+
+De ahí en adelante, **antes de empezar cualquier entrega**:
+
+```bash
+git checkout main
+git pull upstream main
+```
+
+Eso baja los ejemplos nuevos sin tocar sus entregas. Si `git remote add` responde `error: remote upstream already exists`, ya estaba configurado y puede seguir directo con el `git pull upstream main`.
+
+> Si clonó directamente el repositorio del curso, su `origin` **ya es** el repositorio del curso y `git pull origin main` hace exactamente lo mismo. El nombre `upstream` se usa para dejar claro de dónde viene el código de clase.
+
 ---
 
 ## Entrega de tareas y laboratorios
 
-Cada entrega vive en **su propia rama**, creada desde cero y sin historial de otras entregas, y se entrega abriendo un **Pull Request** hacia `main`. No se trabaja sobre `main` ni sobre la rama de otro compañero.
+Para cada entrega **el profesor crea una rama por estudiante y por ejercicio**. Esa rama llega vacía y es el **destino** de la entrega. El estudiante no la crea ni trabaja directamente sobre ella: crea a partir de ella su propia **rama de trabajo**, y desde ahí abre el **Pull Request**.
 
-### 1. Nomenclatura de la rama
+> **`main` no se toca nunca.** No se commitea en `main`, no se hace push a `main` y **ningún Pull Request va hacia `main`**. `main` es solo la referencia de los ejemplos de clase.
+
+Las dos ramas de cada entrega:
+
+| Rama | Quién la crea | Para qué sirve |
+|---|---|---|
+| `26031-alan-turing-lab3` | **el profesor** (script) | Rama vacía. Es el `base` del PR: el destino de la entrega. |
+| `26031-alan-turing-lab3-entrega` | **el estudiante** | Rama de trabajo. Lleva el código y es el `compare` del PR. |
+
+### 1. Nomenclatura de las ramas
+
+La rama que crea el profesor sigue este patrón:
 
 ```
 carnet-nombre-apellido-tarea
 ```
 
-| Ejemplo | Entrega |
-|---|---|
-| `12345-alan-turing-lab3` | Laboratorio 3 |
-| `12345-alan-turing-hdt1` | Hoja de trabajo 1 |
-| `12345-alan-turing-pro1` | Proyecto |
+| Rama del profesor (`base`) | Rama del estudiante (`compare`) | Entrega |
+|---|---|---|
+| `26031-alan-turing-lab3` | `26031-alan-turing-lab3-entrega` | Laboratorio 3 |
+| `26031-alan-turing-hdt1` | `26031-alan-turing-hdt1-entrega` | Hoja de trabajo 1 |
+| `26031-alan-turing-pro1` | `26031-alan-turing-pro1-entrega` | Proyecto |
 
-Todo en minúsculas, sin tildes, sin espacios y separado con guiones.
+La rama de trabajo es **exactamente el nombre de la rama del profesor más el sufijo `-entrega`**. Todo en minúsculas, sin tildes, sin espacios y separado con guiones.
 
-### 2. Crear la rama vacía
+### 2. Crear la rama de trabajo
 
-Una rama *huérfana* (`--orphan`) nace sin historial y sin archivos: es una hoja en blanco, no una copia de `main`.
+La rama que creó el profesor es una rama *huérfana*: nace sin historial y sin archivos, es una hoja en blanco y no una copia de `main`. Al crear la rama de trabajo a partir de ella, la carpeta queda vacía y lista para la entrega.
 
 ```bash
-# Partir siempre de main actualizado
-git checkout main
-git pull
+# Traer las ramas nuevas que creo el profesor
+git fetch origin
 
-# Crear la rama nueva sin historial
-git checkout --orphan 12345-alan-turing-lab3
+# Pararse en la rama que le asignaron (llega vacia)
+git checkout 26031-alan-turing-lab3
 
-# Vaciar el árbol de trabajo que se heredó de main
-git rm -rf .
+# Crear SU rama de trabajo a partir de ella
+git checkout -b 26031-alan-turing-lab3-entrega
 ```
 
-Después de estos comandos la carpeta queda vacía y lista para la entrega.
+Si `git checkout` responde `error: pathspec ... did not match any file(s) known to git`, la rama todavía no existe o el nombre está mal escrito: revise el nombre exacto en GitHub antes de seguir.
+
+**Todos los commits van en la rama `-entrega`.** La rama del profesor se queda vacía: es el destino del PR, no el lugar de trabajo.
 
 ### 3. Estructura obligatoria
 
+Esta es la estructura que debe tener la rama `-entrega`, en su raíz:
+
 ```
-12345-alan-turing-lab3/
+26031-alan-turing-lab3-entrega/
 ├── README.md
 ├── docs/
 │   ├── analisis.pdf        <- el mismo documento que sube a Canvas
@@ -105,7 +144,7 @@ En la raíz de la rama, no dentro de `docs/`. Es lo primero que se ve al abrir l
 # Laboratorio 3 - Título de la tarea
 
 **Nombre completo:** Alan Mathison Turing
-**Carné:** 12345
+**Carné:** 26031
 
 ## Descripción
 Explicación de la tarea: qué problema resuelve el programa, qué clases lo
@@ -118,13 +157,20 @@ java -cp bin Main
 ```
 ````
 
-### 4. Subir la rama
+### 4. Subir la rama de trabajo
+
+El push va **a su rama `-entrega`**, nunca a `main` ni a la rama vacía del profesor:
 
 ```bash
+# Confirme en que rama esta parado antes de hacer push
+git branch --show-current      # debe decir 26031-alan-turing-lab3-entrega
+
 git add .
-git commit -m "Lab 3 - Alan Turing 12345"
-git push -u origin 12345-alan-turing-lab3
+git commit -m "Lab 3 - Alan Turing 26031"
+git push -u origin 26031-alan-turing-lab3-entrega
 ```
+
+Si `git branch --show-current` dice `main` o dice el nombre de la rama del profesor sin el sufijo `-entrega`, **no haga push**: regrese al paso 2 y párese en la rama correcta.
 
 Subir la rama todavía no es entregar: falta el Pull Request del paso 5.
 
@@ -139,16 +185,18 @@ git add -f bin
 
 > **El Pull Request es la entrega.** Sin PR, o con el PR mal hecho, la nota es **0**. Subir la rama no es entregar: la entrega se registra cuando el PR existe, apunta a donde debe y está bien identificado.
 
-El PR va **desde su rama hacia `main`**, dentro del repositorio del curso.
+El PR va **desde su rama `-entrega` hacia la rama que creó el profesor**, dentro del repositorio del curso. **Nunca hacia `main`.**
 
 | Campo | Valor |
 |---|---|
 | Repositorio | el del curso, no un fork |
-| `base` (destino) | la rama propia en el repo de la clase, por ejemplo `12345-alan-turing-lab3` (NUNCA AL MAIN) |
-| `compare` (origen) | su rama, por ejemplo `12345-alan-turing-lab3` |
-| Título | **la misma nomenclatura de la rama**: `12345-alan-turing-lab3` |
+| `base` (destino) | la rama que creó el profesor: `26031-alan-turing-lab3` — **NUNCA `main`** |
+| `compare` (origen) | su rama de trabajo: `26031-alan-turing-lab3-entrega` |
+| Título | **el nombre de la rama del profesor**: `26031-alan-turing-lab3` |
 
-Desde la web: GitHub → pestaña **Pull requests** → **New pull request** → seleccione `base: main` y `compare: su-rama` → **Create pull request**.
+Desde la web: GitHub → pestaña **Pull requests** → **New pull request** → seleccione `base: 26031-alan-turing-lab3` y `compare: 26031-alan-turing-lab3-entrega` → **Create pull request**.
+
+> GitHub propone `base: main` por defecto. **Hay que cambiarlo a mano.** Antes de darle a *Create pull request*, lea la línea que aparece arriba del formulario: debe decir `base: 26031-alan-turing-lab3 ← compare: 26031-alan-turing-lab3-entrega`. Si ahí aparece `main`, el PR está mal y la nota es 0.
 
 En la descripción del PR van, como mínimo, **nombre completo, carné y qué entrega es**.
 
@@ -158,24 +206,28 @@ En la descripción del PR van, como mínimo, **nombre completo, carné y qué en
 
 - No abrir el PR, o abrirlo después de la fecha límite.
 - Abrir el PR desde un fork personal en lugar del repositorio del curso.
-- Escoger mal el `base`: apuntar a la rama de otro compañero en vez de a `main`.
+- **Escoger mal el `base`: apuntar a `main`** o a la rama de otro compañero, en vez de a la rama que le creó el profesor.
 - Escoger mal el `compare`: abrir el PR desde `main` o desde la rama de alguien más.
+- Commitear el trabajo directamente en `main` o en la rama del profesor en vez de en la rama `-entrega`.
 - Título que no respeta la nomenclatura `carnet-nombre-apellido-tarea`.
 - Abrir el PR sin haber hecho `push`, o con archivos faltando en la rama.
-- Hacer merge del PR por su cuenta.
+- Hacer merge del PR por su cuenta, o hacer merge de cualquier cosa hacia `main`.
 
-Como las ramas de entrega son huérfanas, el PR muestra todos los archivos como nuevos. Eso es lo esperado.
+Como la rama del profesor está vacía, el PR muestra todos los archivos como nuevos. Eso es lo esperado.
 
 ### 6. Antes de entregar
 
-- [ ] La rama sigue la nomenclatura `carnet-nombre-apellido-tarea`.
+- [ ] Hice `git pull upstream main` antes de empezar, para tener los ejemplos de clase al día.
+- [ ] Mi rama de trabajo se llama igual que la rama del profesor **más el sufijo `-entrega`**.
+- [ ] **No hay ni un commit mío en `main`** ni en la rama vacía del profesor.
 - [ ] La rama contiene **solo** su entrega: nada de las carpetas de clase ni de entregas anteriores.
 - [ ] Existen las tres carpetas: `docs`, `src` y `bin`.
 - [ ] `docs/` tiene el PDF del análisis y el UML.
 - [ ] El `README.md` tiene nombre completo, carné y la explicación de la tarea.
 - [ ] El código compila con `javac -d bin src/*.java` sin errores.
-- [ ] El `push` se hizo a la rama correcta y los archivos se ven en GitHub.
-- [ ] **El Pull Request está abierto**, con `base: main` y `compare:` su rama.
-- [ ] **El título del PR usa la misma nomenclatura de la rama.**
+- [ ] El `push` se hizo a la rama `-entrega` y los archivos se ven en GitHub.
+- [ ] **El Pull Request está abierto**, con `base:` la rama del profesor y `compare:` su rama `-entrega`.
+- [ ] **El `base` del PR NO es `main`.** Lo verifiqué leyendo la línea de arriba del PR.
+- [ ] **El título del PR usa la misma nomenclatura de la rama del profesor.**
 - [ ] La descripción del PR tiene nombre completo, carné y la tarea que entrega.
 - [ ] El PR quedó abierto, sin merge y sin cerrar.
