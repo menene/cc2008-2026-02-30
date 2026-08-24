@@ -144,7 +144,7 @@ El PR va **desde su rama hacia `main`**, dentro del repositorio del curso.
 | Campo | Valor |
 |---|---|
 | Repositorio | el del curso, no un fork |
-| `base` (destino) | `main` |
+| `base` (destino) | la rama propia en el repo de la clase, por ejemplo `12345-alan-turing-lab3` (NUNCA AL MAIN) |
 | `compare` (origen) | su rama, por ejemplo `12345-alan-turing-lab3` |
 | Título | **la misma nomenclatura de la rama**: `12345-alan-turing-lab3` |
 
