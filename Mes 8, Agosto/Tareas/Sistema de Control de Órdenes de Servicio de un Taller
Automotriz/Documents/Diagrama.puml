@@ -1,0 +1,57 @@
+@startuml
+
+'Algún cambio realizado a referencia con el análisis se explica en el programa directamente
+
+class Order{
+    -orderNumber: int 
+    -ownerName: String 
+    -vehicleLicensePlate: String
+    -serviceDescription: String
+    -estimatedCost: double
+
+    +Order(orderNumber: int, ownerName: String, vehicleLicensePlate: String, serviceDescription: String, estimatedCost: double): Order
+    +getOwnerName(): String
+    +getOrderNumber(): int
+    +getVehicleLicensePlate(): String
+    +getServiceDescription(): String
+    +getEstimatedCost(): double
+    +setNewServiceDescription(serviceDescription: String)
+    +setNewEstimatedCost(estimatedCost: int)
+}
+class OrdersController{
+    -orders: List<Order>
+
+    +OrdersController(): OrdersController
+    +addOrder(order: Order)
+    +searchOrder(orderNumber: int): Order
+    +updateOrder(serviceDescription: String, estimatedCost: double, orderNumber: int)
+    +cancelOrder(orderNumber: int)
+    +searchOrdersByVehicleLicensePlate(vehicleLicensePlate: String): List<Order>
+    +getBigestEstimatedCost(): double
+    +getOrdersCostsAverage(): double
+    +getTotalRegisteredOrders(): int
+    +getTotalOrdersValue(): double
+    +getOrders(): List<Order>
+}
+class View{
+    +getNewOrder(): Order
+    +getOrderNumber(): int
+    +getNewEstimatedOrderCost(estimatedCost: double): double
+    +getNewServiceDescription(serviceDescription: String): String
+    +getVehicleLicensePlate(): String
+    +showMenu(): int
+    +showResult(mesage: String, value: double)
+    +showOrders(oders: List<Order>)
+    +showOrder(order: Order)
+    +showException(e: Exception)
+}
+class Main{
+    +main(String[] args): public static
+}
+
+Main ...> View
+Main ...> OrdersController
+View ---> OrdersController
+Order ---o OrdersController
+
+@enduml
