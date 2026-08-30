@@ -1,0 +1,106 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="Page-1" id="VmywYZtLhwVgmx_8aerC">
+    <mxGraphModel dx="1688" dy="2025" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="42UZTfDA3jh0QrgetHTg-1" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fillColor=light-dark(#FFFFFF,#CCCCCC);" value="Main" vertex="1">
+          <mxGeometry height="60" width="160" x="670" y="-110" as="geometry" />
+        </mxCell>
+        <mxCell id="42UZTfDA3jh0QrgetHTg-3" parent="42UZTfDA3jh0QrgetHTg-1" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" value="" vertex="1">
+          <mxGeometry height="8" width="160" y="26" as="geometry" />
+        </mxCell>
+        <mxCell id="42UZTfDA3jh0QrgetHTg-4" parent="42UZTfDA3jh0QrgetHTg-1" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="+ main(args: String[]): void" vertex="1">
+          <mxGeometry height="26" width="160" y="34" as="geometry" />
+        </mxCell>
+        <mxCell id="42UZTfDA3jh0QrgetHTg-5" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fillColor=light-dark(#FFFFFF,#FF3333);" value="GestorOrdenes" vertex="1">
+          <mxGeometry height="240" width="630" x="435" y="420" as="geometry" />
+        </mxCell>
+        <mxCell id="42UZTfDA3jh0QrgetHTg-6" parent="42UZTfDA3jh0QrgetHTg-5" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="- ordenes: List&amp;lt;OrdenServicio&amp;gt;" vertex="1">
+          <mxGeometry height="26" width="630" y="26" as="geometry" />
+        </mxCell>
+        <mxCell id="42UZTfDA3jh0QrgetHTg-7" parent="42UZTfDA3jh0QrgetHTg-5" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" value="" vertex="1">
+          <mxGeometry height="8" width="630" y="52" as="geometry" />
+        </mxCell>
+        <mxCell id="42UZTfDA3jh0QrgetHTg-8" parent="42UZTfDA3jh0QrgetHTg-5" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="&lt;div&gt;+ GestorOrdenes()&lt;/div&gt;&lt;div&gt;+ agregarOrden(orden: OrdenServicio): void&lt;/div&gt;&lt;div&gt;+ obtenerOrdenes(): List&amp;lt;OrdenServicio&amp;gt;&lt;/div&gt;&lt;div&gt;+ buscarOrden(numeroOrden: int): OrdenServicio&lt;/div&gt;&lt;div&gt;+ modificarOrden(numeroOrden: int, descripcionServicio: String, costoEstimado: double): void&lt;/div&gt;&lt;div&gt;+ cancelarOrden(numeroOrden: int): void&lt;/div&gt;&lt;div&gt;+ buscarPorPlaca(placa: String): List&amp;lt;OrdenServicio&amp;gt;&lt;/div&gt;&lt;div&gt;+ calcularTotal(): double&lt;/div&gt;&lt;div&gt;+ calcularPromedio(): double&lt;/div&gt;&lt;div&gt;+ obtenerOrdenMayorCosto(): OrdenServicio&lt;/div&gt;&lt;div&gt;+ cantidadOrdenes(): int&lt;/div&gt;" vertex="1">
+          <mxGeometry height="180" width="630" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="42UZTfDA3jh0QrgetHTg-11" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fillColor=light-dark(#FFFFFF,#4D9900);" value="OrdenServicio" vertex="1">
+          <mxGeometry height="278" width="670" x="1240" y="420" as="geometry" />
+        </mxCell>
+        <mxCell id="42UZTfDA3jh0QrgetHTg-12" parent="42UZTfDA3jh0QrgetHTg-11" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="&lt;div&gt;- numeroOrden: int&lt;/div&gt;&lt;div&gt;- propietario: String&lt;/div&gt;&lt;div&gt;- placa: String&lt;/div&gt;&lt;div&gt;- descripcionServicio: String&lt;/div&gt;&lt;div&gt;- costoEstimado: double&lt;/div&gt;" vertex="1">
+          <mxGeometry height="94" width="670" y="26" as="geometry" />
+        </mxCell>
+        <mxCell id="42UZTfDA3jh0QrgetHTg-13" parent="42UZTfDA3jh0QrgetHTg-11" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" value="" vertex="1">
+          <mxGeometry height="8" width="670" y="120" as="geometry" />
+        </mxCell>
+        <mxCell id="42UZTfDA3jh0QrgetHTg-14" parent="42UZTfDA3jh0QrgetHTg-11" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="&lt;div&gt;+ OrdenServicio(numeroOrden: int, propietario: String, placa: String, descripcionServicio: String, costoEstimado: double)&lt;/div&gt;&lt;div&gt;+ getNumeroOrden(): int&lt;/div&gt;&lt;div&gt;+ getPropietario(): String&lt;/div&gt;&lt;div&gt;+ getPlaca(): String&lt;/div&gt;&lt;div&gt;+ getDescripcionServicio(): String&lt;/div&gt;&lt;div&gt;+ getCostoEstimado(): double&lt;/div&gt;&lt;div&gt;+ setDescripcionServicio(descripcionServicio: String): void&lt;/div&gt;&lt;div&gt;+ setCostoEstimado(costoEstimado: double): void&lt;/div&gt;&lt;div&gt;+ toString(): String&lt;/div&gt;" vertex="1">
+          <mxGeometry height="150" width="670" y="128" as="geometry" />
+        </mxCell>
+        <mxCell id="42UZTfDA3jh0QrgetHTg-15" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fillColor=light-dark(#FFFFFF,#3333FF);" value="TallerControlador" vertex="1">
+          <mxGeometry height="290" width="370" x="565" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="42UZTfDA3jh0QrgetHTg-16" parent="42UZTfDA3jh0QrgetHTg-15" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="&lt;div&gt;- gestor: GestorOrdenes&lt;/div&gt;&lt;div&gt;- vista: TallerVista&lt;/div&gt;" vertex="1">
+          <mxGeometry height="57" width="370" y="26" as="geometry" />
+        </mxCell>
+        <mxCell id="42UZTfDA3jh0QrgetHTg-17" parent="42UZTfDA3jh0QrgetHTg-15" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" value="" vertex="1">
+          <mxGeometry height="8" width="370" y="83" as="geometry" />
+        </mxCell>
+        <mxCell id="42UZTfDA3jh0QrgetHTg-18" parent="42UZTfDA3jh0QrgetHTg-15" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="&lt;div&gt;+ TallerControlador(gestor: GestorOrdenes, vista: TallerVista)&lt;/div&gt;&lt;div&gt;+ iniciar(): void&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;- registrarOrden(): void&lt;/div&gt;&lt;div&gt;- consultarOrdenes(): void&lt;/div&gt;&lt;div&gt;- buscarOrden(): void&lt;/div&gt;&lt;div&gt;- modificarOrden(): void&lt;/div&gt;&lt;div&gt;- cancelarOrden(): void&lt;/div&gt;&lt;div&gt;- consultarPorPlaca(): void&lt;/div&gt;&lt;div&gt;- mostrarReporteCostos(): void&lt;/div&gt;&lt;div&gt;- mostrarOrdenMayorCosto(): void&lt;/div&gt;&lt;div&gt;- mostrarCantidadOrdenes(): void&lt;/div&gt;" vertex="1">
+          <mxGeometry height="199" width="370" y="91" as="geometry" />
+        </mxCell>
+        <mxCell id="42UZTfDA3jh0QrgetHTg-19" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fillColor=light-dark(#FFFFFF,#3333FF);" value="TallerVista" vertex="1">
+          <mxGeometry height="218" width="320" x="1060" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="42UZTfDA3jh0QrgetHTg-20" parent="42UZTfDA3jh0QrgetHTg-19" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="- scanner: Scanner" vertex="1">
+          <mxGeometry height="34" width="320" y="26" as="geometry" />
+        </mxCell>
+        <mxCell id="42UZTfDA3jh0QrgetHTg-21" parent="42UZTfDA3jh0QrgetHTg-19" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" value="" vertex="1">
+          <mxGeometry height="8" width="320" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="42UZTfDA3jh0QrgetHTg-22" parent="42UZTfDA3jh0QrgetHTg-19" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="&lt;div&gt;+ TallerVista()&lt;/div&gt;&lt;div&gt;+ mostrarMenu(): void&lt;/div&gt;&lt;div&gt;+ solicitarDato(mensaje: String): String&lt;/div&gt;&lt;div&gt;+ solicitarEntero(mensaje: String): int&lt;/div&gt;&lt;div&gt;+ solicitarDouble(mensaje: String): double&lt;/div&gt;&lt;div&gt;+ mostrarMensaje(mensaje: String): void&lt;/div&gt;&lt;div&gt;+ mostrarOrden(orden: OrdenServicio): void&lt;/div&gt;&lt;div&gt;+ mostrarOrdenes(ordenes: List&amp;lt;OrdenServicio&amp;gt;): void&lt;/div&gt;" vertex="1">
+          <mxGeometry height="150" width="320" y="68" as="geometry" />
+        </mxCell>
+        <mxCell id="0M4EfJ11n11y6rqw-Rsk-3" edge="1" parent="1" source="42UZTfDA3jh0QrgetHTg-1" style="endArrow=block;dashed=1;endFill=0;endSize=12;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="42UZTfDA3jh0QrgetHTg-15" value="">
+          <mxGeometry relative="1" width="160" as="geometry">
+            <mxPoint x="660" y="50" as="sourcePoint" />
+            <mxPoint x="820" y="50" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="0M4EfJ11n11y6rqw-Rsk-6" edge="1" parent="1" source="42UZTfDA3jh0QrgetHTg-11" style="endArrow=diamondThin;endFill=0;endSize=24;html=1;rounded=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" target="42UZTfDA3jh0QrgetHTg-8" value="">
+          <mxGeometry relative="1" width="160" as="geometry">
+            <mxPoint x="1080" y="330" as="sourcePoint" />
+            <mxPoint x="1068.78" y="559.74" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="0M4EfJ11n11y6rqw-Rsk-11" edge="1" parent="1" source="42UZTfDA3jh0QrgetHTg-18" style="endArrow=block;dashed=1;endFill=0;endSize=12;html=1;rounded=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;exitX=0.502;exitY=0.978;exitDx=0;exitDy=0;exitPerimeter=0;" target="42UZTfDA3jh0QrgetHTg-5" value="">
+          <mxGeometry relative="1" width="160" as="geometry">
+            <mxPoint x="730" y="340" as="sourcePoint" />
+            <mxPoint x="1240" y="330" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="0M4EfJ11n11y6rqw-Rsk-12" edge="1" parent="1" source="42UZTfDA3jh0QrgetHTg-15" style="endArrow=block;dashed=1;endFill=0;endSize=12;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" target="42UZTfDA3jh0QrgetHTg-22" value="">
+          <mxGeometry relative="1" width="160" as="geometry">
+            <mxPoint x="1100" y="330" as="sourcePoint" />
+            <mxPoint x="1260" y="330" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="0M4EfJ11n11y6rqw-Rsk-13" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="1" vertex="1">
+          <mxGeometry height="30" width="60" x="1050" y="520" as="geometry" />
+        </mxCell>
+        <mxCell id="0M4EfJ11n11y6rqw-Rsk-14" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="0..*" vertex="1">
+          <mxGeometry height="30" width="60" x="1180" y="510" as="geometry" />
+        </mxCell>
+        <mxCell id="0M4EfJ11n11y6rqw-Rsk-15" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Colección dinámica: ordenes se declara como List&amp;lt;OrdenServicio&amp;gt; y se inicializa con new ArrayList&amp;lt;OrdenServicio&amp;gt;(), para que se pueda almacenar una cantidad dinámica" vertex="1">
+          <mxGeometry height="30" width="410" x="740" y="690" as="geometry" />
+        </mxCell>
+        <mxCell id="0M4EfJ11n11y6rqw-Rsk-16" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="para las excepciones: voy a usar try-catch para controlar entradas numéricas inválidas y operaciones sobre órdenes inexistentes. También finally en el proceso de búsqueda para ejecutar una acción independientemente de su resultado." vertex="1">
+          <mxGeometry height="30" width="440" x="270" y="-10" as="geometry" />
+        </mxCell>
+        <mxCell id="0M4EfJ11n11y6rqw-Rsk-17" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="&lt;div&gt;Ejercicio 3&lt;/div&gt;Laura Morales&amp;nbsp;&lt;div&gt;26281&lt;/div&gt;" vertex="1">
+          <mxGeometry height="30" width="230" x="1090" y="-90" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
