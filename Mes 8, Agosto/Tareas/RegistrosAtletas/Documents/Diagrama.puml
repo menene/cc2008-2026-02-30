@@ -1,0 +1,53 @@
+@startuml
+class Main{
+    +main(String[] args): void
+}
+class View{
+    -contoller: Controller
+    -scanner: Scanner
+
+    +View()
+    +showMenu()
+    +registerAthlete()
+    +registerAttempt()
+    +modifyAttempt()
+    +showAllAthletes()
+    +showWinner()
+}
+class Controller{
+    -athletes: Athlete[5]
+    -athletesCounter: int
+
+    +Controller()
+    +addAthlete(p1: Athlete)
+    +getOverwallAverage(): double
+    +getAthlete(p1: int): Athlete
+    -findAthleteIndex(p1: int): int
+    +hasSpace(): boolean
+    +getWinner(): Athlete
+    +getResults():String
+}
+class Athlete {
+    -name: String
+    -number: int
+    -age: int
+    -attemptTimes: int[10]
+    -attemptsCounter: int
+
+    +Athlete(name: String, number: int, age: int)
+    +getNumber(): int
+    +getName(): String
+    +getAge(): int
+    +addAttempt(time: int)
+    +changeAttemptTime(attempt: int, time: int)
+    +getAttemptTime(attempt: int): int
+    +getAvailableAttempts():int
+    +getAttempts(): int[]
+    +getAverageTime(): double
+    getBestTime(): int
+}
+Controller o-- Athlete
+Main ..> Controller
+View ..> Controller
+Main ..> View
+@enduml
