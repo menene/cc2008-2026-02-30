@@ -22,12 +22,12 @@ public class Atleta {
         return this.edad;
     }
 
-    public int numeroParticipante() {
+    public int getNumeroParticipante() {
         return this.numeroParticipante;
     }
 
     public float[] getTiempos() {
-        return this.getTiempos();
+        return this.tiempos;
     }
 
     // Calcula la cantidad de intentos realizados recorriendo la lista de tiempos y contando aquellos valores superiores a 0.
@@ -61,7 +61,6 @@ public class Atleta {
             Edad:                    %d
             Intentos realizados:     %d
             Intentos disponibles:    %d
-            +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-
             """,
             nombre,
             numeroParticipante,

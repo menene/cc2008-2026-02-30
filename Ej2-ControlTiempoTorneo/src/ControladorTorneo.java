@@ -12,36 +12,45 @@ public class ControladorTorneo {
         atletas[1] = new Atleta("Daniel Nájera", 67, 6767, 10);
 
         this.torneo = new Torneo(atletas);;
-        this.vista = new VistaTorneo;
+        this.vista = new VistaTorneo();
     }
 
     // Muestra los atletas disponibles y retorna el atleta seleccionado.
-    public void mostraMenuAtletas() {
-        int opcion;
+    public void mostrarMenuAtletas() {
 
-        do {
-            opcion = 0;
+        boolean salir = false;
 
-            if (opcion > 0) {
+        while (!salir) {
+            int numeroAtleta = vista.mostrarMenuAtletas(torneo.toString());
 
-                Atleta atleta = null;
+            if (numeroAtleta == 0) {
+                salir = true;
+            } else {
+                Atleta atleta = torneo.getAtleta(numeroAtleta);
 
                 if (atleta != null) {
-                    iniciarTomaTiempos(atleta);
+                    boolean terminarPrograma = iniciarTomaTiempos(atleta);
+
+                    if (terminarPrograma) {
+                        salir = true;
+                    }
+                } else {
+                    vista.imprimirMensaje("Ingresó una opción inválida. Inténtelo otra vez :)");
                 }
             }
-
-        } while (opcion != 0);
+        }
     }
 
     // Maneja el menú principal
-    public void iniciarTomaTiempos(Atleta atleta) {
+    public boolean iniciarTomaTiempos(Atleta atleta) {
         
         int opcion;
 
         do {
             opcion = mostrarMenu(atleta.toString());
             switch (opcion) {
+                case 0: 
+                    return true;
                 case 1: 
                     registrarTiempo(atleta.getTiempos(), atleta.getDisponibles() > 0);
                     break;
@@ -61,34 +70,33 @@ public class ControladorTorneo {
                     mejorYMayorTiempo(atleta.getTiempos());
                     break;
                 case 7: 
-                    // Para salir del menú del atleta
+                    mostrarIntentosDisponibles(atleta);
                     break;
+                case 8:
+                    return false;
                 default:
-                    //PENDIENTE
+                    vista.imprimirMensaje("Ingresó una opción inválida. Inténtelo otra vez UwU");
                     break;
             }
-        } while (opcion != 7);
+        } while (true);
     }
 
     // Llama a la vista para que muestre el menú y retorne la opción escogida. 
     private int mostrarMenu(String datosAtleta) {
-        //PENDIENTE
-        return 0;
+        return vista.mostrarMenu(datosAtleta);
     }
 
     // Registra un nuevo tiempo en la siguiente posición disponible
     private void registrarTiempo(float[] tiempos, boolean disponible) {
         if (!disponible) {
-            //PENDIENTE mostrar mensaje de error
+            vista.imprimirMensaje("No hay intentos disponibles :(");
             return;
         }
 
-        // PENDIENTE pedir a la vista el tiempo ingresado
-
-        float tiempo = 0;
+        float tiempo = vista.pedirTiempo("Ingrese el tiempo obtenido: ");
 
         if (tiempo <= 0) {
-            // PENDIENTE mensaje del erro valor 0
+            vista.imprimirMensaje("El tiempo debe ser mayor a 0 XD.");
             return;
         }
 
@@ -98,79 +106,83 @@ public class ControladorTorneo {
 
                 tiempos[i] = tiempo;
 
-                //PENDIENTE mostrar mensaje de tiempo guardado
+                vista.imprimirMensaje("El tiempo ha sido guardado UwU");
                 return;
             }
         }
     }
 
-    public void modificarTiempo(float[] tiempos) {
-        // PENDIENTE pedir el intento que se desea modificarf
-        int intento = 0;
+    private void modificarTiempo(float[] tiempos) {
 
-        ind indice = intento - 1;
+        int intento = vista.pedirIntento();
+
+        int indice = intento - 1;
 
         if (indice < 0 || indice >= tiempos.length) {
-            // PENDIENTE mostrar mensaje de intento inválido
+            vista.imprimirMensaje("Número de intento inválido :/");
             return;
         }
 
-        if (tiempo[indice] == 0) {
-            // Pendiente mensaje de intento no ha sido registrado
-            return
+        if (tiempos[indice] == 0) {
+            vista.imprimirMensaje("El intento todavía no ha sido registrado, entonces no se puede modificar algo que no existe.");
+            return;
         }
 
-        // PENDIENTE pedir el tiempo desde vista
-        float nuevoTiempo = 0;
+        float nuevoTiempo = vista.pedirTiempo("Ingrese el nuevo tiempo: ");
 
         if (nuevoTiempo <= 0) {
-
-            // PENDIENTE mensaje tiempo debe ser mayor a 0
-
+            vista.imprimirMensaje("El tiempo debe ser mayor a 0 XD. No se modificó el tiempo.");
             return;
         }
 
         tiempos[indice] = nuevoTiempo;
-         // PENDIENTE mostrar mensaje de guardado
+        vista.imprimirMensaje("Tiempo modificado correctamente :D");
     }
 
     private void mostrarTiempo(float[] tiempos, boolean todos) {
         if (todos) {
             boolean hayTiempos = false;
 
+            String encabezado = """
+                        +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-
+                                        TIEMPOS
+                        +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-
+                        """;
+
+            vista.imprimirMensaje(encabezado);
+
             for (int i = 0; i < tiempos.length; i++) {
 
                 if (tiempos[i] > 0) {
 
                     hayTiempos = true;
-
-                    // PENDIENTE imprimir tiempos
+                    
+                    vista.imprimirMensaje("Intento " + (i + 1) + ": " + tiempos[i] + " segundos");
                 }
             }
+            
 
             if (!hayTiempos) {
-                // PENDIENTE mostrar en vista mensaje de que no hay tiempos
+                vista.imprimirMensaje("No hay tiempos registrados para mostrar :/");
             }
         } else {
-            // PENDIENTE pedir numero de intento
-
-            int intento = 0;
+            int intento = vista.pedirIntento();
 
             int indice = intento - 1;
 
             if (indice < 0 || indice >= tiempos.length) {
 
-                // PENDIENTE mostrar numero ingresado inválido
+                vista.imprimirMensaje("Número de intento inválido :/");
 
                 return;
             }
 
             if (tiempos[indice] == 0) {
-                // PENDIENTE mostrar mediante vista que el intento no ha sido registrado
+                vista.imprimirMensaje("El tiempo todavía no se ha registrado :(.");
                 return;
             }
 
-            // PENDIENTE mostrar el tiempo
+            vista.imprimirMensaje("Intento " + intento+ ": " + tiempos[indice] + " segundos");
         }
     }
 
@@ -186,13 +198,13 @@ public class ControladorTorneo {
         }
 
         if (cantidad == 0) {
-            // PENDIENTE mostrar mensaje de que no hay tiempos registrados
+            vista.imprimirMensaje("No hay tiempos registrados para calcular el promedio :(");
             return;
         }
 
         float promedio = suma / cantidad;
 
-        // PENDIENTE mostrar promedio
+        vista.imprimirMensaje(String.format("Tiempo promedio: %.2f segundos", promedio));
     }
 
     private void mejorYMayorTiempo(float[] tiempos) {
@@ -209,7 +221,7 @@ public class ControladorTorneo {
         }
 
         if (primeraPosicion == -1) {
-            //PENDIENTE mostrar mensaje sin tiempos
+            vista.imprimirMensaje("No hay tiempos registrados para mostrar el mejor y el mayor tiempo :(");
             return;
         }
 
@@ -229,6 +241,10 @@ public class ControladorTorneo {
             }
         }
 
-        // PENDIENTE mostrar por vista los tiempos
+        vista.imprimirMensaje(String.format("Mejor tiempo: %.2f segundos" + "\nMayor tiempo: %.2f segundos", mejor, mayor));
+    }
+
+    private void mostrarIntentosDisponibles(Atleta atleta) {
+        vista.imprimirMensaje("Intentos realizados: " + atleta.getIntentosRealizados() + "\nIntentos disponibles: " + atleta.getDisponibles());
     }
 }
