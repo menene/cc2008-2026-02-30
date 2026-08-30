@@ -1,0 +1,2743 @@
+{
+	"_type": "Project",
+	"_id": "AAAAAAFF+h6SjaM2Hec=",
+	"name": "Taller Automotriz",
+	"ownedElements": [
+		{
+			"_type": "UMLModel",
+			"_id": "AAAAAAFF+qBWK6M3Z8Y=",
+			"_parent": {
+				"$ref": "AAAAAAFF+h6SjaM2Hec="
+			},
+			"name": "Model",
+			"ownedElements": [
+				{
+					"_type": "UMLClassDiagram",
+					"_id": "AAAAAAFF+qBtyKM79qY=",
+					"_parent": {
+						"$ref": "AAAAAAFF+qBWK6M3Z8Y="
+					},
+					"name": "Diagrama de clases - Ordenes de Servicio",
+					"defaultDiagram": true,
+					"ownedViews": [
+						{
+							"_type": "UMLClassView",
+							"_id": "Main_V",
+							"_parent": {
+								"$ref": "AAAAAAFF+qBtyKM79qY="
+							},
+							"model": {
+								"$ref": "Main"
+							},
+							"subViews": [
+								{
+									"_type": "UMLNameCompartmentView",
+									"_id": "Main_V_NC",
+									"_parent": {
+										"$ref": "Main_V"
+									},
+									"model": {
+										"$ref": "Main"
+									},
+									"font": "Arial;13;0",
+									"parentStyle": true,
+									"left": 60,
+									"top": 40,
+									"width": 230,
+									"height": 25,
+									"subViews": [
+										{
+											"_type": "LabelView",
+											"_id": "Main_V_NC_ST",
+											"_parent": {
+												"$ref": "Main_V_NC"
+											},
+											"font": "Arial;13;0",
+											"parentStyle": true,
+											"left": 65,
+											"top": 47,
+											"height": 13,
+											"visible": false
+										},
+										{
+											"_type": "LabelView",
+											"_id": "Main_V_NC_NM",
+											"_parent": {
+												"$ref": "Main_V_NC"
+											},
+											"font": "Arial;13;1",
+											"parentStyle": true,
+											"left": 65,
+											"top": 47,
+											"height": 13,
+											"width": 220,
+											"text": "Main",
+											"horizontalAlignment": 1
+										},
+										{
+											"_type": "LabelView",
+											"_id": "Main_V_NC_NS",
+											"_parent": {
+												"$ref": "Main_V_NC"
+											},
+											"font": "Arial;13;0",
+											"parentStyle": true,
+											"left": 65,
+											"top": 47,
+											"height": 13,
+											"visible": false,
+											"width": 74,
+											"text": "(from Model)"
+										},
+										{
+											"_type": "LabelView",
+											"_id": "Main_V_NC_PR",
+											"_parent": {
+												"$ref": "Main_V_NC"
+											},
+											"font": "Arial;13;0",
+											"parentStyle": true,
+											"left": 65,
+											"top": 47,
+											"height": 13,
+											"visible": false,
+											"horizontalAlignment": 1
+										}
+									],
+									"stereotypeLabel": {
+										"$ref": "Main_V_NC_ST"
+									},
+									"nameLabel": {
+										"$ref": "Main_V_NC_NM"
+									},
+									"namespaceLabel": {
+										"$ref": "Main_V_NC_NS"
+									},
+									"propertyLabel": {
+										"$ref": "Main_V_NC_PR"
+									}
+								},
+								{
+									"_type": "UMLAttributeCompartmentView",
+									"_id": "Main_V_AC",
+									"_parent": {
+										"$ref": "Main_V"
+									},
+									"model": {
+										"$ref": "Main"
+									},
+									"font": "Arial;13;0",
+									"parentStyle": true,
+									"left": 60,
+									"top": 65,
+									"width": 230,
+									"height": 38,
+									"subViews": [
+										{
+											"_type": "UMLAttributeView",
+											"_id": "Main_V_AC_0",
+											"_parent": {
+												"$ref": "Main_V_AC"
+											},
+											"model": {
+												"$ref": "Main_A0"
+											},
+											"font": "Arial;13;0",
+											"parentStyle": true,
+											"left": 65,
+											"top": 70,
+											"width": 220,
+											"height": 13,
+											"text": "-entrada: Scanner",
+											"horizontalAlignment": 0
+										},
+										{
+											"_type": "UMLAttributeView",
+											"_id": "Main_V_AC_1",
+											"_parent": {
+												"$ref": "Main_V_AC"
+											},
+											"model": {
+												"$ref": "Main_A1"
+											},
+											"font": "Arial;13;0",
+											"parentStyle": true,
+											"left": 65,
+											"top": 85,
+											"width": 220,
+											"height": 13,
+											"text": "-taller: TallerServicio",
+											"horizontalAlignment": 0
+										}
+									]
+								},
+								{
+									"_type": "UMLOperationCompartmentView",
+									"_id": "Main_V_OC",
+									"_parent": {
+										"$ref": "Main_V"
+									},
+									"model": {
+										"$ref": "Main"
+									},
+									"font": "Arial;13;0",
+									"parentStyle": true,
+									"left": 60,
+									"top": 103,
+									"width": 230,
+									"height": 68,
+									"subViews": [
+										{
+											"_type": "UMLOperationView",
+											"_id": "Main_V_OC_0",
+											"_parent": {
+												"$ref": "Main_V_OC"
+											},
+											"model": {
+												"$ref": "Main_O0"
+											},
+											"font": "Arial;13;0",
+											"parentStyle": true,
+											"left": 65,
+											"top": 108,
+											"width": 220,
+											"height": 13,
+											"text": "+main(String[]): void",
+											"horizontalAlignment": 0
+										},
+										{
+											"_type": "UMLOperationView",
+											"_id": "Main_V_OC_1",
+											"_parent": {
+												"$ref": "Main_V_OC"
+											},
+											"model": {
+												"$ref": "Main_O1"
+											},
+											"font": "Arial;13;0",
+											"parentStyle": true,
+											"left": 65,
+											"top": 123,
+											"width": 220,
+											"height": 13,
+											"text": "-mostrarMenu(): void",
+											"horizontalAlignment": 0
+										},
+										{
+											"_type": "UMLOperationView",
+											"_id": "Main_V_OC_2",
+											"_parent": {
+												"$ref": "Main_V_OC"
+											},
+											"model": {
+												"$ref": "Main_O2"
+											},
+											"font": "Arial;13;0",
+											"parentStyle": true,
+											"left": 65,
+											"top": 138,
+											"width": 220,
+											"height": 13,
+											"text": "-opcionRegistrar(): void",
+											"horizontalAlignment": 0
+										},
+										{
+											"_type": "UMLOperationView",
+											"_id": "Main_V_OC_3",
+											"_parent": {
+												"$ref": "Main_V_OC"
+											},
+											"model": {
+												"$ref": "Main_O3"
+											},
+											"font": "Arial;13;0",
+											"parentStyle": true,
+											"left": 65,
+											"top": 153,
+											"width": 220,
+											"height": 13,
+											"text": "-leerCosto(): double",
+											"horizontalAlignment": 0
+										}
+									]
+								},
+								{
+									"_type": "UMLReceptionCompartmentView",
+									"_id": "Main_V_RC",
+									"_parent": {
+										"$ref": "Main_V"
+									},
+									"model": {
+										"$ref": "Main"
+									},
+									"visible": false,
+									"font": "Arial;13;0",
+									"parentStyle": true,
+									"left": 60,
+									"top": 40,
+									"width": 10,
+									"height": 10
+								},
+								{
+									"_type": "UMLTemplateParameterCompartmentView",
+									"_id": "Main_V_TC",
+									"_parent": {
+										"$ref": "Main_V"
+									},
+									"model": {
+										"$ref": "Main"
+									},
+									"visible": false,
+									"font": "Arial;13;0",
+									"parentStyle": true,
+									"left": 60,
+									"top": 40,
+									"width": 10,
+									"height": 10
+								}
+							],
+							"font": "Arial;13;0",
+							"parentStyle": false,
+							"lineColor": "#1E8449",
+							"fillColor": "#D5F0DD",
+							"containerChangeable": true,
+							"left": 60,
+							"top": 40,
+							"width": 230,
+							"height": 131,
+							"stereotypeDisplay": "label",
+							"showVisibility": true,
+							"suppressAttributes": false,
+							"suppressOperations": false,
+							"nameCompartment": {
+								"$ref": "Main_V_NC"
+							},
+							"attributeCompartment": {
+								"$ref": "Main_V_AC"
+							},
+							"operationCompartment": {
+								"$ref": "Main_V_OC"
+							},
+							"receptionCompartment": {
+								"$ref": "Main_V_RC"
+							},
+							"templateParameterCompartment": {
+								"$ref": "Main_V_TC"
+							}
+						},
+						{
+							"_type": "UMLClassView",
+							"_id": "TallerServicio_V",
+							"_parent": {
+								"$ref": "AAAAAAFF+qBtyKM79qY="
+							},
+							"model": {
+								"$ref": "TallerServicio"
+							},
+							"subViews": [
+								{
+									"_type": "UMLNameCompartmentView",
+									"_id": "TallerServicio_V_NC",
+									"_parent": {
+										"$ref": "TallerServicio_V"
+									},
+									"model": {
+										"$ref": "TallerServicio"
+									},
+									"font": "Arial;13;0",
+									"parentStyle": true,
+									"left": 60,
+									"top": 261,
+									"width": 332,
+									"height": 25,
+									"subViews": [
+										{
+											"_type": "LabelView",
+											"_id": "TallerServicio_V_NC_ST",
+											"_parent": {
+												"$ref": "TallerServicio_V_NC"
+											},
+											"font": "Arial;13;0",
+											"parentStyle": true,
+											"left": 65,
+											"top": 268,
+											"height": 13,
+											"visible": false
+										},
+										{
+											"_type": "LabelView",
+											"_id": "TallerServicio_V_NC_NM",
+											"_parent": {
+												"$ref": "TallerServicio_V_NC"
+											},
+											"font": "Arial;13;1",
+											"parentStyle": true,
+											"left": 65,
+											"top": 268,
+											"height": 13,
+											"width": 322,
+											"text": "TallerServicio",
+											"horizontalAlignment": 1
+										},
+										{
+											"_type": "LabelView",
+											"_id": "TallerServicio_V_NC_NS",
+											"_parent": {
+												"$ref": "TallerServicio_V_NC"
+											},
+											"font": "Arial;13;0",
+											"parentStyle": true,
+											"left": 65,
+											"top": 268,
+											"height": 13,
+											"visible": false,
+											"width": 74,
+											"text": "(from Model)"
+										},
+										{
+											"_type": "LabelView",
+											"_id": "TallerServicio_V_NC_PR",
+											"_parent": {
+												"$ref": "TallerServicio_V_NC"
+											},
+											"font": "Arial;13;0",
+											"parentStyle": true,
+											"left": 65,
+											"top": 268,
+											"height": 13,
+											"visible": false,
+											"horizontalAlignment": 1
+										}
+									],
+									"stereotypeLabel": {
+										"$ref": "TallerServicio_V_NC_ST"
+									},
+									"nameLabel": {
+										"$ref": "TallerServicio_V_NC_NM"
+									},
+									"namespaceLabel": {
+										"$ref": "TallerServicio_V_NC_NS"
+									},
+									"propertyLabel": {
+										"$ref": "TallerServicio_V_NC_PR"
+									}
+								},
+								{
+									"_type": "UMLAttributeCompartmentView",
+									"_id": "TallerServicio_V_AC",
+									"_parent": {
+										"$ref": "TallerServicio_V"
+									},
+									"model": {
+										"$ref": "TallerServicio"
+									},
+									"font": "Arial;13;0",
+									"parentStyle": true,
+									"left": 60,
+									"top": 286,
+									"width": 332,
+									"height": 23,
+									"subViews": [
+										{
+											"_type": "UMLAttributeView",
+											"_id": "TallerServicio_V_AC_0",
+											"_parent": {
+												"$ref": "TallerServicio_V_AC"
+											},
+											"model": {
+												"$ref": "TallerServicio_A0"
+											},
+											"font": "Arial;13;0",
+											"parentStyle": true,
+											"left": 65,
+											"top": 291,
+											"width": 322,
+											"height": 13,
+											"text": "-ordenes: List<OrdenServicio>",
+											"horizontalAlignment": 0
+										}
+									]
+								},
+								{
+									"_type": "UMLOperationCompartmentView",
+									"_id": "TallerServicio_V_OC",
+									"_parent": {
+										"$ref": "TallerServicio_V"
+									},
+									"model": {
+										"$ref": "TallerServicio"
+									},
+									"font": "Arial;13;0",
+									"parentStyle": true,
+									"left": 60,
+									"top": 309,
+									"width": 332,
+									"height": 188,
+									"subViews": [
+										{
+											"_type": "UMLOperationView",
+											"_id": "TallerServicio_V_OC_0",
+											"_parent": {
+												"$ref": "TallerServicio_V_OC"
+											},
+											"model": {
+												"$ref": "TallerServicio_O0"
+											},
+											"font": "Arial;13;0",
+											"parentStyle": true,
+											"left": 65,
+											"top": 314,
+											"width": 322,
+											"height": 13,
+											"text": "+TallerServicio()",
+											"horizontalAlignment": 0
+										},
+										{
+											"_type": "UMLOperationView",
+											"_id": "TallerServicio_V_OC_1",
+											"_parent": {
+												"$ref": "TallerServicio_V_OC"
+											},
+											"model": {
+												"$ref": "TallerServicio_O1"
+											},
+											"font": "Arial;13;0",
+											"parentStyle": true,
+											"left": 65,
+											"top": 329,
+											"width": 322,
+											"height": 13,
+											"text": "+registrarOrden(OrdenServicio): void",
+											"horizontalAlignment": 0
+										},
+										{
+											"_type": "UMLOperationView",
+											"_id": "TallerServicio_V_OC_2",
+											"_parent": {
+												"$ref": "TallerServicio_V_OC"
+											},
+											"model": {
+												"$ref": "TallerServicio_O2"
+											},
+											"font": "Arial;13;0",
+											"parentStyle": true,
+											"left": 65,
+											"top": 344,
+											"width": 322,
+											"height": 13,
+											"text": "+buscarPorNumero(int): OrdenServicio",
+											"horizontalAlignment": 0
+										},
+										{
+											"_type": "UMLOperationView",
+											"_id": "TallerServicio_V_OC_3",
+											"_parent": {
+												"$ref": "TallerServicio_V_OC"
+											},
+											"model": {
+												"$ref": "TallerServicio_O3"
+											},
+											"font": "Arial;13;0",
+											"parentStyle": true,
+											"left": 65,
+											"top": 359,
+											"width": 322,
+											"height": 13,
+											"text": "-existeNumero(int): boolean",
+											"horizontalAlignment": 0
+										},
+										{
+											"_type": "UMLOperationView",
+											"_id": "TallerServicio_V_OC_4",
+											"_parent": {
+												"$ref": "TallerServicio_V_OC"
+											},
+											"model": {
+												"$ref": "TallerServicio_O4"
+											},
+											"font": "Arial;13;0",
+											"parentStyle": true,
+											"left": 65,
+											"top": 374,
+											"width": 322,
+											"height": 13,
+											"text": "+modificarOrden(int, String, double): void",
+											"horizontalAlignment": 0
+										},
+										{
+											"_type": "UMLOperationView",
+											"_id": "TallerServicio_V_OC_5",
+											"_parent": {
+												"$ref": "TallerServicio_V_OC"
+											},
+											"model": {
+												"$ref": "TallerServicio_O5"
+											},
+											"font": "Arial;13;0",
+											"parentStyle": true,
+											"left": 65,
+											"top": 389,
+											"width": 322,
+											"height": 13,
+											"text": "+cancelarOrden(int): void",
+											"horizontalAlignment": 0
+										},
+										{
+											"_type": "UMLOperationView",
+											"_id": "TallerServicio_V_OC_6",
+											"_parent": {
+												"$ref": "TallerServicio_V_OC"
+											},
+											"model": {
+												"$ref": "TallerServicio_O6"
+											},
+											"font": "Arial;13;0",
+											"parentStyle": true,
+											"left": 65,
+											"top": 404,
+											"width": 322,
+											"height": 13,
+											"text": "+consultarPorPlaca(String): List<OrdenServicio>",
+											"horizontalAlignment": 0
+										},
+										{
+											"_type": "UMLOperationView",
+											"_id": "TallerServicio_V_OC_7",
+											"_parent": {
+												"$ref": "TallerServicio_V_OC"
+											},
+											"model": {
+												"$ref": "TallerServicio_O7"
+											},
+											"font": "Arial;13;0",
+											"parentStyle": true,
+											"left": 65,
+											"top": 419,
+											"width": 322,
+											"height": 13,
+											"text": "+listarOrdenes(): List<OrdenServicio>",
+											"horizontalAlignment": 0
+										},
+										{
+											"_type": "UMLOperationView",
+											"_id": "TallerServicio_V_OC_8",
+											"_parent": {
+												"$ref": "TallerServicio_V_OC"
+											},
+											"model": {
+												"$ref": "TallerServicio_O8"
+											},
+											"font": "Arial;13;0",
+											"parentStyle": true,
+											"left": 65,
+											"top": 434,
+											"width": 322,
+											"height": 13,
+											"text": "+calcularTotal(): double",
+											"horizontalAlignment": 0
+										},
+										{
+											"_type": "UMLOperationView",
+											"_id": "TallerServicio_V_OC_9",
+											"_parent": {
+												"$ref": "TallerServicio_V_OC"
+											},
+											"model": {
+												"$ref": "TallerServicio_O9"
+											},
+											"font": "Arial;13;0",
+											"parentStyle": true,
+											"left": 65,
+											"top": 449,
+											"width": 322,
+											"height": 13,
+											"text": "+calcularPromedio(): double",
+											"horizontalAlignment": 0
+										},
+										{
+											"_type": "UMLOperationView",
+											"_id": "TallerServicio_V_OC_10",
+											"_parent": {
+												"$ref": "TallerServicio_V_OC"
+											},
+											"model": {
+												"$ref": "TallerServicio_O10"
+											},
+											"font": "Arial;13;0",
+											"parentStyle": true,
+											"left": 65,
+											"top": 464,
+											"width": 322,
+											"height": 13,
+											"text": "+obtenerMayorCosto(): OrdenServicio",
+											"horizontalAlignment": 0
+										},
+										{
+											"_type": "UMLOperationView",
+											"_id": "TallerServicio_V_OC_11",
+											"_parent": {
+												"$ref": "TallerServicio_V_OC"
+											},
+											"model": {
+												"$ref": "TallerServicio_O11"
+											},
+											"font": "Arial;13;0",
+											"parentStyle": true,
+											"left": 65,
+											"top": 479,
+											"width": 322,
+											"height": 13,
+											"text": "+cantidadOrdenes(): int",
+											"horizontalAlignment": 0
+										}
+									]
+								},
+								{
+									"_type": "UMLReceptionCompartmentView",
+									"_id": "TallerServicio_V_RC",
+									"_parent": {
+										"$ref": "TallerServicio_V"
+									},
+									"model": {
+										"$ref": "TallerServicio"
+									},
+									"visible": false,
+									"font": "Arial;13;0",
+									"parentStyle": true,
+									"left": 60,
+									"top": 261,
+									"width": 10,
+									"height": 10
+								},
+								{
+									"_type": "UMLTemplateParameterCompartmentView",
+									"_id": "TallerServicio_V_TC",
+									"_parent": {
+										"$ref": "TallerServicio_V"
+									},
+									"model": {
+										"$ref": "TallerServicio"
+									},
+									"visible": false,
+									"font": "Arial;13;0",
+									"parentStyle": true,
+									"left": 60,
+									"top": 261,
+									"width": 10,
+									"height": 10
+								}
+							],
+							"font": "Arial;13;0",
+							"parentStyle": false,
+							"lineColor": "#1E8449",
+							"fillColor": "#D5F0DD",
+							"containerChangeable": true,
+							"left": 60,
+							"top": 261,
+							"width": 332,
+							"height": 236,
+							"stereotypeDisplay": "label",
+							"showVisibility": true,
+							"suppressAttributes": false,
+							"suppressOperations": false,
+							"nameCompartment": {
+								"$ref": "TallerServicio_V_NC"
+							},
+							"attributeCompartment": {
+								"$ref": "TallerServicio_V_AC"
+							},
+							"operationCompartment": {
+								"$ref": "TallerServicio_V_OC"
+							},
+							"receptionCompartment": {
+								"$ref": "TallerServicio_V_RC"
+							},
+							"templateParameterCompartment": {
+								"$ref": "TallerServicio_V_TC"
+							}
+						},
+						{
+							"_type": "UMLClassView",
+							"_id": "OrdenServicio_V",
+							"_parent": {
+								"$ref": "AAAAAAFF+qBtyKM79qY="
+							},
+							"model": {
+								"$ref": "OrdenServicio"
+							},
+							"subViews": [
+								{
+									"_type": "UMLNameCompartmentView",
+									"_id": "OrdenServicio_V_NC",
+									"_parent": {
+										"$ref": "OrdenServicio_V"
+									},
+									"model": {
+										"$ref": "OrdenServicio"
+									},
+									"font": "Arial;13;0",
+									"parentStyle": true,
+									"left": 60,
+									"top": 587,
+									"width": 358,
+									"height": 25,
+									"subViews": [
+										{
+											"_type": "LabelView",
+											"_id": "OrdenServicio_V_NC_ST",
+											"_parent": {
+												"$ref": "OrdenServicio_V_NC"
+											},
+											"font": "Arial;13;0",
+											"parentStyle": true,
+											"left": 65,
+											"top": 594,
+											"height": 13,
+											"visible": false
+										},
+										{
+											"_type": "LabelView",
+											"_id": "OrdenServicio_V_NC_NM",
+											"_parent": {
+												"$ref": "OrdenServicio_V_NC"
+											},
+											"font": "Arial;13;1",
+											"parentStyle": true,
+											"left": 65,
+											"top": 594,
+											"height": 13,
+											"width": 348,
+											"text": "OrdenServicio",
+											"horizontalAlignment": 1
+										},
+										{
+											"_type": "LabelView",
+											"_id": "OrdenServicio_V_NC_NS",
+											"_parent": {
+												"$ref": "OrdenServicio_V_NC"
+											},
+											"font": "Arial;13;0",
+											"parentStyle": true,
+											"left": 65,
+											"top": 594,
+											"height": 13,
+											"visible": false,
+											"width": 74,
+											"text": "(from Model)"
+										},
+										{
+											"_type": "LabelView",
+											"_id": "OrdenServicio_V_NC_PR",
+											"_parent": {
+												"$ref": "OrdenServicio_V_NC"
+											},
+											"font": "Arial;13;0",
+											"parentStyle": true,
+											"left": 65,
+											"top": 594,
+											"height": 13,
+											"visible": false,
+											"horizontalAlignment": 1
+										}
+									],
+									"stereotypeLabel": {
+										"$ref": "OrdenServicio_V_NC_ST"
+									},
+									"nameLabel": {
+										"$ref": "OrdenServicio_V_NC_NM"
+									},
+									"namespaceLabel": {
+										"$ref": "OrdenServicio_V_NC_NS"
+									},
+									"propertyLabel": {
+										"$ref": "OrdenServicio_V_NC_PR"
+									}
+								},
+								{
+									"_type": "UMLAttributeCompartmentView",
+									"_id": "OrdenServicio_V_AC",
+									"_parent": {
+										"$ref": "OrdenServicio_V"
+									},
+									"model": {
+										"$ref": "OrdenServicio"
+									},
+									"font": "Arial;13;0",
+									"parentStyle": true,
+									"left": 60,
+									"top": 612,
+									"width": 358,
+									"height": 83,
+									"subViews": [
+										{
+											"_type": "UMLAttributeView",
+											"_id": "OrdenServicio_V_AC_0",
+											"_parent": {
+												"$ref": "OrdenServicio_V_AC"
+											},
+											"model": {
+												"$ref": "OrdenServicio_A0"
+											},
+											"font": "Arial;13;0",
+											"parentStyle": true,
+											"left": 65,
+											"top": 617,
+											"width": 348,
+											"height": 13,
+											"text": "-numeroOrden: int",
+											"horizontalAlignment": 0
+										},
+										{
+											"_type": "UMLAttributeView",
+											"_id": "OrdenServicio_V_AC_1",
+											"_parent": {
+												"$ref": "OrdenServicio_V_AC"
+											},
+											"model": {
+												"$ref": "OrdenServicio_A1"
+											},
+											"font": "Arial;13;0",
+											"parentStyle": true,
+											"left": 65,
+											"top": 632,
+											"width": 348,
+											"height": 13,
+											"text": "-propietario: String",
+											"horizontalAlignment": 0
+										},
+										{
+											"_type": "UMLAttributeView",
+											"_id": "OrdenServicio_V_AC_2",
+											"_parent": {
+												"$ref": "OrdenServicio_V_AC"
+											},
+											"model": {
+												"$ref": "OrdenServicio_A2"
+											},
+											"font": "Arial;13;0",
+											"parentStyle": true,
+											"left": 65,
+											"top": 647,
+											"width": 348,
+											"height": 13,
+											"text": "-placa: String",
+											"horizontalAlignment": 0
+										},
+										{
+											"_type": "UMLAttributeView",
+											"_id": "OrdenServicio_V_AC_3",
+											"_parent": {
+												"$ref": "OrdenServicio_V_AC"
+											},
+											"model": {
+												"$ref": "OrdenServicio_A3"
+											},
+											"font": "Arial;13;0",
+											"parentStyle": true,
+											"left": 65,
+											"top": 662,
+											"width": 348,
+											"height": 13,
+											"text": "-descripcion: String",
+											"horizontalAlignment": 0
+										},
+										{
+											"_type": "UMLAttributeView",
+											"_id": "OrdenServicio_V_AC_4",
+											"_parent": {
+												"$ref": "OrdenServicio_V_AC"
+											},
+											"model": {
+												"$ref": "OrdenServicio_A4"
+											},
+											"font": "Arial;13;0",
+											"parentStyle": true,
+											"left": 65,
+											"top": 677,
+											"width": 348,
+											"height": 13,
+											"text": "-costoEstimado: double",
+											"horizontalAlignment": 0
+										}
+									]
+								},
+								{
+									"_type": "UMLOperationCompartmentView",
+									"_id": "OrdenServicio_V_OC",
+									"_parent": {
+										"$ref": "OrdenServicio_V"
+									},
+									"model": {
+										"$ref": "OrdenServicio"
+									},
+									"font": "Arial;13;0",
+									"parentStyle": true,
+									"left": 60,
+									"top": 695,
+									"width": 358,
+									"height": 143,
+									"subViews": [
+										{
+											"_type": "UMLOperationView",
+											"_id": "OrdenServicio_V_OC_0",
+											"_parent": {
+												"$ref": "OrdenServicio_V_OC"
+											},
+											"model": {
+												"$ref": "OrdenServicio_O0"
+											},
+											"font": "Arial;13;0",
+											"parentStyle": true,
+											"left": 65,
+											"top": 700,
+											"width": 348,
+											"height": 13,
+											"text": "+OrdenServicio(int, String, String, String, double)",
+											"horizontalAlignment": 0
+										},
+										{
+											"_type": "UMLOperationView",
+											"_id": "OrdenServicio_V_OC_1",
+											"_parent": {
+												"$ref": "OrdenServicio_V_OC"
+											},
+											"model": {
+												"$ref": "OrdenServicio_O1"
+											},
+											"font": "Arial;13;0",
+											"parentStyle": true,
+											"left": 65,
+											"top": 715,
+											"width": 348,
+											"height": 13,
+											"text": "+getNumeroOrden(): int",
+											"horizontalAlignment": 0
+										},
+										{
+											"_type": "UMLOperationView",
+											"_id": "OrdenServicio_V_OC_2",
+											"_parent": {
+												"$ref": "OrdenServicio_V_OC"
+											},
+											"model": {
+												"$ref": "OrdenServicio_O2"
+											},
+											"font": "Arial;13;0",
+											"parentStyle": true,
+											"left": 65,
+											"top": 730,
+											"width": 348,
+											"height": 13,
+											"text": "+getPropietario(): String",
+											"horizontalAlignment": 0
+										},
+										{
+											"_type": "UMLOperationView",
+											"_id": "OrdenServicio_V_OC_3",
+											"_parent": {
+												"$ref": "OrdenServicio_V_OC"
+											},
+											"model": {
+												"$ref": "OrdenServicio_O3"
+											},
+											"font": "Arial;13;0",
+											"parentStyle": true,
+											"left": 65,
+											"top": 745,
+											"width": 348,
+											"height": 13,
+											"text": "+getPlaca(): String",
+											"horizontalAlignment": 0
+										},
+										{
+											"_type": "UMLOperationView",
+											"_id": "OrdenServicio_V_OC_4",
+											"_parent": {
+												"$ref": "OrdenServicio_V_OC"
+											},
+											"model": {
+												"$ref": "OrdenServicio_O4"
+											},
+											"font": "Arial;13;0",
+											"parentStyle": true,
+											"left": 65,
+											"top": 760,
+											"width": 348,
+											"height": 13,
+											"text": "+getDescripcion(): String",
+											"horizontalAlignment": 0
+										},
+										{
+											"_type": "UMLOperationView",
+											"_id": "OrdenServicio_V_OC_5",
+											"_parent": {
+												"$ref": "OrdenServicio_V_OC"
+											},
+											"model": {
+												"$ref": "OrdenServicio_O5"
+											},
+											"font": "Arial;13;0",
+											"parentStyle": true,
+											"left": 65,
+											"top": 775,
+											"width": 348,
+											"height": 13,
+											"text": "+getCostoEstimado(): double",
+											"horizontalAlignment": 0
+										},
+										{
+											"_type": "UMLOperationView",
+											"_id": "OrdenServicio_V_OC_6",
+											"_parent": {
+												"$ref": "OrdenServicio_V_OC"
+											},
+											"model": {
+												"$ref": "OrdenServicio_O6"
+											},
+											"font": "Arial;13;0",
+											"parentStyle": true,
+											"left": 65,
+											"top": 790,
+											"width": 348,
+											"height": 13,
+											"text": "+setDescripcion(String): void",
+											"horizontalAlignment": 0
+										},
+										{
+											"_type": "UMLOperationView",
+											"_id": "OrdenServicio_V_OC_7",
+											"_parent": {
+												"$ref": "OrdenServicio_V_OC"
+											},
+											"model": {
+												"$ref": "OrdenServicio_O7"
+											},
+											"font": "Arial;13;0",
+											"parentStyle": true,
+											"left": 65,
+											"top": 805,
+											"width": 348,
+											"height": 13,
+											"text": "+setCostoEstimado(double): void",
+											"horizontalAlignment": 0
+										},
+										{
+											"_type": "UMLOperationView",
+											"_id": "OrdenServicio_V_OC_8",
+											"_parent": {
+												"$ref": "OrdenServicio_V_OC"
+											},
+											"model": {
+												"$ref": "OrdenServicio_O8"
+											},
+											"font": "Arial;13;0",
+											"parentStyle": true,
+											"left": 65,
+											"top": 820,
+											"width": 348,
+											"height": 13,
+											"text": "+toString(): String",
+											"horizontalAlignment": 0
+										}
+									]
+								},
+								{
+									"_type": "UMLReceptionCompartmentView",
+									"_id": "OrdenServicio_V_RC",
+									"_parent": {
+										"$ref": "OrdenServicio_V"
+									},
+									"model": {
+										"$ref": "OrdenServicio"
+									},
+									"visible": false,
+									"font": "Arial;13;0",
+									"parentStyle": true,
+									"left": 60,
+									"top": 587,
+									"width": 10,
+									"height": 10
+								},
+								{
+									"_type": "UMLTemplateParameterCompartmentView",
+									"_id": "OrdenServicio_V_TC",
+									"_parent": {
+										"$ref": "OrdenServicio_V"
+									},
+									"model": {
+										"$ref": "OrdenServicio"
+									},
+									"visible": false,
+									"font": "Arial;13;0",
+									"parentStyle": true,
+									"left": 60,
+									"top": 587,
+									"width": 10,
+									"height": 10
+								}
+							],
+							"font": "Arial;13;0",
+							"parentStyle": false,
+							"lineColor": "#1A4FD8",
+							"fillColor": "#D8E3FF",
+							"containerChangeable": true,
+							"left": 60,
+							"top": 587,
+							"width": 358,
+							"height": 251,
+							"stereotypeDisplay": "label",
+							"showVisibility": true,
+							"suppressAttributes": false,
+							"suppressOperations": false,
+							"nameCompartment": {
+								"$ref": "OrdenServicio_V_NC"
+							},
+							"attributeCompartment": {
+								"$ref": "OrdenServicio_V_AC"
+							},
+							"operationCompartment": {
+								"$ref": "OrdenServicio_V_OC"
+							},
+							"receptionCompartment": {
+								"$ref": "OrdenServicio_V_RC"
+							},
+							"templateParameterCompartment": {
+								"$ref": "OrdenServicio_V_TC"
+							}
+						},
+						{
+							"_type": "UMLAssociationView",
+							"_id": "R1_V",
+							"_parent": {
+								"$ref": "AAAAAAFF+qBtyKM79qY="
+							},
+							"model": {
+								"$ref": "R1"
+							},
+							"subViews": [
+								{
+									"_type": "EdgeLabelView",
+									"_id": "R1_V_NL",
+									"_parent": {
+										"$ref": "R1_V"
+									},
+									"model": {
+										"$ref": "R1"
+									},
+									"visible": false,
+									"font": "Arial;13;0",
+									"parentStyle": false,
+									"left": 232,
+									"top": 545,
+									"height": 13,
+									"alpha": 1.5707963267948966,
+									"distance": 15,
+									"hostEdge": {
+										"$ref": "R1_V"
+									},
+									"edgePosition": 1
+								},
+								{
+									"_type": "EdgeLabelView",
+									"_id": "R1_V_SL",
+									"_parent": {
+										"$ref": "R1_V"
+									},
+									"model": {
+										"$ref": "R1"
+									},
+									"visible": false,
+									"font": "Arial;13;0",
+									"parentStyle": false,
+									"left": 217,
+									"top": 545,
+									"height": 13,
+									"alpha": 1.5707963267948966,
+									"distance": 30,
+									"hostEdge": {
+										"$ref": "R1_V"
+									},
+									"edgePosition": 1
+								},
+								{
+									"_type": "EdgeLabelView",
+									"_id": "R1_V_PL",
+									"_parent": {
+										"$ref": "R1_V"
+									},
+									"model": {
+										"$ref": "R1"
+									},
+									"visible": false,
+									"font": "Arial;13;0",
+									"parentStyle": false,
+									"left": 257,
+									"top": 545,
+									"height": 13,
+									"alpha": -1.5707963267948966,
+									"distance": 15,
+									"hostEdge": {
+										"$ref": "R1_V"
+									},
+									"edgePosition": 1
+								},
+								{
+									"_type": "EdgeLabelView",
+									"_id": "R1_V_TR",
+									"_parent": {
+										"$ref": "R1_V"
+									},
+									"model": {
+										"$ref": "R1_E1"
+									},
+									"visible": false,
+									"font": "Arial;13;0",
+									"parentStyle": false,
+									"left": 232,
+									"top": 563,
+									"height": 13,
+									"alpha": 0.5235987755982988,
+									"distance": 30,
+									"hostEdge": {
+										"$ref": "R1_V"
+									},
+									"edgePosition": 2
+								},
+								{
+									"_type": "EdgeLabelView",
+									"_id": "R1_V_TP",
+									"_parent": {
+										"$ref": "R1_V"
+									},
+									"model": {
+										"$ref": "R1_E1"
+									},
+									"visible": false,
+									"font": "Arial;13;0",
+									"parentStyle": false,
+									"left": 217,
+									"top": 560,
+									"height": 13,
+									"alpha": 0.7853981633974483,
+									"distance": 40,
+									"hostEdge": {
+										"$ref": "R1_V"
+									},
+									"edgePosition": 2
+								},
+								{
+									"_type": "EdgeLabelView",
+									"_id": "R1_V_TM",
+									"_parent": {
+										"$ref": "R1_V"
+									},
+									"model": {
+										"$ref": "R1_E1"
+									},
+									"visible": false,
+									"font": "Arial;13;0",
+									"parentStyle": false,
+									"left": 257,
+									"top": 567,
+									"height": 13,
+									"alpha": -0.5235987755982988,
+									"distance": 25,
+									"hostEdge": {
+										"$ref": "R1_V"
+									},
+									"edgePosition": 2
+								},
+								{
+									"_type": "EdgeLabelView",
+									"_id": "R1_V_HR",
+									"_parent": {
+										"$ref": "R1_V"
+									},
+									"model": {
+										"$ref": "R1_E2"
+									},
+									"visible": false,
+									"font": "Arial;13;0",
+									"parentStyle": false,
+									"left": 232,
+									"top": 527,
+									"height": 13,
+									"alpha": -0.5235987755982988,
+									"distance": 30,
+									"hostEdge": {
+										"$ref": "R1_V"
+									}
+								},
+								{
+									"_type": "EdgeLabelView",
+									"_id": "R1_V_HP",
+									"_parent": {
+										"$ref": "R1_V"
+									},
+									"model": {
+										"$ref": "R1_E2"
+									},
+									"visible": false,
+									"font": "Arial;13;0",
+									"parentStyle": false,
+									"left": 217,
+									"top": 530,
+									"height": 13,
+									"alpha": -0.7853981633974483,
+									"distance": 40,
+									"hostEdge": {
+										"$ref": "R1_V"
+									}
+								},
+								{
+									"_type": "EdgeLabelView",
+									"_id": "R1_V_HM",
+									"_parent": {
+										"$ref": "R1_V"
+									},
+									"model": {
+										"$ref": "R1_E2"
+									},
+									"visible": false,
+									"font": "Arial;13;0",
+									"parentStyle": false,
+									"left": 257,
+									"top": 523,
+									"height": 13,
+									"alpha": 0.5235987755982988,
+									"distance": 25,
+									"hostEdge": {
+										"$ref": "R1_V"
+									}
+								},
+								{
+									"_type": "UMLQualifierCompartmentView",
+									"_id": "R1_V_TQ",
+									"_parent": {
+										"$ref": "R1_V"
+									},
+									"model": {
+										"$ref": "R1_E1"
+									},
+									"visible": false,
+									"font": "Arial;13;0",
+									"parentStyle": true,
+									"left": 232,
+									"top": 545,
+									"width": 10,
+									"height": 10
+								},
+								{
+									"_type": "UMLQualifierCompartmentView",
+									"_id": "R1_V_HQ",
+									"_parent": {
+										"$ref": "R1_V"
+									},
+									"model": {
+										"$ref": "R1_E2"
+									},
+									"visible": false,
+									"font": "Arial;13;0",
+									"parentStyle": true,
+									"left": 232,
+									"top": 545,
+									"width": 10,
+									"height": 10
+								}
+							],
+							"font": "Arial;13;0",
+							"parentStyle": false,
+							"lineColor": "#1A4FD8",
+							"head": {
+								"$ref": "TallerServicio_V"
+							},
+							"tail": {
+								"$ref": "OrdenServicio_V"
+							},
+							"points": "239:712;226:379",
+							"showVisibility": true,
+							"showEndOrder": "hide",
+							"nameLabel": {
+								"$ref": "R1_V_NL"
+							},
+							"stereotypeLabel": {
+								"$ref": "R1_V_SL"
+							},
+							"propertyLabel": {
+								"$ref": "R1_V_PL"
+							},
+							"tailRoleNameLabel": {
+								"$ref": "R1_V_TR"
+							},
+							"tailPropertyLabel": {
+								"$ref": "R1_V_TP"
+							},
+							"tailMultiplicityLabel": {
+								"$ref": "R1_V_TM"
+							},
+							"headRoleNameLabel": {
+								"$ref": "R1_V_HR"
+							},
+							"headPropertyLabel": {
+								"$ref": "R1_V_HP"
+							},
+							"headMultiplicityLabel": {
+								"$ref": "R1_V_HM"
+							},
+							"tailQualifiersCompartment": {
+								"$ref": "R1_V_TQ"
+							},
+							"headQualifiersCompartment": {
+								"$ref": "R1_V_HQ"
+							}
+						},
+						{
+							"_type": "UMLAssociationView",
+							"_id": "R2_V",
+							"_parent": {
+								"$ref": "AAAAAAFF+qBtyKM79qY="
+							},
+							"model": {
+								"$ref": "R2"
+							},
+							"subViews": [
+								{
+									"_type": "EdgeLabelView",
+									"_id": "R2_V_NL",
+									"_parent": {
+										"$ref": "R2_V"
+									},
+									"model": {
+										"$ref": "R2"
+									},
+									"visible": false,
+									"font": "Arial;13;0",
+									"parentStyle": false,
+									"left": 200,
+									"top": 242,
+									"height": 13,
+									"alpha": 1.5707963267948966,
+									"distance": 15,
+									"hostEdge": {
+										"$ref": "R2_V"
+									},
+									"edgePosition": 1
+								},
+								{
+									"_type": "EdgeLabelView",
+									"_id": "R2_V_SL",
+									"_parent": {
+										"$ref": "R2_V"
+									},
+									"model": {
+										"$ref": "R2"
+									},
+									"visible": false,
+									"font": "Arial;13;0",
+									"parentStyle": false,
+									"left": 185,
+									"top": 242,
+									"height": 13,
+									"alpha": 1.5707963267948966,
+									"distance": 30,
+									"hostEdge": {
+										"$ref": "R2_V"
+									},
+									"edgePosition": 1
+								},
+								{
+									"_type": "EdgeLabelView",
+									"_id": "R2_V_PL",
+									"_parent": {
+										"$ref": "R2_V"
+									},
+									"model": {
+										"$ref": "R2"
+									},
+									"visible": false,
+									"font": "Arial;13;0",
+									"parentStyle": false,
+									"left": 225,
+									"top": 242,
+									"height": 13,
+									"alpha": -1.5707963267948966,
+									"distance": 15,
+									"hostEdge": {
+										"$ref": "R2_V"
+									},
+									"edgePosition": 1
+								},
+								{
+									"_type": "EdgeLabelView",
+									"_id": "R2_V_TR",
+									"_parent": {
+										"$ref": "R2_V"
+									},
+									"model": {
+										"$ref": "R2_E1"
+									},
+									"visible": false,
+									"font": "Arial;13;0",
+									"parentStyle": false,
+									"left": 200,
+									"top": 260,
+									"height": 13,
+									"alpha": 0.5235987755982988,
+									"distance": 30,
+									"hostEdge": {
+										"$ref": "R2_V"
+									},
+									"edgePosition": 2
+								},
+								{
+									"_type": "EdgeLabelView",
+									"_id": "R2_V_TP",
+									"_parent": {
+										"$ref": "R2_V"
+									},
+									"model": {
+										"$ref": "R2_E1"
+									},
+									"visible": false,
+									"font": "Arial;13;0",
+									"parentStyle": false,
+									"left": 185,
+									"top": 257,
+									"height": 13,
+									"alpha": 0.7853981633974483,
+									"distance": 40,
+									"hostEdge": {
+										"$ref": "R2_V"
+									},
+									"edgePosition": 2
+								},
+								{
+									"_type": "EdgeLabelView",
+									"_id": "R2_V_TM",
+									"_parent": {
+										"$ref": "R2_V"
+									},
+									"model": {
+										"$ref": "R2_E1"
+									},
+									"visible": false,
+									"font": "Arial;13;0",
+									"parentStyle": false,
+									"left": 225,
+									"top": 264,
+									"height": 13,
+									"alpha": -0.5235987755982988,
+									"distance": 25,
+									"hostEdge": {
+										"$ref": "R2_V"
+									},
+									"edgePosition": 2
+								},
+								{
+									"_type": "EdgeLabelView",
+									"_id": "R2_V_HR",
+									"_parent": {
+										"$ref": "R2_V"
+									},
+									"model": {
+										"$ref": "R2_E2"
+									},
+									"visible": false,
+									"font": "Arial;13;0",
+									"parentStyle": false,
+									"left": 200,
+									"top": 224,
+									"height": 13,
+									"alpha": -0.5235987755982988,
+									"distance": 30,
+									"hostEdge": {
+										"$ref": "R2_V"
+									}
+								},
+								{
+									"_type": "EdgeLabelView",
+									"_id": "R2_V_HP",
+									"_parent": {
+										"$ref": "R2_V"
+									},
+									"model": {
+										"$ref": "R2_E2"
+									},
+									"visible": false,
+									"font": "Arial;13;0",
+									"parentStyle": false,
+									"left": 185,
+									"top": 227,
+									"height": 13,
+									"alpha": -0.7853981633974483,
+									"distance": 40,
+									"hostEdge": {
+										"$ref": "R2_V"
+									}
+								},
+								{
+									"_type": "EdgeLabelView",
+									"_id": "R2_V_HM",
+									"_parent": {
+										"$ref": "R2_V"
+									},
+									"model": {
+										"$ref": "R2_E2"
+									},
+									"visible": false,
+									"font": "Arial;13;0",
+									"parentStyle": false,
+									"left": 225,
+									"top": 220,
+									"height": 13,
+									"alpha": 0.5235987755982988,
+									"distance": 25,
+									"hostEdge": {
+										"$ref": "R2_V"
+									}
+								},
+								{
+									"_type": "UMLQualifierCompartmentView",
+									"_id": "R2_V_TQ",
+									"_parent": {
+										"$ref": "R2_V"
+									},
+									"model": {
+										"$ref": "R2_E1"
+									},
+									"visible": false,
+									"font": "Arial;13;0",
+									"parentStyle": true,
+									"left": 200,
+									"top": 242,
+									"width": 10,
+									"height": 10
+								},
+								{
+									"_type": "UMLQualifierCompartmentView",
+									"_id": "R2_V_HQ",
+									"_parent": {
+										"$ref": "R2_V"
+									},
+									"model": {
+										"$ref": "R2_E2"
+									},
+									"visible": false,
+									"font": "Arial;13;0",
+									"parentStyle": true,
+									"left": 200,
+									"top": 242,
+									"width": 10,
+									"height": 10
+								}
+							],
+							"font": "Arial;13;0",
+							"parentStyle": false,
+							"lineColor": "#1E8449",
+							"head": {
+								"$ref": "Main_V"
+							},
+							"tail": {
+								"$ref": "TallerServicio_V"
+							},
+							"points": "226:379;175:105",
+							"showVisibility": true,
+							"showEndOrder": "hide",
+							"nameLabel": {
+								"$ref": "R2_V_NL"
+							},
+							"stereotypeLabel": {
+								"$ref": "R2_V_SL"
+							},
+							"propertyLabel": {
+								"$ref": "R2_V_PL"
+							},
+							"tailRoleNameLabel": {
+								"$ref": "R2_V_TR"
+							},
+							"tailPropertyLabel": {
+								"$ref": "R2_V_TP"
+							},
+							"tailMultiplicityLabel": {
+								"$ref": "R2_V_TM"
+							},
+							"headRoleNameLabel": {
+								"$ref": "R2_V_HR"
+							},
+							"headPropertyLabel": {
+								"$ref": "R2_V_HP"
+							},
+							"headMultiplicityLabel": {
+								"$ref": "R2_V_HM"
+							},
+							"tailQualifiersCompartment": {
+								"$ref": "R2_V_TQ"
+							},
+							"headQualifiersCompartment": {
+								"$ref": "R2_V_HQ"
+							}
+						},
+						{
+							"_type": "UMLDependencyView",
+							"_id": "D1_V",
+							"_parent": {
+								"$ref": "AAAAAAFF+qBtyKM79qY="
+							},
+							"model": {
+								"$ref": "D1"
+							},
+							"subViews": [
+								{
+									"_type": "EdgeLabelView",
+									"_id": "D1_V_NL",
+									"_parent": {
+										"$ref": "D1_V"
+									},
+									"model": {
+										"$ref": "D1"
+									},
+									"visible": false,
+									"font": "Arial;13;0",
+									"parentStyle": false,
+									"left": 207,
+									"top": 408,
+									"height": 13,
+									"alpha": 1.5707963267948966,
+									"distance": 15,
+									"hostEdge": {
+										"$ref": "D1_V"
+									}
+								},
+								{
+									"_type": "EdgeLabelView",
+									"_id": "D1_V_SL",
+									"_parent": {
+										"$ref": "D1_V"
+									},
+									"model": {
+										"$ref": "D1"
+									},
+									"visible": false,
+									"font": "Arial;13;0",
+									"parentStyle": false,
+									"left": 192,
+									"top": 408,
+									"height": 13,
+									"alpha": 1.5707963267948966,
+									"distance": 30,
+									"hostEdge": {
+										"$ref": "D1_V"
+									}
+								},
+								{
+									"_type": "EdgeLabelView",
+									"_id": "D1_V_PL",
+									"_parent": {
+										"$ref": "D1_V"
+									},
+									"model": {
+										"$ref": "D1"
+									},
+									"visible": false,
+									"font": "Arial;13;0",
+									"parentStyle": false,
+									"left": 232,
+									"top": 408,
+									"height": 13,
+									"alpha": -1.5707963267948966,
+									"distance": 15,
+									"hostEdge": {
+										"$ref": "D1_V"
+									}
+								}
+							],
+							"font": "Arial;13;0",
+							"parentStyle": false,
+							"lineColor": "#D62828",
+							"head": {
+								"$ref": "OrdenServicio_V"
+							},
+							"tail": {
+								"$ref": "Main_V"
+							},
+							"points": "175:105;239:712",
+							"nameLabel": {
+								"$ref": "D1_V_NL"
+							},
+							"stereotypeLabel": {
+								"$ref": "D1_V_SL"
+							},
+							"propertyLabel": {
+								"$ref": "D1_V_PL"
+							}
+						}
+					]
+				},
+				{
+					"_type": "UMLClass",
+					"_id": "Main",
+					"_parent": {
+						"$ref": "AAAAAAFF+qBWK6M3Z8Y="
+					},
+					"name": "Main",
+					"visibility": "public",
+					"attributes": [
+						{
+							"_type": "UMLAttribute",
+							"_id": "Main_A0",
+							"_parent": {
+								"$ref": "Main"
+							},
+							"name": "entrada",
+							"visibility": "private",
+							"type": "Scanner",
+							"isStatic": true
+						},
+						{
+							"_type": "UMLAttribute",
+							"_id": "Main_A1",
+							"_parent": {
+								"$ref": "Main"
+							},
+							"name": "taller",
+							"visibility": "private",
+							"type": {
+								"$ref": "TallerServicio"
+							},
+							"isStatic": true
+						}
+					],
+					"operations": [
+						{
+							"_type": "UMLOperation",
+							"_id": "Main_O0",
+							"_parent": {
+								"$ref": "Main"
+							},
+							"name": "main",
+							"visibility": "public",
+							"parameters": [
+								{
+									"_type": "UMLParameter",
+									"_id": "Main_O0_P0",
+									"_parent": {
+										"$ref": "Main_O0"
+									},
+									"name": "p1",
+									"type": "String[]"
+								},
+								{
+									"_type": "UMLParameter",
+									"_id": "Main_O0_RET",
+									"_parent": {
+										"$ref": "Main_O0"
+									},
+									"name": "",
+									"type": "void",
+									"direction": "return"
+								}
+							],
+							"isStatic": true
+						},
+						{
+							"_type": "UMLOperation",
+							"_id": "Main_O1",
+							"_parent": {
+								"$ref": "Main"
+							},
+							"name": "mostrarMenu",
+							"visibility": "private",
+							"parameters": [
+								{
+									"_type": "UMLParameter",
+									"_id": "Main_O1_RET",
+									"_parent": {
+										"$ref": "Main_O1"
+									},
+									"name": "",
+									"type": "void",
+									"direction": "return"
+								}
+							],
+							"isStatic": true
+						},
+						{
+							"_type": "UMLOperation",
+							"_id": "Main_O2",
+							"_parent": {
+								"$ref": "Main"
+							},
+							"name": "opcionRegistrar",
+							"visibility": "private",
+							"parameters": [
+								{
+									"_type": "UMLParameter",
+									"_id": "Main_O2_RET",
+									"_parent": {
+										"$ref": "Main_O2"
+									},
+									"name": "",
+									"type": "void",
+									"direction": "return"
+								}
+							],
+							"isStatic": true
+						},
+						{
+							"_type": "UMLOperation",
+							"_id": "Main_O3",
+							"_parent": {
+								"$ref": "Main"
+							},
+							"name": "leerCosto",
+							"visibility": "private",
+							"parameters": [
+								{
+									"_type": "UMLParameter",
+									"_id": "Main_O3_RET",
+									"_parent": {
+										"$ref": "Main_O3"
+									},
+									"name": "",
+									"type": "double",
+									"direction": "return"
+								}
+							],
+							"isStatic": true
+						}
+					]
+				},
+				{
+					"_type": "UMLClass",
+					"_id": "TallerServicio",
+					"_parent": {
+						"$ref": "AAAAAAFF+qBWK6M3Z8Y="
+					},
+					"name": "TallerServicio",
+					"visibility": "public",
+					"attributes": [
+						{
+							"_type": "UMLAttribute",
+							"_id": "TallerServicio_A0",
+							"_parent": {
+								"$ref": "TallerServicio"
+							},
+							"name": "ordenes",
+							"visibility": "private",
+							"type": "List<OrdenServicio>"
+						}
+					],
+					"operations": [
+						{
+							"_type": "UMLOperation",
+							"_id": "TallerServicio_O0",
+							"_parent": {
+								"$ref": "TallerServicio"
+							},
+							"name": "TallerServicio",
+							"visibility": "public",
+							"parameters": []
+						},
+						{
+							"_type": "UMLOperation",
+							"_id": "TallerServicio_O1",
+							"_parent": {
+								"$ref": "TallerServicio"
+							},
+							"name": "registrarOrden",
+							"visibility": "public",
+							"parameters": [
+								{
+									"_type": "UMLParameter",
+									"_id": "TallerServicio_O1_P0",
+									"_parent": {
+										"$ref": "TallerServicio_O1"
+									},
+									"name": "p1",
+									"type": "OrdenServicio"
+								},
+								{
+									"_type": "UMLParameter",
+									"_id": "TallerServicio_O1_RET",
+									"_parent": {
+										"$ref": "TallerServicio_O1"
+									},
+									"name": "",
+									"type": "void",
+									"direction": "return"
+								}
+							]
+						},
+						{
+							"_type": "UMLOperation",
+							"_id": "TallerServicio_O2",
+							"_parent": {
+								"$ref": "TallerServicio"
+							},
+							"name": "buscarPorNumero",
+							"visibility": "public",
+							"parameters": [
+								{
+									"_type": "UMLParameter",
+									"_id": "TallerServicio_O2_P0",
+									"_parent": {
+										"$ref": "TallerServicio_O2"
+									},
+									"name": "p1",
+									"type": "int"
+								},
+								{
+									"_type": "UMLParameter",
+									"_id": "TallerServicio_O2_RET",
+									"_parent": {
+										"$ref": "TallerServicio_O2"
+									},
+									"name": "",
+									"type": {
+										"$ref": "OrdenServicio"
+									},
+									"direction": "return"
+								}
+							]
+						},
+						{
+							"_type": "UMLOperation",
+							"_id": "TallerServicio_O3",
+							"_parent": {
+								"$ref": "TallerServicio"
+							},
+							"name": "existeNumero",
+							"visibility": "private",
+							"parameters": [
+								{
+									"_type": "UMLParameter",
+									"_id": "TallerServicio_O3_P0",
+									"_parent": {
+										"$ref": "TallerServicio_O3"
+									},
+									"name": "p1",
+									"type": "int"
+								},
+								{
+									"_type": "UMLParameter",
+									"_id": "TallerServicio_O3_RET",
+									"_parent": {
+										"$ref": "TallerServicio_O3"
+									},
+									"name": "",
+									"type": "boolean",
+									"direction": "return"
+								}
+							]
+						},
+						{
+							"_type": "UMLOperation",
+							"_id": "TallerServicio_O4",
+							"_parent": {
+								"$ref": "TallerServicio"
+							},
+							"name": "modificarOrden",
+							"visibility": "public",
+							"parameters": [
+								{
+									"_type": "UMLParameter",
+									"_id": "TallerServicio_O4_P0",
+									"_parent": {
+										"$ref": "TallerServicio_O4"
+									},
+									"name": "p1",
+									"type": "int"
+								},
+								{
+									"_type": "UMLParameter",
+									"_id": "TallerServicio_O4_P1",
+									"_parent": {
+										"$ref": "TallerServicio_O4"
+									},
+									"name": "p2",
+									"type": "String"
+								},
+								{
+									"_type": "UMLParameter",
+									"_id": "TallerServicio_O4_P2",
+									"_parent": {
+										"$ref": "TallerServicio_O4"
+									},
+									"name": "p3",
+									"type": "double"
+								},
+								{
+									"_type": "UMLParameter",
+									"_id": "TallerServicio_O4_RET",
+									"_parent": {
+										"$ref": "TallerServicio_O4"
+									},
+									"name": "",
+									"type": "void",
+									"direction": "return"
+								}
+							]
+						},
+						{
+							"_type": "UMLOperation",
+							"_id": "TallerServicio_O5",
+							"_parent": {
+								"$ref": "TallerServicio"
+							},
+							"name": "cancelarOrden",
+							"visibility": "public",
+							"parameters": [
+								{
+									"_type": "UMLParameter",
+									"_id": "TallerServicio_O5_P0",
+									"_parent": {
+										"$ref": "TallerServicio_O5"
+									},
+									"name": "p1",
+									"type": "int"
+								},
+								{
+									"_type": "UMLParameter",
+									"_id": "TallerServicio_O5_RET",
+									"_parent": {
+										"$ref": "TallerServicio_O5"
+									},
+									"name": "",
+									"type": "void",
+									"direction": "return"
+								}
+							]
+						},
+						{
+							"_type": "UMLOperation",
+							"_id": "TallerServicio_O6",
+							"_parent": {
+								"$ref": "TallerServicio"
+							},
+							"name": "consultarPorPlaca",
+							"visibility": "public",
+							"parameters": [
+								{
+									"_type": "UMLParameter",
+									"_id": "TallerServicio_O6_P0",
+									"_parent": {
+										"$ref": "TallerServicio_O6"
+									},
+									"name": "p1",
+									"type": "String"
+								},
+								{
+									"_type": "UMLParameter",
+									"_id": "TallerServicio_O6_RET",
+									"_parent": {
+										"$ref": "TallerServicio_O6"
+									},
+									"name": "",
+									"type": "List<OrdenServicio>",
+									"direction": "return"
+								}
+							]
+						},
+						{
+							"_type": "UMLOperation",
+							"_id": "TallerServicio_O7",
+							"_parent": {
+								"$ref": "TallerServicio"
+							},
+							"name": "listarOrdenes",
+							"visibility": "public",
+							"parameters": [
+								{
+									"_type": "UMLParameter",
+									"_id": "TallerServicio_O7_RET",
+									"_parent": {
+										"$ref": "TallerServicio_O7"
+									},
+									"name": "",
+									"type": "List<OrdenServicio>",
+									"direction": "return"
+								}
+							]
+						},
+						{
+							"_type": "UMLOperation",
+							"_id": "TallerServicio_O8",
+							"_parent": {
+								"$ref": "TallerServicio"
+							},
+							"name": "calcularTotal",
+							"visibility": "public",
+							"parameters": [
+								{
+									"_type": "UMLParameter",
+									"_id": "TallerServicio_O8_RET",
+									"_parent": {
+										"$ref": "TallerServicio_O8"
+									},
+									"name": "",
+									"type": "double",
+									"direction": "return"
+								}
+							]
+						},
+						{
+							"_type": "UMLOperation",
+							"_id": "TallerServicio_O9",
+							"_parent": {
+								"$ref": "TallerServicio"
+							},
+							"name": "calcularPromedio",
+							"visibility": "public",
+							"parameters": [
+								{
+									"_type": "UMLParameter",
+									"_id": "TallerServicio_O9_RET",
+									"_parent": {
+										"$ref": "TallerServicio_O9"
+									},
+									"name": "",
+									"type": "double",
+									"direction": "return"
+								}
+							]
+						},
+						{
+							"_type": "UMLOperation",
+							"_id": "TallerServicio_O10",
+							"_parent": {
+								"$ref": "TallerServicio"
+							},
+							"name": "obtenerMayorCosto",
+							"visibility": "public",
+							"parameters": [
+								{
+									"_type": "UMLParameter",
+									"_id": "TallerServicio_O10_RET",
+									"_parent": {
+										"$ref": "TallerServicio_O10"
+									},
+									"name": "",
+									"type": {
+										"$ref": "OrdenServicio"
+									},
+									"direction": "return"
+								}
+							]
+						},
+						{
+							"_type": "UMLOperation",
+							"_id": "TallerServicio_O11",
+							"_parent": {
+								"$ref": "TallerServicio"
+							},
+							"name": "cantidadOrdenes",
+							"visibility": "public",
+							"parameters": [
+								{
+									"_type": "UMLParameter",
+									"_id": "TallerServicio_O11_RET",
+									"_parent": {
+										"$ref": "TallerServicio_O11"
+									},
+									"name": "",
+									"type": "int",
+									"direction": "return"
+								}
+							]
+						}
+					]
+				},
+				{
+					"_type": "UMLClass",
+					"_id": "OrdenServicio",
+					"_parent": {
+						"$ref": "AAAAAAFF+qBWK6M3Z8Y="
+					},
+					"name": "OrdenServicio",
+					"visibility": "public",
+					"attributes": [
+						{
+							"_type": "UMLAttribute",
+							"_id": "OrdenServicio_A0",
+							"_parent": {
+								"$ref": "OrdenServicio"
+							},
+							"name": "numeroOrden",
+							"visibility": "private",
+							"type": "int"
+						},
+						{
+							"_type": "UMLAttribute",
+							"_id": "OrdenServicio_A1",
+							"_parent": {
+								"$ref": "OrdenServicio"
+							},
+							"name": "propietario",
+							"visibility": "private",
+							"type": "String"
+						},
+						{
+							"_type": "UMLAttribute",
+							"_id": "OrdenServicio_A2",
+							"_parent": {
+								"$ref": "OrdenServicio"
+							},
+							"name": "placa",
+							"visibility": "private",
+							"type": "String"
+						},
+						{
+							"_type": "UMLAttribute",
+							"_id": "OrdenServicio_A3",
+							"_parent": {
+								"$ref": "OrdenServicio"
+							},
+							"name": "descripcion",
+							"visibility": "private",
+							"type": "String"
+						},
+						{
+							"_type": "UMLAttribute",
+							"_id": "OrdenServicio_A4",
+							"_parent": {
+								"$ref": "OrdenServicio"
+							},
+							"name": "costoEstimado",
+							"visibility": "private",
+							"type": "double"
+						}
+					],
+					"operations": [
+						{
+							"_type": "UMLOperation",
+							"_id": "OrdenServicio_O0",
+							"_parent": {
+								"$ref": "OrdenServicio"
+							},
+							"name": "OrdenServicio",
+							"visibility": "public",
+							"parameters": [
+								{
+									"_type": "UMLParameter",
+									"_id": "OrdenServicio_O0_P0",
+									"_parent": {
+										"$ref": "OrdenServicio_O0"
+									},
+									"name": "p1",
+									"type": "int"
+								},
+								{
+									"_type": "UMLParameter",
+									"_id": "OrdenServicio_O0_P1",
+									"_parent": {
+										"$ref": "OrdenServicio_O0"
+									},
+									"name": "p2",
+									"type": "String"
+								},
+								{
+									"_type": "UMLParameter",
+									"_id": "OrdenServicio_O0_P2",
+									"_parent": {
+										"$ref": "OrdenServicio_O0"
+									},
+									"name": "p3",
+									"type": "String"
+								},
+								{
+									"_type": "UMLParameter",
+									"_id": "OrdenServicio_O0_P3",
+									"_parent": {
+										"$ref": "OrdenServicio_O0"
+									},
+									"name": "p4",
+									"type": "String"
+								},
+								{
+									"_type": "UMLParameter",
+									"_id": "OrdenServicio_O0_P4",
+									"_parent": {
+										"$ref": "OrdenServicio_O0"
+									},
+									"name": "p5",
+									"type": "double"
+								}
+							]
+						},
+						{
+							"_type": "UMLOperation",
+							"_id": "OrdenServicio_O1",
+							"_parent": {
+								"$ref": "OrdenServicio"
+							},
+							"name": "getNumeroOrden",
+							"visibility": "public",
+							"parameters": [
+								{
+									"_type": "UMLParameter",
+									"_id": "OrdenServicio_O1_RET",
+									"_parent": {
+										"$ref": "OrdenServicio_O1"
+									},
+									"name": "",
+									"type": "int",
+									"direction": "return"
+								}
+							]
+						},
+						{
+							"_type": "UMLOperation",
+							"_id": "OrdenServicio_O2",
+							"_parent": {
+								"$ref": "OrdenServicio"
+							},
+							"name": "getPropietario",
+							"visibility": "public",
+							"parameters": [
+								{
+									"_type": "UMLParameter",
+									"_id": "OrdenServicio_O2_RET",
+									"_parent": {
+										"$ref": "OrdenServicio_O2"
+									},
+									"name": "",
+									"type": "String",
+									"direction": "return"
+								}
+							]
+						},
+						{
+							"_type": "UMLOperation",
+							"_id": "OrdenServicio_O3",
+							"_parent": {
+								"$ref": "OrdenServicio"
+							},
+							"name": "getPlaca",
+							"visibility": "public",
+							"parameters": [
+								{
+									"_type": "UMLParameter",
+									"_id": "OrdenServicio_O3_RET",
+									"_parent": {
+										"$ref": "OrdenServicio_O3"
+									},
+									"name": "",
+									"type": "String",
+									"direction": "return"
+								}
+							]
+						},
+						{
+							"_type": "UMLOperation",
+							"_id": "OrdenServicio_O4",
+							"_parent": {
+								"$ref": "OrdenServicio"
+							},
+							"name": "getDescripcion",
+							"visibility": "public",
+							"parameters": [
+								{
+									"_type": "UMLParameter",
+									"_id": "OrdenServicio_O4_RET",
+									"_parent": {
+										"$ref": "OrdenServicio_O4"
+									},
+									"name": "",
+									"type": "String",
+									"direction": "return"
+								}
+							]
+						},
+						{
+							"_type": "UMLOperation",
+							"_id": "OrdenServicio_O5",
+							"_parent": {
+								"$ref": "OrdenServicio"
+							},
+							"name": "getCostoEstimado",
+							"visibility": "public",
+							"parameters": [
+								{
+									"_type": "UMLParameter",
+									"_id": "OrdenServicio_O5_RET",
+									"_parent": {
+										"$ref": "OrdenServicio_O5"
+									},
+									"name": "",
+									"type": "double",
+									"direction": "return"
+								}
+							]
+						},
+						{
+							"_type": "UMLOperation",
+							"_id": "OrdenServicio_O6",
+							"_parent": {
+								"$ref": "OrdenServicio"
+							},
+							"name": "setDescripcion",
+							"visibility": "public",
+							"parameters": [
+								{
+									"_type": "UMLParameter",
+									"_id": "OrdenServicio_O6_P0",
+									"_parent": {
+										"$ref": "OrdenServicio_O6"
+									},
+									"name": "p1",
+									"type": "String"
+								},
+								{
+									"_type": "UMLParameter",
+									"_id": "OrdenServicio_O6_RET",
+									"_parent": {
+										"$ref": "OrdenServicio_O6"
+									},
+									"name": "",
+									"type": "void",
+									"direction": "return"
+								}
+							]
+						},
+						{
+							"_type": "UMLOperation",
+							"_id": "OrdenServicio_O7",
+							"_parent": {
+								"$ref": "OrdenServicio"
+							},
+							"name": "setCostoEstimado",
+							"visibility": "public",
+							"parameters": [
+								{
+									"_type": "UMLParameter",
+									"_id": "OrdenServicio_O7_P0",
+									"_parent": {
+										"$ref": "OrdenServicio_O7"
+									},
+									"name": "p1",
+									"type": "double"
+								},
+								{
+									"_type": "UMLParameter",
+									"_id": "OrdenServicio_O7_RET",
+									"_parent": {
+										"$ref": "OrdenServicio_O7"
+									},
+									"name": "",
+									"type": "void",
+									"direction": "return"
+								}
+							]
+						},
+						{
+							"_type": "UMLOperation",
+							"_id": "OrdenServicio_O8",
+							"_parent": {
+								"$ref": "OrdenServicio"
+							},
+							"name": "toString",
+							"visibility": "public",
+							"parameters": [
+								{
+									"_type": "UMLParameter",
+									"_id": "OrdenServicio_O8_RET",
+									"_parent": {
+										"$ref": "OrdenServicio_O8"
+									},
+									"name": "",
+									"type": "String",
+									"direction": "return"
+								}
+							]
+						}
+					]
+				},
+				{
+					"_type": "UMLAssociation",
+					"_id": "R1",
+					"_parent": {
+						"$ref": "AAAAAAFF+qBWK6M3Z8Y="
+					},
+					"name": "",
+					"end1": {
+						"_type": "UMLAssociationEnd",
+						"_id": "R1_E1",
+						"_parent": {
+							"$ref": "R1"
+						},
+						"reference": {
+							"$ref": "OrdenServicio"
+						},
+						"visibility": "public",
+						"multiplicity": "0..*",
+						"aggregation": "none",
+						"navigable": false
+					},
+					"end2": {
+						"_type": "UMLAssociationEnd",
+						"_id": "R1_E2",
+						"_parent": {
+							"$ref": "R1"
+						},
+						"reference": {
+							"$ref": "TallerServicio"
+						},
+						"visibility": "public",
+						"multiplicity": "1",
+						"aggregation": "shared",
+						"navigable": true
+					}
+				},
+				{
+					"_type": "UMLAssociation",
+					"_id": "R2",
+					"_parent": {
+						"$ref": "AAAAAAFF+qBWK6M3Z8Y="
+					},
+					"name": "",
+					"end1": {
+						"_type": "UMLAssociationEnd",
+						"_id": "R2_E1",
+						"_parent": {
+							"$ref": "R2"
+						},
+						"reference": {
+							"$ref": "TallerServicio"
+						},
+						"visibility": "public",
+						"multiplicity": "1",
+						"aggregation": "none",
+						"navigable": false
+					},
+					"end2": {
+						"_type": "UMLAssociationEnd",
+						"_id": "R2_E2",
+						"_parent": {
+							"$ref": "R2"
+						},
+						"reference": {
+							"$ref": "Main"
+						},
+						"visibility": "public",
+						"multiplicity": "1",
+						"aggregation": "composite",
+						"navigable": true
+					}
+				},
+				{
+					"_type": "UMLDependency",
+					"_id": "D1",
+					"_parent": {
+						"$ref": "Main"
+					},
+					"source": {
+						"$ref": "Main"
+					},
+					"target": {
+						"$ref": "OrdenServicio"
+					}
+				}
+			]
+		}
+	]
+}
