@@ -18,6 +18,7 @@ La rama `main` contiene los ejemplos vistos en clase. Cada carpeta es un proyect
 | `05-Palatino-Pro` | Enums: `NivelRendimiento` y clasificación por efectividad |
 | `06-Excepciones` | Manejo, propagación (`throws`, checked y unchecked) y excepciones propias |
 | `07-Palatino-Ultra` | `ArrayList`: agregar y eliminar equipos en tiempo de ejecución |
+| `08-Notas` | Matriz multidimensional de `ArrayList`: registro y consulta de notas |
 
 ### Cómo compilar y ejecutar cualquier ejemplo
 
