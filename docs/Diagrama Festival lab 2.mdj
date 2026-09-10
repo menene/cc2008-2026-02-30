@@ -1,0 +1,3209 @@
+{
+	"_type": "Project",
+	"_id": "festival-project-0001",
+	"name": "Sistema de gestión de festival",
+	"ownedElements": [
+		{
+			"_type": "UMLModel",
+			"_id": "festival-model-0002",
+			"_parent": {
+				"$ref": "festival-project-0001"
+			},
+			"name": "Modelo del festival",
+			"ownedElements": [
+				{
+					"_type": "UMLClass",
+					"_id": "festival-class-0004",
+					"_parent": {
+						"$ref": "festival-model-0002"
+					},
+					"name": "Festival",
+					"attributes": [
+						{
+							"_type": "UMLAttribute",
+							"_id": "festival-attribute-0005",
+							"_parent": {
+								"$ref": "festival-class-0004"
+							},
+							"name": "nombreFestival",
+							"type": "String"
+						},
+						{
+							"_type": "UMLAttribute",
+							"_id": "festival-attribute-0006",
+							"_parent": {
+								"$ref": "festival-class-0004"
+							},
+							"name": "nombreCoordinador",
+							"visibility": "private",
+							"type": "String"
+						},
+						{
+							"_type": "UMLAttribute",
+							"_id": "festival-attribute-0007",
+							"_parent": {
+								"$ref": "festival-class-0004"
+							},
+							"name": "codigoIdentificacion",
+							"visibility": "private",
+							"type": "int"
+						},
+						{
+							"_type": "UMLAttribute",
+							"_id": "festival-attribute-0008",
+							"_parent": {
+								"$ref": "festival-class-0004"
+							},
+							"name": "escenarios",
+							"type": "Escenario[]"
+						}
+					],
+					"operations": [
+						{
+							"_type": "UMLOperation",
+							"_id": "festival-operation-0009",
+							"_parent": {
+								"$ref": "festival-class-0004"
+							},
+							"name": "VerificarPosicionEscenario",
+							"parameters": [
+								{
+									"_type": "UMLParameter",
+									"_id": "festival-parameter-0010",
+									"_parent": {
+										"$ref": "festival-operation-0009"
+									},
+									"name": "posicion",
+									"type": "int"
+								},
+								{
+									"_type": "UMLParameter",
+									"_id": "festival-parameter-0011",
+									"_parent": {
+										"$ref": "festival-operation-0009"
+									},
+									"type": "boolean",
+									"direction": "return"
+								}
+							]
+						},
+						{
+							"_type": "UMLOperation",
+							"_id": "festival-operation-0012",
+							"_parent": {
+								"$ref": "festival-class-0004"
+							},
+							"name": "VerificarDisponibilidadEscenario",
+							"parameters": [
+								{
+									"_type": "UMLParameter",
+									"_id": "festival-parameter-0013",
+									"_parent": {
+										"$ref": "festival-operation-0012"
+									},
+									"name": "posicion",
+									"type": "int"
+								},
+								{
+									"_type": "UMLParameter",
+									"_id": "festival-parameter-0014",
+									"_parent": {
+										"$ref": "festival-operation-0012"
+									},
+									"type": "boolean",
+									"direction": "return"
+								}
+							]
+						},
+						{
+							"_type": "UMLOperation",
+							"_id": "festival-operation-0015",
+							"_parent": {
+								"$ref": "festival-class-0004"
+							},
+							"name": "VerificarInformacionEscenario",
+							"parameters": [
+								{
+									"_type": "UMLParameter",
+									"_id": "festival-parameter-0016",
+									"_parent": {
+										"$ref": "festival-operation-0015"
+									},
+									"name": "capacidadEscenario",
+									"type": "int"
+								},
+								{
+									"_type": "UMLParameter",
+									"_id": "festival-parameter-0017",
+									"_parent": {
+										"$ref": "festival-operation-0015"
+									},
+									"type": "boolean",
+									"direction": "return"
+								}
+							]
+						},
+						{
+							"_type": "UMLOperation",
+							"_id": "festival-operation-0018",
+							"_parent": {
+								"$ref": "festival-class-0004"
+							},
+							"name": "ConsultarEscenario",
+							"parameters": [
+								{
+									"_type": "UMLParameter",
+									"_id": "festival-parameter-0019",
+									"_parent": {
+										"$ref": "festival-operation-0018"
+									},
+									"name": "escenario",
+									"type": "Escenario"
+								},
+								{
+									"_type": "UMLParameter",
+									"_id": "festival-parameter-0020",
+									"_parent": {
+										"$ref": "festival-operation-0018"
+									},
+									"type": "Escenario",
+									"direction": "return"
+								}
+							]
+						},
+						{
+							"_type": "UMLOperation",
+							"_id": "festival-operation-0021",
+							"_parent": {
+								"$ref": "festival-class-0004"
+							},
+							"name": "ConsultarTodosEscenarios",
+							"parameters": [
+								{
+									"_type": "UMLParameter",
+									"_id": "festival-parameter-0022",
+									"_parent": {
+										"$ref": "festival-operation-0021"
+									},
+									"type": "Escenario",
+									"direction": "return"
+								}
+							]
+						},
+						{
+							"_type": "UMLOperation",
+							"_id": "festival-operation-0023",
+							"_parent": {
+								"$ref": "festival-class-0004"
+							},
+							"name": "ModificarCapacidadEscenario",
+							"visibility": "private",
+							"parameters": [
+								{
+									"_type": "UMLParameter",
+									"_id": "festival-parameter-0024",
+									"_parent": {
+										"$ref": "festival-operation-0023"
+									},
+									"name": "escenario",
+									"type": "Escenario"
+								},
+								{
+									"_type": "UMLParameter",
+									"_id": "festival-parameter-0025",
+									"_parent": {
+										"$ref": "festival-operation-0023"
+									},
+									"type": "void",
+									"direction": "return"
+								}
+							]
+						},
+						{
+							"_type": "UMLOperation",
+							"_id": "festival-operation-0026",
+							"_parent": {
+								"$ref": "festival-class-0004"
+							},
+							"name": "ModificarEstadoEscenario",
+							"visibility": "private",
+							"parameters": [
+								{
+									"_type": "UMLParameter",
+									"_id": "festival-parameter-0027",
+									"_parent": {
+										"$ref": "festival-operation-0026"
+									},
+									"name": "escenario",
+									"type": "Escenario"
+								},
+								{
+									"_type": "UMLParameter",
+									"_id": "festival-parameter-0028",
+									"_parent": {
+										"$ref": "festival-operation-0026"
+									},
+									"type": "void",
+									"direction": "return"
+								}
+							]
+						},
+						{
+							"_type": "UMLOperation",
+							"_id": "festival-operation-0029",
+							"_parent": {
+								"$ref": "festival-class-0004"
+							},
+							"name": "RetirarEscenario",
+							"visibility": "private",
+							"parameters": [
+								{
+									"_type": "UMLParameter",
+									"_id": "festival-parameter-0030",
+									"_parent": {
+										"$ref": "festival-operation-0029"
+									},
+									"name": "escenario",
+									"type": "Escenario"
+								},
+								{
+									"_type": "UMLParameter",
+									"_id": "festival-parameter-0031",
+									"_parent": {
+										"$ref": "festival-operation-0029"
+									},
+									"type": "void",
+									"direction": "return"
+								}
+							]
+						},
+						{
+							"_type": "UMLOperation",
+							"_id": "festival-operation-0032",
+							"_parent": {
+								"$ref": "festival-class-0004"
+							},
+							"name": "VerificarDuracionArtista",
+							"parameters": [
+								{
+									"_type": "UMLParameter",
+									"_id": "festival-parameter-0033",
+									"_parent": {
+										"$ref": "festival-operation-0032"
+									},
+									"name": "artista",
+									"type": "Artista"
+								},
+								{
+									"_type": "UMLParameter",
+									"_id": "festival-parameter-0034",
+									"_parent": {
+										"$ref": "festival-operation-0032"
+									},
+									"type": "boolean",
+									"direction": "return"
+								}
+							]
+						},
+						{
+							"_type": "UMLOperation",
+							"_id": "festival-operation-0035",
+							"_parent": {
+								"$ref": "festival-class-0004"
+							},
+							"name": "RegistrarArtista",
+							"visibility": "private",
+							"parameters": [
+								{
+									"_type": "UMLParameter",
+									"_id": "festival-parameter-0036",
+									"_parent": {
+										"$ref": "festival-operation-0035"
+									},
+									"name": "nombreArtista",
+									"type": "String"
+								},
+								{
+									"_type": "UMLParameter",
+									"_id": "festival-parameter-0037",
+									"_parent": {
+										"$ref": "festival-operation-0035"
+									},
+									"name": "codigoArtista",
+									"type": "int"
+								},
+								{
+									"_type": "UMLParameter",
+									"_id": "festival-parameter-0038",
+									"_parent": {
+										"$ref": "festival-operation-0035"
+									},
+									"name": "generoMusicalArtista",
+									"type": "String"
+								},
+								{
+									"_type": "UMLParameter",
+									"_id": "festival-parameter-0039",
+									"_parent": {
+										"$ref": "festival-operation-0035"
+									},
+									"name": "duracionPresentacionArtista",
+									"type": "int"
+								},
+								{
+									"_type": "UMLParameter",
+									"_id": "festival-parameter-0040",
+									"_parent": {
+										"$ref": "festival-operation-0035"
+									},
+									"name": "estimacionAsistentesArtista",
+									"type": "int"
+								},
+								{
+									"_type": "UMLParameter",
+									"_id": "festival-parameter-0041",
+									"_parent": {
+										"$ref": "festival-operation-0035"
+									},
+									"type": "void",
+									"direction": "return"
+								}
+							]
+						},
+						{
+							"_type": "UMLOperation",
+							"_id": "festival-operation-0042",
+							"_parent": {
+								"$ref": "festival-class-0004"
+							},
+							"name": "ConsultarTodosArtistas",
+							"parameters": [
+								{
+									"_type": "UMLParameter",
+									"_id": "festival-parameter-0043",
+									"_parent": {
+										"$ref": "festival-operation-0042"
+									},
+									"type": "String",
+									"direction": "return"
+								}
+							]
+						},
+						{
+							"_type": "UMLOperation",
+							"_id": "festival-operation-0044",
+							"_parent": {
+								"$ref": "festival-class-0004"
+							},
+							"name": "BuscarArtista",
+							"parameters": [
+								{
+									"_type": "UMLParameter",
+									"_id": "festival-parameter-0045",
+									"_parent": {
+										"$ref": "festival-operation-0044"
+									},
+									"name": "artista",
+									"type": "Artista"
+								},
+								{
+									"_type": "UMLParameter",
+									"_id": "festival-parameter-0046",
+									"_parent": {
+										"$ref": "festival-operation-0044"
+									},
+									"type": "Artista",
+									"direction": "return"
+								}
+							]
+						},
+						{
+							"_type": "UMLOperation",
+							"_id": "festival-operation-0047",
+							"_parent": {
+								"$ref": "festival-class-0004"
+							},
+							"name": "ModificarArtista",
+							"parameters": [
+								{
+									"_type": "UMLParameter",
+									"_id": "festival-parameter-0048",
+									"_parent": {
+										"$ref": "festival-operation-0047"
+									},
+									"name": "artista",
+									"type": "Artista"
+								},
+								{
+									"_type": "UMLParameter",
+									"_id": "festival-parameter-0049",
+									"_parent": {
+										"$ref": "festival-operation-0047"
+									},
+									"type": "void",
+									"direction": "return"
+								}
+							]
+						},
+						{
+							"_type": "UMLOperation",
+							"_id": "festival-operation-0050",
+							"_parent": {
+								"$ref": "festival-class-0004"
+							},
+							"name": "CancelarArtista",
+							"visibility": "private",
+							"parameters": [
+								{
+									"_type": "UMLParameter",
+									"_id": "festival-parameter-0051",
+									"_parent": {
+										"$ref": "festival-operation-0050"
+									},
+									"name": "artista",
+									"type": "Artista"
+								},
+								{
+									"_type": "UMLParameter",
+									"_id": "festival-parameter-0052",
+									"_parent": {
+										"$ref": "festival-operation-0050"
+									},
+									"type": "void",
+									"direction": "return"
+								}
+							]
+						}
+					]
+				},
+				{
+					"_type": "UMLClass",
+					"_id": "festival-class-0053",
+					"_parent": {
+						"$ref": "festival-model-0002"
+					},
+					"name": "Escenario",
+					"ownedElements": [
+						{
+							"_type": "UMLAssociation",
+							"_id": "AAAAAAGghKISZaG6UMA=",
+							"_parent": {
+								"$ref": "festival-class-0053"
+							},
+							"end1": {
+								"_type": "UMLAssociationEnd",
+								"_id": "AAAAAAGghKISZaG7jdM=",
+								"_parent": {
+									"$ref": "AAAAAAGghKISZaG6UMA="
+								},
+								"reference": {
+									"$ref": "festival-class-0060"
+								}
+							},
+							"end2": {
+								"_type": "UMLAssociationEnd",
+								"_id": "AAAAAAGghKISZaG8GMU=",
+								"_parent": {
+									"$ref": "AAAAAAGghKISZaG6UMA="
+								},
+								"reference": {
+									"$ref": "festival-class-0053"
+								},
+								"aggregation": "shared"
+							}
+						},
+						{
+							"_type": "UMLAssociation",
+							"_id": "AAAAAAGghKLJYbSJR6c=",
+							"_parent": {
+								"$ref": "festival-class-0053"
+							},
+							"end1": {
+								"_type": "UMLAssociationEnd",
+								"_id": "AAAAAAGghKLJYbSKdKs=",
+								"_parent": {
+									"$ref": "AAAAAAGghKLJYbSJR6c="
+								},
+								"reference": {
+									"$ref": "festival-class-0053"
+								}
+							},
+							"end2": {
+								"_type": "UMLAssociationEnd",
+								"_id": "AAAAAAGghKLJYbSLkHo=",
+								"_parent": {
+									"$ref": "AAAAAAGghKLJYbSJR6c="
+								},
+								"reference": {
+									"$ref": "festival-class-0004"
+								},
+								"aggregation": "composite"
+							}
+						}
+					],
+					"attributes": [
+						{
+							"_type": "UMLAttribute",
+							"_id": "festival-attribute-0054",
+							"_parent": {
+								"$ref": "festival-class-0053"
+							},
+							"name": "codigoEscenario",
+							"visibility": "private",
+							"type": "int"
+						},
+						{
+							"_type": "UMLAttribute",
+							"_id": "festival-attribute-0055",
+							"_parent": {
+								"$ref": "festival-class-0053"
+							},
+							"name": "nombreEscenario",
+							"type": "String"
+						},
+						{
+							"_type": "UMLAttribute",
+							"_id": "festival-attribute-0056",
+							"_parent": {
+								"$ref": "festival-class-0053"
+							},
+							"name": "ubicacionEscenario",
+							"type": "String"
+						},
+						{
+							"_type": "UMLAttribute",
+							"_id": "festival-attribute-0057",
+							"_parent": {
+								"$ref": "festival-class-0053"
+							},
+							"name": "capacidadEscenario",
+							"type": "int"
+						},
+						{
+							"_type": "UMLAttribute",
+							"_id": "festival-attribute-0058",
+							"_parent": {
+								"$ref": "festival-class-0053"
+							},
+							"name": "estadoEscenario",
+							"type": "String"
+						},
+						{
+							"_type": "UMLAttribute",
+							"_id": "festival-attribute-0059",
+							"_parent": {
+								"$ref": "festival-class-0053"
+							},
+							"name": "artistas",
+							"visibility": "private",
+							"type": "ArrayList<Artista>"
+						}
+					]
+				},
+				{
+					"_type": "UMLClass",
+					"_id": "festival-class-0060",
+					"_parent": {
+						"$ref": "festival-model-0002"
+					},
+					"name": "Artista",
+					"attributes": [
+						{
+							"_type": "UMLAttribute",
+							"_id": "festival-attribute-0061",
+							"_parent": {
+								"$ref": "festival-class-0060"
+							},
+							"name": "codigoArtista",
+							"visibility": "private",
+							"type": "int"
+						},
+						{
+							"_type": "UMLAttribute",
+							"_id": "festival-attribute-0062",
+							"_parent": {
+								"$ref": "festival-class-0060"
+							},
+							"name": "nombreArtista",
+							"type": "String"
+						},
+						{
+							"_type": "UMLAttribute",
+							"_id": "festival-attribute-0063",
+							"_parent": {
+								"$ref": "festival-class-0060"
+							},
+							"name": "generoMusicalArtista",
+							"type": "String"
+						},
+						{
+							"_type": "UMLAttribute",
+							"_id": "festival-attribute-0064",
+							"_parent": {
+								"$ref": "festival-class-0060"
+							},
+							"name": "duracionPresentacionArtista",
+							"type": "int"
+						},
+						{
+							"_type": "UMLAttribute",
+							"_id": "festival-attribute-0065",
+							"_parent": {
+								"$ref": "festival-class-0060"
+							},
+							"name": "estimacionAsistentesArtista",
+							"type": "int"
+						}
+					]
+				},
+				{
+					"_type": "UMLClass",
+					"_id": "festival-class-0066",
+					"_parent": {
+						"$ref": "festival-model-0002"
+					},
+					"name": "Controlador",
+					"operations": [
+						{
+							"_type": "UMLOperation",
+							"_id": "festival-operation-0067",
+							"_parent": {
+								"$ref": "festival-class-0066"
+							},
+							"name": "InicioFestival",
+							"parameters": [
+								{
+									"_type": "UMLParameter",
+									"_id": "festival-parameter-0068",
+									"_parent": {
+										"$ref": "festival-operation-0067"
+									},
+									"name": "nombreFestival",
+									"type": "String"
+								},
+								{
+									"_type": "UMLParameter",
+									"_id": "festival-parameter-0069",
+									"_parent": {
+										"$ref": "festival-operation-0067"
+									},
+									"name": "nombreCoordinador",
+									"type": "String"
+								},
+								{
+									"_type": "UMLParameter",
+									"_id": "festival-parameter-0070",
+									"_parent": {
+										"$ref": "festival-operation-0067"
+									},
+									"name": "codigoIdentificacion",
+									"type": "int"
+								},
+								{
+									"_type": "UMLParameter",
+									"_id": "festival-parameter-0071",
+									"_parent": {
+										"$ref": "festival-operation-0067"
+									},
+									"type": "void",
+									"direction": "return"
+								}
+							]
+						},
+						{
+							"_type": "UMLOperation",
+							"_id": "festival-operation-0072",
+							"_parent": {
+								"$ref": "festival-class-0066"
+							},
+							"name": "ResumenFestival",
+							"parameters": [
+								{
+									"_type": "UMLParameter",
+									"_id": "festival-parameter-0073",
+									"_parent": {
+										"$ref": "festival-operation-0072"
+									},
+									"type": "String",
+									"direction": "return"
+								}
+							]
+						},
+						{
+							"_type": "UMLOperation",
+							"_id": "festival-operation-0074",
+							"_parent": {
+								"$ref": "festival-class-0066"
+							},
+							"name": "VerificarInput",
+							"parameters": [
+								{
+									"_type": "UMLParameter",
+									"_id": "festival-parameter-0075",
+									"_parent": {
+										"$ref": "festival-operation-0074"
+									},
+									"name": "scanner",
+									"type": "Scanner"
+								},
+								{
+									"_type": "UMLParameter",
+									"_id": "festival-parameter-0076",
+									"_parent": {
+										"$ref": "festival-operation-0074"
+									},
+									"type": "boolean",
+									"direction": "return"
+								}
+							]
+						},
+						{
+							"_type": "UMLOperation",
+							"_id": "festival-operation-0077",
+							"_parent": {
+								"$ref": "festival-class-0066"
+							},
+							"name": "VerificarPosicionArrayList",
+							"parameters": [
+								{
+									"_type": "UMLParameter",
+									"_id": "festival-parameter-0078",
+									"_parent": {
+										"$ref": "festival-operation-0077"
+									},
+									"name": "posicion",
+									"type": "int"
+								},
+								{
+									"_type": "UMLParameter",
+									"_id": "festival-parameter-0079",
+									"_parent": {
+										"$ref": "festival-operation-0077"
+									},
+									"type": "boolean",
+									"direction": "return"
+								}
+							]
+						}
+					]
+				},
+				{
+					"_type": "UMLClass",
+					"_id": "festival-class-0080",
+					"_parent": {
+						"$ref": "festival-model-0002"
+					},
+					"name": "Main",
+					"operations": [
+						{
+							"_type": "UMLOperation",
+							"_id": "festival-operation-0081",
+							"_parent": {
+								"$ref": "festival-class-0080"
+							},
+							"name": "main",
+							"isStatic": true,
+							"parameters": [
+								{
+									"_type": "UMLParameter",
+									"_id": "festival-parameter-0082",
+									"_parent": {
+										"$ref": "festival-operation-0081"
+									},
+									"name": "args",
+									"type": "String[]"
+								},
+								{
+									"_type": "UMLParameter",
+									"_id": "festival-parameter-0083",
+									"_parent": {
+										"$ref": "festival-operation-0081"
+									},
+									"type": "void",
+									"direction": "return"
+								}
+							]
+						}
+					]
+				},
+				{
+					"_type": "UMLAssociation",
+					"_id": "festival-association-0084",
+					"_parent": {
+						"$ref": "festival-model-0002"
+					},
+					"name": "contiene",
+					"end1": {
+						"_type": "UMLAssociationEnd",
+						"_id": "festival-association-end-0085",
+						"_parent": {
+							"$ref": "festival-association-0084"
+						},
+						"name": "festival",
+						"reference": {
+							"$ref": "festival-class-0004"
+						},
+						"aggregation": "composite",
+						"multiplicity": "1"
+					},
+					"end2": {
+						"_type": "UMLAssociationEnd",
+						"_id": "festival-association-end-0086",
+						"_parent": {
+							"$ref": "festival-association-0084"
+						},
+						"name": "escenarios",
+						"reference": {
+							"$ref": "festival-class-0053"
+						},
+						"navigable": "navigable",
+						"multiplicity": "0..*"
+					}
+				},
+				{
+					"_type": "UMLAssociation",
+					"_id": "festival-association-0087",
+					"_parent": {
+						"$ref": "festival-model-0002"
+					},
+					"name": "programa",
+					"end1": {
+						"_type": "UMLAssociationEnd",
+						"_id": "festival-association-end-0088",
+						"_parent": {
+							"$ref": "festival-association-0087"
+						},
+						"name": "escenario",
+						"reference": {
+							"$ref": "festival-class-0053"
+						},
+						"aggregation": "shared",
+						"multiplicity": "1"
+					},
+					"end2": {
+						"_type": "UMLAssociationEnd",
+						"_id": "festival-association-end-0089",
+						"_parent": {
+							"$ref": "festival-association-0087"
+						},
+						"name": "artistas",
+						"reference": {
+							"$ref": "festival-class-0060"
+						},
+						"navigable": "navigable",
+						"multiplicity": "0..*"
+					}
+				},
+				{
+					"_type": "UMLDependency",
+					"_id": "festival-dependency-0090",
+					"_parent": {
+						"$ref": "festival-model-0002"
+					},
+					"name": "gestiona",
+					"source": {
+						"$ref": "festival-class-0066"
+					},
+					"target": {
+						"$ref": "festival-class-0004"
+					}
+				},
+				{
+					"_type": "UMLDependency",
+					"_id": "festival-dependency-0091",
+					"_parent": {
+						"$ref": "festival-model-0002"
+					},
+					"name": "inicia",
+					"source": {
+						"$ref": "festival-class-0080"
+					},
+					"target": {
+						"$ref": "festival-class-0066"
+					}
+				},
+				{
+					"_type": "UMLClassDiagram",
+					"_id": "festival-diagram-0003",
+					"_parent": {
+						"$ref": "festival-model-0002"
+					},
+					"name": "Diagrama de clases del festival",
+					"defaultDiagram": true,
+					"ownedViews": [
+						{
+							"_type": "UMLClassView",
+							"_id": "festival-class-view-0092",
+							"_parent": {
+								"$ref": "festival-diagram-0003"
+							},
+							"model": {
+								"$ref": "festival-class-0080"
+							},
+							"subViews": [
+								{
+									"_type": "UMLReceptionCompartmentView",
+									"_id": "festival-reception-compartment-0093",
+									"_parent": {
+										"$ref": "festival-class-view-0092"
+									},
+									"model": {
+										"$ref": "festival-class-0080"
+									},
+									"visible": false,
+									"font": "Arial;12;0",
+									"parentStyle": true,
+									"width": 10,
+									"height": 10
+								},
+								{
+									"_type": "UMLNameCompartmentView",
+									"_id": "festival-name-compartment-0094",
+									"_parent": {
+										"$ref": "festival-class-view-0092"
+									},
+									"model": {
+										"$ref": "festival-class-0080"
+									},
+									"subViews": [
+										{
+											"_type": "LabelView",
+											"_id": "festival-stereotype-label-0098",
+											"_parent": {
+												"$ref": "festival-name-compartment-0094"
+											},
+											"visible": false,
+											"font": "Arial;12;0",
+											"parentStyle": true,
+											"height": 12
+										},
+										{
+											"_type": "LabelView",
+											"_id": "festival-name-label-0099",
+											"_parent": {
+												"$ref": "festival-name-compartment-0094"
+											},
+											"font": "Arial;12;1",
+											"parentStyle": true,
+											"left": 65,
+											"top": 67,
+											"width": 301,
+											"height": 12,
+											"text": "Main"
+										},
+										{
+											"_type": "LabelView",
+											"_id": "festival-namespace-label-0100",
+											"_parent": {
+												"$ref": "festival-name-compartment-0094"
+											},
+											"visible": false,
+											"font": "Arial;12;0",
+											"parentStyle": true,
+											"width": 134.712890625,
+											"height": 12,
+											"text": "(from Modelo del festival)"
+										},
+										{
+											"_type": "LabelView",
+											"_id": "festival-property-label-0101",
+											"_parent": {
+												"$ref": "festival-name-compartment-0094"
+											},
+											"visible": false,
+											"font": "Arial;12;0",
+											"parentStyle": true,
+											"height": 12,
+											"horizontalAlignment": 1
+										}
+									],
+									"font": "Arial;12;0",
+									"parentStyle": true,
+									"left": 60,
+									"top": 60,
+									"width": 311,
+									"height": 24,
+									"stereotypeLabel": {
+										"$ref": "festival-stereotype-label-0098"
+									},
+									"nameLabel": {
+										"$ref": "festival-name-label-0099"
+									},
+									"namespaceLabel": {
+										"$ref": "festival-namespace-label-0100"
+									},
+									"propertyLabel": {
+										"$ref": "festival-property-label-0101"
+									}
+								},
+								{
+									"_type": "UMLAttributeCompartmentView",
+									"_id": "festival-attribute-compartment-0095",
+									"_parent": {
+										"$ref": "festival-class-view-0092"
+									},
+									"model": {
+										"$ref": "festival-class-0080"
+									},
+									"font": "Arial;12;0",
+									"parentStyle": true,
+									"left": 60,
+									"top": 84,
+									"width": 311,
+									"height": 10
+								},
+								{
+									"_type": "UMLOperationCompartmentView",
+									"_id": "festival-operation-compartment-0096",
+									"_parent": {
+										"$ref": "festival-class-view-0092"
+									},
+									"model": {
+										"$ref": "festival-class-0080"
+									},
+									"subViews": [
+										{
+											"_type": "UMLOperationView",
+											"_id": "festival-operation-view-0102",
+											"_parent": {
+												"$ref": "festival-operation-compartment-0096"
+											},
+											"model": {
+												"$ref": "festival-operation-0081"
+											},
+											"font": "Arial;12;0",
+											"parentStyle": true,
+											"left": 65,
+											"top": 99,
+											"width": 301,
+											"height": 12,
+											"underline": true,
+											"text": "+main(args: String[]): void",
+											"horizontalAlignment": 0
+										}
+									],
+									"font": "Arial;12;0",
+									"parentStyle": true,
+									"left": 60,
+									"top": 94,
+									"width": 311,
+									"height": 22
+								},
+								{
+									"_type": "UMLTemplateParameterCompartmentView",
+									"_id": "festival-template-compartment-0097",
+									"_parent": {
+										"$ref": "festival-class-view-0092"
+									},
+									"model": {
+										"$ref": "festival-class-0080"
+									},
+									"visible": false,
+									"font": "Arial;12;0",
+									"parentStyle": true,
+									"width": 10,
+									"height": 10
+								}
+							],
+							"font": "Arial;12;0",
+							"parentStyle": false,
+							"left": 60,
+							"top": 60,
+							"width": 310,
+							"height": 58,
+							"nameCompartment": {
+								"$ref": "festival-name-compartment-0094"
+							},
+							"attributeCompartment": {
+								"$ref": "festival-attribute-compartment-0095"
+							},
+							"operationCompartment": {
+								"$ref": "festival-operation-compartment-0096"
+							},
+							"receptionCompartment": {
+								"$ref": "festival-reception-compartment-0093"
+							},
+							"templateParameterCompartment": {
+								"$ref": "festival-template-compartment-0097"
+							}
+						},
+						{
+							"_type": "UMLClassView",
+							"_id": "festival-class-view-0117",
+							"_parent": {
+								"$ref": "festival-diagram-0003"
+							},
+							"model": {
+								"$ref": "festival-class-0004"
+							},
+							"subViews": [
+								{
+									"_type": "UMLReceptionCompartmentView",
+									"_id": "festival-reception-compartment-0118",
+									"_parent": {
+										"$ref": "festival-class-view-0117"
+									},
+									"model": {
+										"$ref": "festival-class-0004"
+									},
+									"visible": false,
+									"font": "Arial;12;0",
+									"parentStyle": true,
+									"width": 10,
+									"height": 10
+								},
+								{
+									"_type": "UMLNameCompartmentView",
+									"_id": "festival-name-compartment-0119",
+									"_parent": {
+										"$ref": "festival-class-view-0117"
+									},
+									"model": {
+										"$ref": "festival-class-0004"
+									},
+									"subViews": [
+										{
+											"_type": "LabelView",
+											"_id": "festival-stereotype-label-0123",
+											"_parent": {
+												"$ref": "festival-name-compartment-0119"
+											},
+											"visible": false,
+											"font": "Arial;12;0",
+											"parentStyle": true,
+											"height": 12
+										},
+										{
+											"_type": "LabelView",
+											"_id": "festival-name-label-0124",
+											"_parent": {
+												"$ref": "festival-name-compartment-0119"
+											},
+											"font": "Arial;12;1",
+											"parentStyle": true,
+											"left": 285,
+											"top": 287,
+											"width": 838.005859375,
+											"height": 12,
+											"text": "Festival"
+										},
+										{
+											"_type": "LabelView",
+											"_id": "festival-namespace-label-0125",
+											"_parent": {
+												"$ref": "festival-name-compartment-0119"
+											},
+											"visible": false,
+											"font": "Arial;12;0",
+											"parentStyle": true,
+											"width": 134.712890625,
+											"height": 12,
+											"text": "(from Modelo del festival)"
+										},
+										{
+											"_type": "LabelView",
+											"_id": "festival-property-label-0126",
+											"_parent": {
+												"$ref": "festival-name-compartment-0119"
+											},
+											"visible": false,
+											"font": "Arial;12;0",
+											"parentStyle": true,
+											"height": 12,
+											"horizontalAlignment": 1
+										}
+									],
+									"font": "Arial;12;0",
+									"parentStyle": true,
+									"left": 280,
+									"top": 280,
+									"width": 848.005859375,
+									"height": 24,
+									"stereotypeLabel": {
+										"$ref": "festival-stereotype-label-0123"
+									},
+									"nameLabel": {
+										"$ref": "festival-name-label-0124"
+									},
+									"namespaceLabel": {
+										"$ref": "festival-namespace-label-0125"
+									},
+									"propertyLabel": {
+										"$ref": "festival-property-label-0126"
+									}
+								},
+								{
+									"_type": "UMLAttributeCompartmentView",
+									"_id": "festival-attribute-compartment-0120",
+									"_parent": {
+										"$ref": "festival-class-view-0117"
+									},
+									"model": {
+										"$ref": "festival-class-0004"
+									},
+									"subViews": [
+										{
+											"_type": "UMLAttributeView",
+											"_id": "festival-attribute-view-0127",
+											"_parent": {
+												"$ref": "festival-attribute-compartment-0120"
+											},
+											"model": {
+												"$ref": "festival-attribute-0005"
+											},
+											"font": "Arial;12;0",
+											"parentStyle": true,
+											"left": 285,
+											"top": 309,
+											"width": 838.005859375,
+											"height": 12,
+											"text": "+nombreFestival: String",
+											"horizontalAlignment": 0
+										},
+										{
+											"_type": "UMLAttributeView",
+											"_id": "festival-attribute-view-0128",
+											"_parent": {
+												"$ref": "festival-attribute-compartment-0120"
+											},
+											"model": {
+												"$ref": "festival-attribute-0006"
+											},
+											"font": "Arial;12;0",
+											"parentStyle": true,
+											"left": 285,
+											"top": 323,
+											"width": 838.005859375,
+											"height": 12,
+											"text": "-nombreCoordinador: String",
+											"horizontalAlignment": 0
+										},
+										{
+											"_type": "UMLAttributeView",
+											"_id": "festival-attribute-view-0129",
+											"_parent": {
+												"$ref": "festival-attribute-compartment-0120"
+											},
+											"model": {
+												"$ref": "festival-attribute-0007"
+											},
+											"font": "Arial;12;0",
+											"parentStyle": true,
+											"left": 285,
+											"top": 337,
+											"width": 838.005859375,
+											"height": 12,
+											"text": "-codigoIdentificacion: int",
+											"horizontalAlignment": 0
+										},
+										{
+											"_type": "UMLAttributeView",
+											"_id": "festival-attribute-view-0130",
+											"_parent": {
+												"$ref": "festival-attribute-compartment-0120"
+											},
+											"model": {
+												"$ref": "festival-attribute-0008"
+											},
+											"font": "Arial;12;0",
+											"parentStyle": true,
+											"left": 285,
+											"top": 351,
+											"width": 838.005859375,
+											"height": 12,
+											"text": "+escenarios: Escenario[]",
+											"horizontalAlignment": 0
+										}
+									],
+									"font": "Arial;12;0",
+									"parentStyle": true,
+									"left": 280,
+									"top": 304,
+									"width": 848.005859375,
+									"height": 64
+								},
+								{
+									"_type": "UMLOperationCompartmentView",
+									"_id": "festival-operation-compartment-0121",
+									"_parent": {
+										"$ref": "festival-class-view-0117"
+									},
+									"model": {
+										"$ref": "festival-class-0004"
+									},
+									"subViews": [
+										{
+											"_type": "UMLOperationView",
+											"_id": "festival-operation-view-0131",
+											"_parent": {
+												"$ref": "festival-operation-compartment-0121"
+											},
+											"model": {
+												"$ref": "festival-operation-0009"
+											},
+											"font": "Arial;12;0",
+											"parentStyle": true,
+											"left": 285,
+											"top": 373,
+											"width": 838.005859375,
+											"height": 12,
+											"text": "+VerificarPosicionEscenario(posicion: int): boolean",
+											"horizontalAlignment": 0
+										},
+										{
+											"_type": "UMLOperationView",
+											"_id": "festival-operation-view-0132",
+											"_parent": {
+												"$ref": "festival-operation-compartment-0121"
+											},
+											"model": {
+												"$ref": "festival-operation-0012"
+											},
+											"font": "Arial;12;0",
+											"parentStyle": true,
+											"left": 285,
+											"top": 387,
+											"width": 838.005859375,
+											"height": 12,
+											"text": "+VerificarDisponibilidadEscenario(posicion: int): boolean",
+											"horizontalAlignment": 0
+										},
+										{
+											"_type": "UMLOperationView",
+											"_id": "festival-operation-view-0133",
+											"_parent": {
+												"$ref": "festival-operation-compartment-0121"
+											},
+											"model": {
+												"$ref": "festival-operation-0015"
+											},
+											"font": "Arial;12;0",
+											"parentStyle": true,
+											"left": 285,
+											"top": 401,
+											"width": 838.005859375,
+											"height": 12,
+											"text": "+VerificarInformacionEscenario(capacidadEscenario: int): boolean",
+											"horizontalAlignment": 0
+										},
+										{
+											"_type": "UMLOperationView",
+											"_id": "festival-operation-view-0134",
+											"_parent": {
+												"$ref": "festival-operation-compartment-0121"
+											},
+											"model": {
+												"$ref": "festival-operation-0018"
+											},
+											"font": "Arial;12;0",
+											"parentStyle": true,
+											"left": 285,
+											"top": 415,
+											"width": 838.005859375,
+											"height": 12,
+											"text": "+ConsultarEscenario(escenario: Escenario): Escenario",
+											"horizontalAlignment": 0
+										},
+										{
+											"_type": "UMLOperationView",
+											"_id": "festival-operation-view-0135",
+											"_parent": {
+												"$ref": "festival-operation-compartment-0121"
+											},
+											"model": {
+												"$ref": "festival-operation-0021"
+											},
+											"font": "Arial;12;0",
+											"parentStyle": true,
+											"left": 285,
+											"top": 429,
+											"width": 838.005859375,
+											"height": 12,
+											"text": "+ConsultarTodosEscenarios(): Escenario",
+											"horizontalAlignment": 0
+										},
+										{
+											"_type": "UMLOperationView",
+											"_id": "festival-operation-view-0136",
+											"_parent": {
+												"$ref": "festival-operation-compartment-0121"
+											},
+											"model": {
+												"$ref": "festival-operation-0023"
+											},
+											"font": "Arial;12;0",
+											"parentStyle": true,
+											"left": 285,
+											"top": 443,
+											"width": 838.005859375,
+											"height": 12,
+											"text": "-ModificarCapacidadEscenario(escenario: Escenario): void",
+											"horizontalAlignment": 0
+										},
+										{
+											"_type": "UMLOperationView",
+											"_id": "festival-operation-view-0137",
+											"_parent": {
+												"$ref": "festival-operation-compartment-0121"
+											},
+											"model": {
+												"$ref": "festival-operation-0026"
+											},
+											"font": "Arial;12;0",
+											"parentStyle": true,
+											"left": 285,
+											"top": 457,
+											"width": 838.005859375,
+											"height": 12,
+											"text": "-ModificarEstadoEscenario(escenario: Escenario): void",
+											"horizontalAlignment": 0
+										},
+										{
+											"_type": "UMLOperationView",
+											"_id": "festival-operation-view-0138",
+											"_parent": {
+												"$ref": "festival-operation-compartment-0121"
+											},
+											"model": {
+												"$ref": "festival-operation-0029"
+											},
+											"font": "Arial;12;0",
+											"parentStyle": true,
+											"left": 285,
+											"top": 471,
+											"width": 838.005859375,
+											"height": 12,
+											"text": "-RetirarEscenario(escenario: Escenario): void",
+											"horizontalAlignment": 0
+										},
+										{
+											"_type": "UMLOperationView",
+											"_id": "festival-operation-view-0139",
+											"_parent": {
+												"$ref": "festival-operation-compartment-0121"
+											},
+											"model": {
+												"$ref": "festival-operation-0032"
+											},
+											"font": "Arial;12;0",
+											"parentStyle": true,
+											"left": 285,
+											"top": 485,
+											"width": 838.005859375,
+											"height": 12,
+											"text": "+VerificarDuracionArtista(artista: Artista): boolean",
+											"horizontalAlignment": 0
+										},
+										{
+											"_type": "UMLOperationView",
+											"_id": "festival-operation-view-0140",
+											"_parent": {
+												"$ref": "festival-operation-compartment-0121"
+											},
+											"model": {
+												"$ref": "festival-operation-0035"
+											},
+											"font": "Arial;12;0",
+											"parentStyle": true,
+											"left": 285,
+											"top": 499,
+											"width": 838.005859375,
+											"height": 12,
+											"text": "-RegistrarArtista(nombreArtista: String, codigoArtista: int, generoMusicalArtista: String, duracionPresentacionArtista: int, estimacionAsistentesArtista: int): void",
+											"horizontalAlignment": 0
+										},
+										{
+											"_type": "UMLOperationView",
+											"_id": "festival-operation-view-0141",
+											"_parent": {
+												"$ref": "festival-operation-compartment-0121"
+											},
+											"model": {
+												"$ref": "festival-operation-0042"
+											},
+											"font": "Arial;12;0",
+											"parentStyle": true,
+											"left": 285,
+											"top": 513,
+											"width": 838.005859375,
+											"height": 12,
+											"text": "+ConsultarTodosArtistas(): String",
+											"horizontalAlignment": 0
+										},
+										{
+											"_type": "UMLOperationView",
+											"_id": "festival-operation-view-0142",
+											"_parent": {
+												"$ref": "festival-operation-compartment-0121"
+											},
+											"model": {
+												"$ref": "festival-operation-0044"
+											},
+											"font": "Arial;12;0",
+											"parentStyle": true,
+											"left": 285,
+											"top": 527,
+											"width": 838.005859375,
+											"height": 12,
+											"text": "+BuscarArtista(artista: Artista): Artista",
+											"horizontalAlignment": 0
+										},
+										{
+											"_type": "UMLOperationView",
+											"_id": "festival-operation-view-0143",
+											"_parent": {
+												"$ref": "festival-operation-compartment-0121"
+											},
+											"model": {
+												"$ref": "festival-operation-0047"
+											},
+											"font": "Arial;12;0",
+											"parentStyle": true,
+											"left": 285,
+											"top": 541,
+											"width": 838.005859375,
+											"height": 12,
+											"text": "+ModificarArtista(artista: Artista): void",
+											"horizontalAlignment": 0
+										},
+										{
+											"_type": "UMLOperationView",
+											"_id": "festival-operation-view-0144",
+											"_parent": {
+												"$ref": "festival-operation-compartment-0121"
+											},
+											"model": {
+												"$ref": "festival-operation-0050"
+											},
+											"font": "Arial;12;0",
+											"parentStyle": true,
+											"left": 285,
+											"top": 555,
+											"width": 838.005859375,
+											"height": 12,
+											"text": "-CancelarArtista(artista: Artista): void",
+											"horizontalAlignment": 0
+										}
+									],
+									"font": "Arial;12;0",
+									"parentStyle": true,
+									"left": 280,
+									"top": 368,
+									"width": 848.005859375,
+									"height": 204
+								},
+								{
+									"_type": "UMLTemplateParameterCompartmentView",
+									"_id": "festival-template-compartment-0122",
+									"_parent": {
+										"$ref": "festival-class-view-0117"
+									},
+									"model": {
+										"$ref": "festival-class-0004"
+									},
+									"visible": false,
+									"font": "Arial;12;0",
+									"parentStyle": true,
+									"width": 10,
+									"height": 10
+								}
+							],
+							"font": "Arial;12;0",
+							"parentStyle": false,
+							"left": 280,
+							"top": 280,
+							"width": 847.005859375,
+							"height": 296,
+							"nameCompartment": {
+								"$ref": "festival-name-compartment-0119"
+							},
+							"attributeCompartment": {
+								"$ref": "festival-attribute-compartment-0120"
+							},
+							"operationCompartment": {
+								"$ref": "festival-operation-compartment-0121"
+							},
+							"receptionCompartment": {
+								"$ref": "festival-reception-compartment-0118"
+							},
+							"templateParameterCompartment": {
+								"$ref": "festival-template-compartment-0122"
+							}
+						},
+						{
+							"_type": "UMLClassView",
+							"_id": "festival-class-view-0145",
+							"_parent": {
+								"$ref": "festival-diagram-0003"
+							},
+							"model": {
+								"$ref": "festival-class-0053"
+							},
+							"subViews": [
+								{
+									"_type": "UMLReceptionCompartmentView",
+									"_id": "festival-reception-compartment-0146",
+									"_parent": {
+										"$ref": "festival-class-view-0145"
+									},
+									"model": {
+										"$ref": "festival-class-0053"
+									},
+									"visible": false,
+									"font": "Arial;12;0",
+									"parentStyle": true,
+									"width": 10,
+									"height": 10
+								},
+								{
+									"_type": "UMLNameCompartmentView",
+									"_id": "festival-name-compartment-0147",
+									"_parent": {
+										"$ref": "festival-class-view-0145"
+									},
+									"model": {
+										"$ref": "festival-class-0053"
+									},
+									"subViews": [
+										{
+											"_type": "LabelView",
+											"_id": "festival-stereotype-label-0151",
+											"_parent": {
+												"$ref": "festival-name-compartment-0147"
+											},
+											"visible": false,
+											"font": "Arial;12;0",
+											"parentStyle": true,
+											"height": 12
+										},
+										{
+											"_type": "LabelView",
+											"_id": "festival-name-label-0152",
+											"_parent": {
+												"$ref": "festival-name-compartment-0147"
+											},
+											"font": "Arial;12;1",
+											"parentStyle": true,
+											"left": 95,
+											"top": 727,
+											"width": 491,
+											"height": 12,
+											"text": "Escenario"
+										},
+										{
+											"_type": "LabelView",
+											"_id": "festival-namespace-label-0153",
+											"_parent": {
+												"$ref": "festival-name-compartment-0147"
+											},
+											"visible": false,
+											"font": "Arial;12;0",
+											"parentStyle": true,
+											"width": 134.712890625,
+											"height": 12,
+											"text": "(from Modelo del festival)"
+										},
+										{
+											"_type": "LabelView",
+											"_id": "festival-property-label-0154",
+											"_parent": {
+												"$ref": "festival-name-compartment-0147"
+											},
+											"visible": false,
+											"font": "Arial;12;0",
+											"parentStyle": true,
+											"height": 12,
+											"horizontalAlignment": 1
+										}
+									],
+									"font": "Arial;12;0",
+									"parentStyle": true,
+									"left": 90,
+									"top": 720,
+									"width": 501,
+									"height": 24,
+									"stereotypeLabel": {
+										"$ref": "festival-stereotype-label-0151"
+									},
+									"nameLabel": {
+										"$ref": "festival-name-label-0152"
+									},
+									"namespaceLabel": {
+										"$ref": "festival-namespace-label-0153"
+									},
+									"propertyLabel": {
+										"$ref": "festival-property-label-0154"
+									}
+								},
+								{
+									"_type": "UMLAttributeCompartmentView",
+									"_id": "festival-attribute-compartment-0148",
+									"_parent": {
+										"$ref": "festival-class-view-0145"
+									},
+									"model": {
+										"$ref": "festival-class-0053"
+									},
+									"subViews": [
+										{
+											"_type": "UMLAttributeView",
+											"_id": "festival-attribute-view-0155",
+											"_parent": {
+												"$ref": "festival-attribute-compartment-0148"
+											},
+											"model": {
+												"$ref": "festival-attribute-0054"
+											},
+											"font": "Arial;12;0",
+											"parentStyle": true,
+											"left": 95,
+											"top": 749,
+											"width": 491,
+											"height": 12,
+											"text": "-codigoEscenario: int",
+											"horizontalAlignment": 0
+										},
+										{
+											"_type": "UMLAttributeView",
+											"_id": "festival-attribute-view-0156",
+											"_parent": {
+												"$ref": "festival-attribute-compartment-0148"
+											},
+											"model": {
+												"$ref": "festival-attribute-0055"
+											},
+											"font": "Arial;12;0",
+											"parentStyle": true,
+											"left": 95,
+											"top": 763,
+											"width": 491,
+											"height": 12,
+											"text": "+nombreEscenario: String",
+											"horizontalAlignment": 0
+										},
+										{
+											"_type": "UMLAttributeView",
+											"_id": "festival-attribute-view-0157",
+											"_parent": {
+												"$ref": "festival-attribute-compartment-0148"
+											},
+											"model": {
+												"$ref": "festival-attribute-0056"
+											},
+											"font": "Arial;12;0",
+											"parentStyle": true,
+											"left": 95,
+											"top": 777,
+											"width": 491,
+											"height": 12,
+											"text": "+ubicacionEscenario: String",
+											"horizontalAlignment": 0
+										},
+										{
+											"_type": "UMLAttributeView",
+											"_id": "festival-attribute-view-0158",
+											"_parent": {
+												"$ref": "festival-attribute-compartment-0148"
+											},
+											"model": {
+												"$ref": "festival-attribute-0057"
+											},
+											"font": "Arial;12;0",
+											"parentStyle": true,
+											"left": 95,
+											"top": 791,
+											"width": 491,
+											"height": 12,
+											"text": "+capacidadEscenario: int",
+											"horizontalAlignment": 0
+										},
+										{
+											"_type": "UMLAttributeView",
+											"_id": "festival-attribute-view-0159",
+											"_parent": {
+												"$ref": "festival-attribute-compartment-0148"
+											},
+											"model": {
+												"$ref": "festival-attribute-0058"
+											},
+											"font": "Arial;12;0",
+											"parentStyle": true,
+											"left": 95,
+											"top": 805,
+											"width": 491,
+											"height": 12,
+											"text": "+estadoEscenario: String",
+											"horizontalAlignment": 0
+										},
+										{
+											"_type": "UMLAttributeView",
+											"_id": "festival-attribute-view-0160",
+											"_parent": {
+												"$ref": "festival-attribute-compartment-0148"
+											},
+											"model": {
+												"$ref": "festival-attribute-0059"
+											},
+											"font": "Arial;12;0",
+											"parentStyle": true,
+											"left": 95,
+											"top": 819,
+											"width": 491,
+											"height": 12,
+											"text": "-artistas: ArrayList<Artista>",
+											"horizontalAlignment": 0
+										}
+									],
+									"font": "Arial;12;0",
+									"parentStyle": true,
+									"left": 90,
+									"top": 744,
+									"width": 501,
+									"height": 92
+								},
+								{
+									"_type": "UMLOperationCompartmentView",
+									"_id": "festival-operation-compartment-0149",
+									"_parent": {
+										"$ref": "festival-class-view-0145"
+									},
+									"model": {
+										"$ref": "festival-class-0053"
+									},
+									"font": "Arial;12;0",
+									"parentStyle": true,
+									"left": 90,
+									"top": 836,
+									"width": 501,
+									"height": 10
+								},
+								{
+									"_type": "UMLTemplateParameterCompartmentView",
+									"_id": "festival-template-compartment-0150",
+									"_parent": {
+										"$ref": "festival-class-view-0145"
+									},
+									"model": {
+										"$ref": "festival-class-0053"
+									},
+									"visible": false,
+									"font": "Arial;12;0",
+									"parentStyle": true,
+									"width": 10,
+									"height": 10
+								}
+							],
+							"font": "Arial;12;0",
+							"parentStyle": false,
+							"left": 90,
+							"top": 720,
+							"width": 500,
+							"height": 128,
+							"nameCompartment": {
+								"$ref": "festival-name-compartment-0147"
+							},
+							"attributeCompartment": {
+								"$ref": "festival-attribute-compartment-0148"
+							},
+							"operationCompartment": {
+								"$ref": "festival-operation-compartment-0149"
+							},
+							"receptionCompartment": {
+								"$ref": "festival-reception-compartment-0146"
+							},
+							"templateParameterCompartment": {
+								"$ref": "festival-template-compartment-0150"
+							}
+						},
+						{
+							"_type": "UMLClassView",
+							"_id": "festival-class-view-0161",
+							"_parent": {
+								"$ref": "festival-diagram-0003"
+							},
+							"model": {
+								"$ref": "festival-class-0060"
+							},
+							"subViews": [
+								{
+									"_type": "UMLReceptionCompartmentView",
+									"_id": "festival-reception-compartment-0162",
+									"_parent": {
+										"$ref": "festival-class-view-0161"
+									},
+									"model": {
+										"$ref": "festival-class-0060"
+									},
+									"visible": false,
+									"font": "Arial;12;0",
+									"parentStyle": true,
+									"left": -290,
+									"top": 16,
+									"width": 10,
+									"height": 10
+								},
+								{
+									"_type": "UMLNameCompartmentView",
+									"_id": "festival-name-compartment-0163",
+									"_parent": {
+										"$ref": "festival-class-view-0161"
+									},
+									"model": {
+										"$ref": "festival-class-0060"
+									},
+									"subViews": [
+										{
+											"_type": "LabelView",
+											"_id": "festival-stereotype-label-0167",
+											"_parent": {
+												"$ref": "festival-name-compartment-0163"
+											},
+											"visible": false,
+											"font": "Arial;12;0",
+											"parentStyle": true,
+											"left": -580,
+											"top": 32,
+											"height": 12
+										},
+										{
+											"_type": "LabelView",
+											"_id": "festival-name-label-0168",
+											"_parent": {
+												"$ref": "festival-name-compartment-0163"
+											},
+											"font": "Arial;12;1",
+											"parentStyle": true,
+											"left": 765,
+											"top": 743,
+											"width": 521,
+											"height": 12,
+											"text": "Artista"
+										},
+										{
+											"_type": "LabelView",
+											"_id": "festival-namespace-label-0169",
+											"_parent": {
+												"$ref": "festival-name-compartment-0163"
+											},
+											"visible": false,
+											"font": "Arial;12;0",
+											"parentStyle": true,
+											"left": -580,
+											"top": 32,
+											"width": 134.712890625,
+											"height": 12,
+											"text": "(from Modelo del festival)"
+										},
+										{
+											"_type": "LabelView",
+											"_id": "festival-property-label-0170",
+											"_parent": {
+												"$ref": "festival-name-compartment-0163"
+											},
+											"visible": false,
+											"font": "Arial;12;0",
+											"parentStyle": true,
+											"left": -580,
+											"top": 32,
+											"height": 12,
+											"horizontalAlignment": 1
+										}
+									],
+									"font": "Arial;12;0",
+									"parentStyle": true,
+									"left": 760,
+									"top": 736,
+									"width": 531,
+									"height": 24,
+									"stereotypeLabel": {
+										"$ref": "festival-stereotype-label-0167"
+									},
+									"nameLabel": {
+										"$ref": "festival-name-label-0168"
+									},
+									"namespaceLabel": {
+										"$ref": "festival-namespace-label-0169"
+									},
+									"propertyLabel": {
+										"$ref": "festival-property-label-0170"
+									}
+								},
+								{
+									"_type": "UMLAttributeCompartmentView",
+									"_id": "festival-attribute-compartment-0164",
+									"_parent": {
+										"$ref": "festival-class-view-0161"
+									},
+									"model": {
+										"$ref": "festival-class-0060"
+									},
+									"subViews": [
+										{
+											"_type": "UMLAttributeView",
+											"_id": "festival-attribute-view-0171",
+											"_parent": {
+												"$ref": "festival-attribute-compartment-0164"
+											},
+											"model": {
+												"$ref": "festival-attribute-0061"
+											},
+											"font": "Arial;12;0",
+											"parentStyle": true,
+											"left": 765,
+											"top": 765,
+											"width": 521,
+											"height": 12,
+											"text": "-codigoArtista: int",
+											"horizontalAlignment": 0
+										},
+										{
+											"_type": "UMLAttributeView",
+											"_id": "festival-attribute-view-0172",
+											"_parent": {
+												"$ref": "festival-attribute-compartment-0164"
+											},
+											"model": {
+												"$ref": "festival-attribute-0062"
+											},
+											"font": "Arial;12;0",
+											"parentStyle": true,
+											"left": 765,
+											"top": 779,
+											"width": 521,
+											"height": 12,
+											"text": "+nombreArtista: String",
+											"horizontalAlignment": 0
+										},
+										{
+											"_type": "UMLAttributeView",
+											"_id": "festival-attribute-view-0173",
+											"_parent": {
+												"$ref": "festival-attribute-compartment-0164"
+											},
+											"model": {
+												"$ref": "festival-attribute-0063"
+											},
+											"font": "Arial;12;0",
+											"parentStyle": true,
+											"left": 765,
+											"top": 793,
+											"width": 521,
+											"height": 12,
+											"text": "+generoMusicalArtista: String",
+											"horizontalAlignment": 0
+										},
+										{
+											"_type": "UMLAttributeView",
+											"_id": "festival-attribute-view-0174",
+											"_parent": {
+												"$ref": "festival-attribute-compartment-0164"
+											},
+											"model": {
+												"$ref": "festival-attribute-0064"
+											},
+											"font": "Arial;12;0",
+											"parentStyle": true,
+											"left": 765,
+											"top": 807,
+											"width": 521,
+											"height": 12,
+											"text": "+duracionPresentacionArtista: int",
+											"horizontalAlignment": 0
+										},
+										{
+											"_type": "UMLAttributeView",
+											"_id": "festival-attribute-view-0175",
+											"_parent": {
+												"$ref": "festival-attribute-compartment-0164"
+											},
+											"model": {
+												"$ref": "festival-attribute-0065"
+											},
+											"font": "Arial;12;0",
+											"parentStyle": true,
+											"left": 765,
+											"top": 821,
+											"width": 521,
+											"height": 12,
+											"text": "+estimacionAsistentesArtista: int",
+											"horizontalAlignment": 0
+										}
+									],
+									"font": "Arial;12;0",
+									"parentStyle": true,
+									"left": 760,
+									"top": 760,
+									"width": 531,
+									"height": 78
+								},
+								{
+									"_type": "UMLOperationCompartmentView",
+									"_id": "festival-operation-compartment-0165",
+									"_parent": {
+										"$ref": "festival-class-view-0161"
+									},
+									"model": {
+										"$ref": "festival-class-0060"
+									},
+									"font": "Arial;12;0",
+									"parentStyle": true,
+									"left": 760,
+									"top": 838,
+									"width": 531,
+									"height": 10
+								},
+								{
+									"_type": "UMLTemplateParameterCompartmentView",
+									"_id": "festival-template-compartment-0166",
+									"_parent": {
+										"$ref": "festival-class-view-0161"
+									},
+									"model": {
+										"$ref": "festival-class-0060"
+									},
+									"visible": false,
+									"font": "Arial;12;0",
+									"parentStyle": true,
+									"left": -290,
+									"top": 16,
+									"width": 10,
+									"height": 10
+								}
+							],
+							"font": "Arial;12;0",
+							"parentStyle": false,
+							"left": 760,
+							"top": 736,
+							"width": 530,
+							"height": 114,
+							"nameCompartment": {
+								"$ref": "festival-name-compartment-0163"
+							},
+							"attributeCompartment": {
+								"$ref": "festival-attribute-compartment-0164"
+							},
+							"operationCompartment": {
+								"$ref": "festival-operation-compartment-0165"
+							},
+							"receptionCompartment": {
+								"$ref": "festival-reception-compartment-0162"
+							},
+							"templateParameterCompartment": {
+								"$ref": "festival-template-compartment-0166"
+							}
+						},
+						{
+							"_type": "UMLClassView",
+							"_id": "festival-class-view-0103",
+							"_parent": {
+								"$ref": "festival-diagram-0003"
+							},
+							"model": {
+								"$ref": "festival-class-0066"
+							},
+							"subViews": [
+								{
+									"_type": "UMLReceptionCompartmentView",
+									"_id": "festival-reception-compartment-0104",
+									"_parent": {
+										"$ref": "festival-class-view-0103"
+									},
+									"model": {
+										"$ref": "festival-class-0066"
+									},
+									"visible": false,
+									"font": "Arial;12;0",
+									"parentStyle": true,
+									"width": 10,
+									"height": 10
+								},
+								{
+									"_type": "UMLNameCompartmentView",
+									"_id": "festival-name-compartment-0105",
+									"_parent": {
+										"$ref": "festival-class-view-0103"
+									},
+									"model": {
+										"$ref": "festival-class-0066"
+									},
+									"subViews": [
+										{
+											"_type": "LabelView",
+											"_id": "festival-stereotype-label-0109",
+											"_parent": {
+												"$ref": "festival-name-compartment-0105"
+											},
+											"visible": false,
+											"font": "Arial;12;0",
+											"parentStyle": true,
+											"height": 12
+										},
+										{
+											"_type": "LabelView",
+											"_id": "festival-name-label-0110",
+											"_parent": {
+												"$ref": "festival-name-compartment-0105"
+											},
+											"font": "Arial;12;1",
+											"parentStyle": true,
+											"left": 525,
+											"top": 57,
+											"width": 691,
+											"height": 12,
+											"text": "Controlador"
+										},
+										{
+											"_type": "LabelView",
+											"_id": "festival-namespace-label-0111",
+											"_parent": {
+												"$ref": "festival-name-compartment-0105"
+											},
+											"visible": false,
+											"font": "Arial;12;0",
+											"parentStyle": true,
+											"width": 134.712890625,
+											"height": 12,
+											"text": "(from Modelo del festival)"
+										},
+										{
+											"_type": "LabelView",
+											"_id": "festival-property-label-0112",
+											"_parent": {
+												"$ref": "festival-name-compartment-0105"
+											},
+											"visible": false,
+											"font": "Arial;12;0",
+											"parentStyle": true,
+											"height": 12,
+											"horizontalAlignment": 1
+										}
+									],
+									"font": "Arial;12;0",
+									"parentStyle": true,
+									"left": 520,
+									"top": 50,
+									"width": 701,
+									"height": 24,
+									"stereotypeLabel": {
+										"$ref": "festival-stereotype-label-0109"
+									},
+									"nameLabel": {
+										"$ref": "festival-name-label-0110"
+									},
+									"namespaceLabel": {
+										"$ref": "festival-namespace-label-0111"
+									},
+									"propertyLabel": {
+										"$ref": "festival-property-label-0112"
+									}
+								},
+								{
+									"_type": "UMLAttributeCompartmentView",
+									"_id": "festival-attribute-compartment-0106",
+									"_parent": {
+										"$ref": "festival-class-view-0103"
+									},
+									"model": {
+										"$ref": "festival-class-0066"
+									},
+									"font": "Arial;12;0",
+									"parentStyle": true,
+									"left": 520,
+									"top": 74,
+									"width": 701,
+									"height": 10
+								},
+								{
+									"_type": "UMLOperationCompartmentView",
+									"_id": "festival-operation-compartment-0107",
+									"_parent": {
+										"$ref": "festival-class-view-0103"
+									},
+									"model": {
+										"$ref": "festival-class-0066"
+									},
+									"subViews": [
+										{
+											"_type": "UMLOperationView",
+											"_id": "festival-operation-view-0113",
+											"_parent": {
+												"$ref": "festival-operation-compartment-0107"
+											},
+											"model": {
+												"$ref": "festival-operation-0067"
+											},
+											"font": "Arial;12;0",
+											"parentStyle": true,
+											"left": 525,
+											"top": 89,
+											"width": 691,
+											"height": 12,
+											"text": "+InicioFestival(nombreFestival: String, nombreCoordinador: String, codigoIdentificacion: int): void",
+											"horizontalAlignment": 0
+										},
+										{
+											"_type": "UMLOperationView",
+											"_id": "festival-operation-view-0114",
+											"_parent": {
+												"$ref": "festival-operation-compartment-0107"
+											},
+											"model": {
+												"$ref": "festival-operation-0072"
+											},
+											"font": "Arial;12;0",
+											"parentStyle": true,
+											"left": 525,
+											"top": 103,
+											"width": 691,
+											"height": 12,
+											"text": "+ResumenFestival(): String",
+											"horizontalAlignment": 0
+										},
+										{
+											"_type": "UMLOperationView",
+											"_id": "festival-operation-view-0115",
+											"_parent": {
+												"$ref": "festival-operation-compartment-0107"
+											},
+											"model": {
+												"$ref": "festival-operation-0074"
+											},
+											"font": "Arial;12;0",
+											"parentStyle": true,
+											"left": 525,
+											"top": 117,
+											"width": 691,
+											"height": 12,
+											"text": "+VerificarInput(scanner: Scanner): boolean",
+											"horizontalAlignment": 0
+										},
+										{
+											"_type": "UMLOperationView",
+											"_id": "festival-operation-view-0116",
+											"_parent": {
+												"$ref": "festival-operation-compartment-0107"
+											},
+											"model": {
+												"$ref": "festival-operation-0077"
+											},
+											"font": "Arial;12;0",
+											"parentStyle": true,
+											"left": 525,
+											"top": 131,
+											"width": 691,
+											"height": 12,
+											"text": "+VerificarPosicionArrayList(posicion: int): boolean",
+											"horizontalAlignment": 0
+										}
+									],
+									"font": "Arial;12;0",
+									"parentStyle": true,
+									"left": 520,
+									"top": 84,
+									"width": 701,
+									"height": 64
+								},
+								{
+									"_type": "UMLTemplateParameterCompartmentView",
+									"_id": "festival-template-compartment-0108",
+									"_parent": {
+										"$ref": "festival-class-view-0103"
+									},
+									"model": {
+										"$ref": "festival-class-0066"
+									},
+									"visible": false,
+									"font": "Arial;12;0",
+									"parentStyle": true,
+									"width": 10,
+									"height": 10
+								}
+							],
+							"font": "Arial;12;0",
+							"parentStyle": false,
+							"left": 520,
+							"top": 50,
+							"width": 700,
+							"height": 100,
+							"nameCompartment": {
+								"$ref": "festival-name-compartment-0105"
+							},
+							"attributeCompartment": {
+								"$ref": "festival-attribute-compartment-0106"
+							},
+							"operationCompartment": {
+								"$ref": "festival-operation-compartment-0107"
+							},
+							"receptionCompartment": {
+								"$ref": "festival-reception-compartment-0104"
+							},
+							"templateParameterCompartment": {
+								"$ref": "festival-template-compartment-0108"
+							}
+						},
+						{
+							"_type": "UMLDependencyView",
+							"_id": "festival-dependency-view-0178",
+							"_parent": {
+								"$ref": "festival-diagram-0003"
+							},
+							"model": {
+								"$ref": "festival-dependency-0091"
+							},
+							"subViews": [
+								{
+									"_type": "EdgeLabelView",
+									"_id": "AAAAAAGghKCxsplI8ys=",
+									"_parent": {
+										"$ref": "festival-dependency-view-0178"
+									},
+									"model": {
+										"$ref": "festival-dependency-0091"
+									},
+									"font": "Arial;13;0",
+									"parentStyle": false,
+									"left": 431,
+									"top": 72,
+									"width": 29.62451171875,
+									"height": 13,
+									"alpha": 1.5707963267948966,
+									"distance": 15,
+									"hostEdge": {
+										"$ref": "festival-dependency-view-0178"
+									},
+									"edgePosition": 1,
+									"text": "inicia"
+								},
+								{
+									"_type": "EdgeLabelView",
+									"_id": "AAAAAAGghKCxsplJSec=",
+									"_parent": {
+										"$ref": "festival-dependency-view-0178"
+									},
+									"model": {
+										"$ref": "festival-dependency-0091"
+									},
+									"visible": null,
+									"font": "Arial;13;0",
+									"parentStyle": false,
+									"left": 445,
+									"top": 57,
+									"height": 13,
+									"alpha": 1.5707963267948966,
+									"distance": 30,
+									"hostEdge": {
+										"$ref": "festival-dependency-view-0178"
+									},
+									"edgePosition": 1
+								},
+								{
+									"_type": "EdgeLabelView",
+									"_id": "AAAAAAGghKCxsplK/P4=",
+									"_parent": {
+										"$ref": "festival-dependency-view-0178"
+									},
+									"model": {
+										"$ref": "festival-dependency-0091"
+									},
+									"visible": false,
+									"font": "Arial;13;0",
+									"parentStyle": false,
+									"left": 444,
+									"top": 101,
+									"height": 13,
+									"alpha": -1.5707963267948966,
+									"distance": 15,
+									"hostEdge": {
+										"$ref": "festival-dependency-view-0178"
+									},
+									"edgePosition": 1
+								}
+							],
+							"font": "Arial;13;0",
+							"parentStyle": false,
+							"head": {
+								"$ref": "festival-class-view-0103"
+							},
+							"tail": {
+								"$ref": "festival-class-view-0092"
+							},
+							"lineStyle": 1,
+							"points": "371:92;519:94",
+							"nameLabel": {
+								"$ref": "AAAAAAGghKCxsplI8ys="
+							},
+							"stereotypeLabel": {
+								"$ref": "AAAAAAGghKCxsplJSec="
+							},
+							"propertyLabel": {
+								"$ref": "AAAAAAGghKCxsplK/P4="
+							}
+						},
+						{
+							"_type": "UMLDependencyView",
+							"_id": "festival-dependency-view-0179",
+							"_parent": {
+								"$ref": "festival-diagram-0003"
+							},
+							"model": {
+								"$ref": "festival-dependency-0090"
+							},
+							"subViews": [
+								{
+									"_type": "EdgeLabelView",
+									"_id": "AAAAAAGghKCxsplMRrI=",
+									"_parent": {
+										"$ref": "festival-dependency-view-0179"
+									},
+									"model": {
+										"$ref": "festival-dependency-0090"
+									},
+									"font": "Arial;13;0",
+									"parentStyle": false,
+									"left": 800,
+									"top": 215,
+									"width": 49.14990234375,
+									"height": 13,
+									"alpha": 1.5707963267948966,
+									"distance": 15,
+									"hostEdge": {
+										"$ref": "festival-dependency-view-0179"
+									},
+									"edgePosition": 1,
+									"text": "gestiona"
+								},
+								{
+									"_type": "EdgeLabelView",
+									"_id": "AAAAAAGghKCxsplN4iI=",
+									"_parent": {
+										"$ref": "festival-dependency-view-0179"
+									},
+									"model": {
+										"$ref": "festival-dependency-0090"
+									},
+									"visible": null,
+									"font": "Arial;13;0",
+									"parentStyle": false,
+									"left": 837,
+									"top": 222,
+									"height": 13,
+									"alpha": 1.5707963267948966,
+									"distance": 30,
+									"hostEdge": {
+										"$ref": "festival-dependency-view-0179"
+									},
+									"edgePosition": 1
+								},
+								{
+									"_type": "EdgeLabelView",
+									"_id": "AAAAAAGghKCxsplOF5g=",
+									"_parent": {
+										"$ref": "festival-dependency-view-0179"
+									},
+									"model": {
+										"$ref": "festival-dependency-0090"
+									},
+									"visible": false,
+									"font": "Arial;13;0",
+									"parentStyle": false,
+									"left": 797,
+									"top": 202,
+									"height": 13,
+									"alpha": -1.5707963267948966,
+									"distance": 15,
+									"hostEdge": {
+										"$ref": "festival-dependency-view-0179"
+									},
+									"edgePosition": 1
+								}
+							],
+							"font": "Arial;13;0",
+							"parentStyle": false,
+							"head": {
+								"$ref": "festival-class-view-0117"
+							},
+							"tail": {
+								"$ref": "festival-class-view-0103"
+							},
+							"lineStyle": 1,
+							"points": "844:151;779:279",
+							"nameLabel": {
+								"$ref": "AAAAAAGghKCxsplMRrI="
+							},
+							"stereotypeLabel": {
+								"$ref": "AAAAAAGghKCxsplN4iI="
+							},
+							"propertyLabel": {
+								"$ref": "AAAAAAGghKCxsplOF5g="
+							}
+						},
+						{
+							"_type": "UMLAssociationView",
+							"_id": "AAAAAAGghKISZaG+yqc=",
+							"_parent": {
+								"$ref": "festival-diagram-0003"
+							},
+							"model": {
+								"$ref": "AAAAAAGghKISZaG6UMA="
+							},
+							"subViews": [
+								{
+									"_type": "EdgeLabelView",
+									"_id": "AAAAAAGghKISZaG/pWI=",
+									"_parent": {
+										"$ref": "AAAAAAGghKISZaG+yqc="
+									},
+									"model": {
+										"$ref": "AAAAAAGghKISZaG6UMA="
+									},
+									"visible": false,
+									"font": "Arial;13;0",
+									"parentStyle": false,
+									"left": 674,
+									"top": 793,
+									"height": 13,
+									"alpha": 1.5707963267948966,
+									"distance": 15,
+									"hostEdge": {
+										"$ref": "AAAAAAGghKISZaG+yqc="
+									},
+									"edgePosition": 1
+								},
+								{
+									"_type": "EdgeLabelView",
+									"_id": "AAAAAAGghKISZaHAwEw=",
+									"_parent": {
+										"$ref": "AAAAAAGghKISZaG+yqc="
+									},
+									"model": {
+										"$ref": "AAAAAAGghKISZaG6UMA="
+									},
+									"visible": null,
+									"font": "Arial;13;0",
+									"parentStyle": false,
+									"left": 674,
+									"top": 808,
+									"height": 13,
+									"alpha": 1.5707963267948966,
+									"distance": 30,
+									"hostEdge": {
+										"$ref": "AAAAAAGghKISZaG+yqc="
+									},
+									"edgePosition": 1
+								},
+								{
+									"_type": "EdgeLabelView",
+									"_id": "AAAAAAGghKISZaHBFP0=",
+									"_parent": {
+										"$ref": "AAAAAAGghKISZaG+yqc="
+									},
+									"model": {
+										"$ref": "AAAAAAGghKISZaG6UMA="
+									},
+									"visible": false,
+									"font": "Arial;13;0",
+									"parentStyle": false,
+									"left": 675,
+									"top": 763,
+									"height": 13,
+									"alpha": -1.5707963267948966,
+									"distance": 15,
+									"hostEdge": {
+										"$ref": "AAAAAAGghKISZaG+yqc="
+									},
+									"edgePosition": 1
+								},
+								{
+									"_type": "EdgeLabelView",
+									"_id": "AAAAAAGghKISZaHCUz4=",
+									"_parent": {
+										"$ref": "AAAAAAGghKISZaG+yqc="
+									},
+									"model": {
+										"$ref": "AAAAAAGghKISZaG7jdM="
+									},
+									"visible": false,
+									"font": "Arial;13;0",
+									"parentStyle": false,
+									"left": 734,
+									"top": 792,
+									"height": 13,
+									"alpha": 0.5235987755982988,
+									"distance": 30,
+									"hostEdge": {
+										"$ref": "AAAAAAGghKISZaG+yqc="
+									},
+									"edgePosition": 2
+								},
+								{
+									"_type": "EdgeLabelView",
+									"_id": "AAAAAAGghKISZaHDt+U=",
+									"_parent": {
+										"$ref": "AAAAAAGghKISZaG+yqc="
+									},
+									"model": {
+										"$ref": "AAAAAAGghKISZaG7jdM="
+									},
+									"visible": false,
+									"font": "Arial;13;0",
+									"parentStyle": false,
+									"left": 731,
+									"top": 806,
+									"height": 13,
+									"alpha": 0.7853981633974483,
+									"distance": 40,
+									"hostEdge": {
+										"$ref": "AAAAAAGghKISZaG+yqc="
+									},
+									"edgePosition": 2
+								},
+								{
+									"_type": "EdgeLabelView",
+									"_id": "AAAAAAGghKISZaHE40U=",
+									"_parent": {
+										"$ref": "AAAAAAGghKISZaG+yqc="
+									},
+									"model": {
+										"$ref": "AAAAAAGghKISZaG7jdM="
+									},
+									"visible": false,
+									"font": "Arial;13;0",
+									"parentStyle": false,
+									"left": 738,
+									"top": 765,
+									"height": 13,
+									"alpha": -0.5235987755982988,
+									"distance": 25,
+									"hostEdge": {
+										"$ref": "AAAAAAGghKISZaG+yqc="
+									},
+									"edgePosition": 2
+								},
+								{
+									"_type": "EdgeLabelView",
+									"_id": "AAAAAAGghKISZaHFha0=",
+									"_parent": {
+										"$ref": "AAAAAAGghKISZaG+yqc="
+									},
+									"model": {
+										"$ref": "AAAAAAGghKISZaG8GMU="
+									},
+									"visible": false,
+									"font": "Arial;13;0",
+									"parentStyle": false,
+									"left": 615,
+									"top": 792,
+									"height": 13,
+									"alpha": -0.5235987755982988,
+									"distance": 30,
+									"hostEdge": {
+										"$ref": "AAAAAAGghKISZaG+yqc="
+									}
+								},
+								{
+									"_type": "EdgeLabelView",
+									"_id": "AAAAAAGghKISZaHG5lc=",
+									"_parent": {
+										"$ref": "AAAAAAGghKISZaG+yqc="
+									},
+									"model": {
+										"$ref": "AAAAAAGghKISZaG8GMU="
+									},
+									"visible": false,
+									"font": "Arial;13;0",
+									"parentStyle": false,
+									"left": 618,
+									"top": 806,
+									"height": 13,
+									"alpha": -0.7853981633974483,
+									"distance": 40,
+									"hostEdge": {
+										"$ref": "AAAAAAGghKISZaG+yqc="
+									}
+								},
+								{
+									"_type": "EdgeLabelView",
+									"_id": "AAAAAAGghKISZaHHMDc=",
+									"_parent": {
+										"$ref": "AAAAAAGghKISZaG+yqc="
+									},
+									"model": {
+										"$ref": "AAAAAAGghKISZaG8GMU="
+									},
+									"visible": false,
+									"font": "Arial;13;0",
+									"parentStyle": false,
+									"left": 611,
+									"top": 765,
+									"height": 13,
+									"alpha": 0.5235987755982988,
+									"distance": 25,
+									"hostEdge": {
+										"$ref": "AAAAAAGghKISZaG+yqc="
+									}
+								},
+								{
+									"_type": "UMLQualifierCompartmentView",
+									"_id": "AAAAAAGghKISZaHIfQs=",
+									"_parent": {
+										"$ref": "AAAAAAGghKISZaG+yqc="
+									},
+									"model": {
+										"$ref": "AAAAAAGghKISZaG7jdM="
+									},
+									"visible": false,
+									"font": "Arial;13;0",
+									"parentStyle": true,
+									"width": 10,
+									"height": 10
+								},
+								{
+									"_type": "UMLQualifierCompartmentView",
+									"_id": "AAAAAAGghKISZaHJ6H0=",
+									"_parent": {
+										"$ref": "AAAAAAGghKISZaG+yqc="
+									},
+									"model": {
+										"$ref": "AAAAAAGghKISZaG8GMU="
+									},
+									"visible": false,
+									"font": "Arial;13;0",
+									"parentStyle": true,
+									"width": 10,
+									"height": 10
+								}
+							],
+							"font": "Arial;13;0",
+							"parentStyle": false,
+							"head": {
+								"$ref": "festival-class-view-0145"
+							},
+							"tail": {
+								"$ref": "festival-class-view-0161"
+							},
+							"points": "760:784;590:784",
+							"showVisibility": true,
+							"nameLabel": {
+								"$ref": "AAAAAAGghKISZaG/pWI="
+							},
+							"stereotypeLabel": {
+								"$ref": "AAAAAAGghKISZaHAwEw="
+							},
+							"propertyLabel": {
+								"$ref": "AAAAAAGghKISZaHBFP0="
+							},
+							"showEndOrder": "hide",
+							"tailRoleNameLabel": {
+								"$ref": "AAAAAAGghKISZaHCUz4="
+							},
+							"tailPropertyLabel": {
+								"$ref": "AAAAAAGghKISZaHDt+U="
+							},
+							"tailMultiplicityLabel": {
+								"$ref": "AAAAAAGghKISZaHE40U="
+							},
+							"headRoleNameLabel": {
+								"$ref": "AAAAAAGghKISZaHFha0="
+							},
+							"headPropertyLabel": {
+								"$ref": "AAAAAAGghKISZaHG5lc="
+							},
+							"headMultiplicityLabel": {
+								"$ref": "AAAAAAGghKISZaHHMDc="
+							},
+							"tailQualifiersCompartment": {
+								"$ref": "AAAAAAGghKISZaHIfQs="
+							},
+							"headQualifiersCompartment": {
+								"$ref": "AAAAAAGghKISZaHJ6H0="
+							}
+						},
+						{
+							"_type": "UMLAssociationView",
+							"_id": "AAAAAAGghKLJYbSNfMk=",
+							"_parent": {
+								"$ref": "festival-diagram-0003"
+							},
+							"model": {
+								"$ref": "AAAAAAGghKLJYbSJR6c="
+							},
+							"subViews": [
+								{
+									"_type": "EdgeLabelView",
+									"_id": "AAAAAAGghKLJYbSOihQ=",
+									"_parent": {
+										"$ref": "AAAAAAGghKLJYbSNfMk="
+									},
+									"model": {
+										"$ref": "AAAAAAGghKLJYbSJR6c="
+									},
+									"visible": false,
+									"font": "Arial;13;0",
+									"parentStyle": false,
+									"left": 480,
+									"top": 679,
+									"height": 13,
+									"alpha": 1.5707963267948966,
+									"distance": 15,
+									"hostEdge": {
+										"$ref": "AAAAAAGghKLJYbSNfMk="
+									},
+									"edgePosition": 1
+								},
+								{
+									"_type": "EdgeLabelView",
+									"_id": "AAAAAAGghKLJYbSPtjY=",
+									"_parent": {
+										"$ref": "AAAAAAGghKLJYbSNfMk="
+									},
+									"model": {
+										"$ref": "AAAAAAGghKLJYbSJR6c="
+									},
+									"visible": null,
+									"font": "Arial;13;0",
+									"parentStyle": false,
+									"left": 480,
+									"top": 664,
+									"height": 13,
+									"alpha": 1.5707963267948966,
+									"distance": 30,
+									"hostEdge": {
+										"$ref": "AAAAAAGghKLJYbSNfMk="
+									},
+									"edgePosition": 1
+								},
+								{
+									"_type": "EdgeLabelView",
+									"_id": "AAAAAAGghKLJYbSQgg0=",
+									"_parent": {
+										"$ref": "AAAAAAGghKLJYbSNfMk="
+									},
+									"model": {
+										"$ref": "AAAAAAGghKLJYbSJR6c="
+									},
+									"visible": false,
+									"font": "Arial;13;0",
+									"parentStyle": false,
+									"left": 480,
+									"top": 709,
+									"height": 13,
+									"alpha": -1.5707963267948966,
+									"distance": 15,
+									"hostEdge": {
+										"$ref": "AAAAAAGghKLJYbSNfMk="
+									},
+									"edgePosition": 1
+								},
+								{
+									"_type": "EdgeLabelView",
+									"_id": "AAAAAAGghKLJYbSRnOk=",
+									"_parent": {
+										"$ref": "AAAAAAGghKLJYbSNfMk="
+									},
+									"model": {
+										"$ref": "AAAAAAGghKLJYbSKdKs="
+									},
+									"visible": false,
+									"font": "Arial;13;0",
+									"parentStyle": false,
+									"left": 325,
+									"top": 688,
+									"height": 13,
+									"alpha": 0.5235987755982988,
+									"distance": 30,
+									"hostEdge": {
+										"$ref": "AAAAAAGghKLJYbSNfMk="
+									},
+									"edgePosition": 2
+								},
+								{
+									"_type": "EdgeLabelView",
+									"_id": "AAAAAAGghKLJYbSS3l4=",
+									"_parent": {
+										"$ref": "AAAAAAGghKLJYbSNfMk="
+									},
+									"model": {
+										"$ref": "AAAAAAGghKLJYbSKdKs="
+									},
+									"visible": false,
+									"font": "Arial;13;0",
+									"parentStyle": false,
+									"left": 311,
+									"top": 685,
+									"height": 13,
+									"alpha": 0.7853981633974483,
+									"distance": 40,
+									"hostEdge": {
+										"$ref": "AAAAAAGghKLJYbSNfMk="
+									},
+									"edgePosition": 2
+								},
+								{
+									"_type": "EdgeLabelView",
+									"_id": "AAAAAAGghKLJYbSTEGk=",
+									"_parent": {
+										"$ref": "AAAAAAGghKLJYbSNfMk="
+									},
+									"model": {
+										"$ref": "AAAAAAGghKLJYbSKdKs="
+									},
+									"visible": false,
+									"font": "Arial;13;0",
+									"parentStyle": false,
+									"left": 352,
+									"top": 692,
+									"height": 13,
+									"alpha": -0.5235987755982988,
+									"distance": 25,
+									"hostEdge": {
+										"$ref": "AAAAAAGghKLJYbSNfMk="
+									},
+									"edgePosition": 2
+								},
+								{
+									"_type": "EdgeLabelView",
+									"_id": "AAAAAAGghKLJYbSUCPY=",
+									"_parent": {
+										"$ref": "AAAAAAGghKLJYbSNfMk="
+									},
+									"model": {
+										"$ref": "AAAAAAGghKLJYbSLkHo="
+									},
+									"visible": false,
+									"font": "Arial;13;0",
+									"parentStyle": false,
+									"left": 605,
+									"top": 595,
+									"height": 13,
+									"alpha": -0.5235987755982988,
+									"distance": 30,
+									"hostEdge": {
+										"$ref": "AAAAAAGghKLJYbSNfMk="
+									}
+								},
+								{
+									"_type": "EdgeLabelView",
+									"_id": "AAAAAAGghKLJYbSVW7c=",
+									"_parent": {
+										"$ref": "AAAAAAGghKLJYbSNfMk="
+									},
+									"model": {
+										"$ref": "AAAAAAGghKLJYbSLkHo="
+									},
+									"visible": false,
+									"font": "Arial;13;0",
+									"parentStyle": false,
+									"left": 591,
+									"top": 598,
+									"height": 13,
+									"alpha": -0.7853981633974483,
+									"distance": 40,
+									"hostEdge": {
+										"$ref": "AAAAAAGghKLJYbSNfMk="
+									}
+								},
+								{
+									"_type": "EdgeLabelView",
+									"_id": "AAAAAAGghKLJYbSWmAM=",
+									"_parent": {
+										"$ref": "AAAAAAGghKLJYbSNfMk="
+									},
+									"model": {
+										"$ref": "AAAAAAGghKLJYbSLkHo="
+									},
+									"visible": false,
+									"font": "Arial;13;0",
+									"parentStyle": false,
+									"left": 632,
+									"top": 591,
+									"height": 13,
+									"alpha": 0.5235987755982988,
+									"distance": 25,
+									"hostEdge": {
+										"$ref": "AAAAAAGghKLJYbSNfMk="
+									}
+								},
+								{
+									"_type": "UMLQualifierCompartmentView",
+									"_id": "AAAAAAGghKLJYbSXv6k=",
+									"_parent": {
+										"$ref": "AAAAAAGghKLJYbSNfMk="
+									},
+									"model": {
+										"$ref": "AAAAAAGghKLJYbSKdKs="
+									},
+									"visible": false,
+									"font": "Arial;13;0",
+									"parentStyle": true,
+									"width": 10,
+									"height": 10
+								},
+								{
+									"_type": "UMLQualifierCompartmentView",
+									"_id": "AAAAAAGghKLJYbSYvWw=",
+									"_parent": {
+										"$ref": "AAAAAAGghKLJYbSNfMk="
+									},
+									"model": {
+										"$ref": "AAAAAAGghKLJYbSLkHo="
+									},
+									"visible": false,
+									"font": "Arial;13;0",
+									"parentStyle": true,
+									"width": 10,
+									"height": 10
+								}
+							],
+							"font": "Arial;13;0",
+							"parentStyle": false,
+							"head": {
+								"$ref": "festival-class-view-0117"
+							},
+							"tail": {
+								"$ref": "festival-class-view-0145"
+							},
+							"points": "340:720;340:700;620:700;620:576",
+							"showVisibility": true,
+							"nameLabel": {
+								"$ref": "AAAAAAGghKLJYbSOihQ="
+							},
+							"stereotypeLabel": {
+								"$ref": "AAAAAAGghKLJYbSPtjY="
+							},
+							"propertyLabel": {
+								"$ref": "AAAAAAGghKLJYbSQgg0="
+							},
+							"showEndOrder": "hide",
+							"tailRoleNameLabel": {
+								"$ref": "AAAAAAGghKLJYbSRnOk="
+							},
+							"tailPropertyLabel": {
+								"$ref": "AAAAAAGghKLJYbSS3l4="
+							},
+							"tailMultiplicityLabel": {
+								"$ref": "AAAAAAGghKLJYbSTEGk="
+							},
+							"headRoleNameLabel": {
+								"$ref": "AAAAAAGghKLJYbSUCPY="
+							},
+							"headPropertyLabel": {
+								"$ref": "AAAAAAGghKLJYbSVW7c="
+							},
+							"headMultiplicityLabel": {
+								"$ref": "AAAAAAGghKLJYbSWmAM="
+							},
+							"tailQualifiersCompartment": {
+								"$ref": "AAAAAAGghKLJYbSXv6k="
+							},
+							"headQualifiersCompartment": {
+								"$ref": "AAAAAAGghKLJYbSYvWw="
+							}
+						}
+					]
+				}
+			]
+		}
+	],
+	"author": "Sebastian Tunchez Saenz",
+	"documentVersion": 1
+}
