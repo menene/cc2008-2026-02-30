@@ -1,0 +1,114 @@
+@startuml
+
+title Festival universitario de música
+
+skinparam classAttributeIconSize 0
+skinparam shadowing false
+
+class Artist {
+  - id: String
+  - artisticName: String
+  - musicalGender: String
+  - pressentationTime: double
+  - numberOfAssistants: int
+
+  + Artist(id: String, artisticName: String, musicalGender: String, pressentationTime: double, numberOfAssistants: int)
+  + getId(): String
+  + getArtisticName(): String
+  + getMusicalGender(): String
+  + getPressentationTime(): double
+  + getNumberOfAssistants(): int
+  + setNewArtisticName(newArtisticName: String): void
+  + setNewMusicalGender(newMusicalGender: String): void
+  + setNewPressentationTime(newPressentationTime: double): void
+  + setNewNumberOfAssistants(newNumberOfAssistants: int): void
+}
+
+class Scenario {
+  - id: String
+  - name: String
+  - location: String
+  - maxCapacityOfAssistants: int
+  - disponibility: boolean
+  - artists: ArrayList<Artist>
+  - artistsCounter: int
+
+  + Scenario(id: String, name: String, location: String, maxCapacityOfAssistants: int, disponibility: boolean)
+  + getId(): String
+  + getName(): String
+  + getLocation(): String
+  + getMaxCapacityOfAssistants(): int
+  + getDisponibility(): boolean
+  + getArtist(): ArrayList<Artist>
+  + getArtistCounter(): int
+  + getArtistById(artistId: String): Artist
+  + setNewMaxCapacityOfAssistants(newMaxCapacityOfAssistants: int): void
+  + changeDisponibility(): void
+  + setNewArtist(artistId: String, artistArtisticName: String, artistMusicalGender: String, artistPressentationTime: double, artistNumberOfAssistants: int): void
+  + cancelArtist(artistId: String): void
+}
+
+class Festival {
+  - coordinatorName: String
+  - id: String
+  - name: String
+  - scenarios: Scenario[5]
+  - view: View
+
+  + Festival(name: String, coordinatorName: String, id: String)
+  + getId(): String
+  + getScenarios(): Scenario[]
+  + getScenarioByIndex(scenarioIndex: int): Scenario
+  + getCoordinatorName(): String
+  + setNewCoordinatorName(newCoordinatorName: String): void
+  + setNewScenario(scenarioIndex: int, scenario: Scenario): void
+  + deleteScenario(scenarioIndex: int): void
+  + getConfiguredScenarios(): int
+  + getDisponibleSpaces(): int
+  + getScenarioWithMostNumberOfAssistants(): Scenario
+  + getRegisteredArtist(): int
+  + getArtistWithTheMostPresentationTime(): Artist
+  + getArtistWithTheMostNumberOfAssistants(): Artist
+  + getAverageOfAllPresentation(): double
+  + getAverageOfPresentationByScenario(scenarioIndex: int): double
+  + registerArtist(scenarioIndex: int, artist: Artist): void
+  + findArtistById(artistId: String): Artist
+  + modifyArtist(artistId: String, newArtisticName: String, newMusicalGender: String, newPressentationTime: double, newNumberOfAssistants: int): void
+  + cancelArtist(artistId: String): boolean
+}
+
+class View {
+  - scanner: Scanner
+  - festival: Festival
+
+  + View(scanner: Scanner)
+  + showMenu(): void
+  + createFestival(): void
+  + setNewScenario(): void
+  + showScenarios(): void
+  + showScenarioByIndex(): void
+  + modifyScenario(): void
+  + deleteScenario(): void
+  + registerArtist(): void
+  + showArtists(): void
+  + findArtist(): void
+  + modifyArtist(): void
+  + cancelArtist(): void
+  + showFestivalReport(): void
+  - readInt(message: String): int
+  - readDouble(message: String): double
+}
+
+class Main {
+  + {static} main(args: String[]): void
+}
+
+Festival  *--  Scenario 
+Scenario  *--  Artist 
+Festival --> View 
+View --> Festival 
+Main ..> View 
+
+
+
+@enduml
