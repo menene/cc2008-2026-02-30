@@ -1,0 +1,3835 @@
+{
+  "_type": "Project",
+  "_id": "Project1",
+  "name": "FestivalMusical",
+  "ownedElements": [
+    {
+      "_type": "UMLModel",
+      "_id": "Model1",
+      "name": "Model",
+      "ownedElements": [
+        {
+          "_type": "UMLClass",
+          "_id": "Main",
+          "_parent": {
+            "$ref": "Model1"
+          },
+          "name": "Main",
+          "attributes": [],
+          "operations": [
+            {
+              "_type": "UMLOperation",
+              "_id": "Main_O0",
+              "_parent": {
+                "$ref": "Main"
+              },
+              "name": "main",
+              "parameters": [
+                {
+                  "_type": "UMLParameter",
+                  "_id": "Main_O0_P0",
+                  "_parent": {
+                    "$ref": "Main_O0"
+                  },
+                  "name": "args",
+                  "type": "String[]"
+                },
+                {
+                  "_type": "UMLParameter",
+                  "_id": "Main_O0_RET",
+                  "_parent": {
+                    "$ref": "Main_O0"
+                  },
+                  "type": "void",
+                  "direction": "return"
+                }
+              ],
+              "isStatic": true
+            }
+          ]
+        },
+        {
+          "_type": "UMLClass",
+          "_id": "Vista",
+          "_parent": {
+            "$ref": "Model1"
+          },
+          "name": "Vista",
+          "attributes": [
+            {
+              "_type": "UMLAttribute",
+              "_id": "Vista_A0",
+              "_parent": {
+                "$ref": "Vista"
+              },
+              "name": "festival",
+              "type": "Festival",
+              "visibility": "private"
+            },
+            {
+              "_type": "UMLAttribute",
+              "_id": "Vista_A1",
+              "_parent": {
+                "$ref": "Vista"
+              },
+              "name": "scanner",
+              "type": "Scanner",
+              "visibility": "private"
+            }
+          ],
+          "operations": [
+            {
+              "_type": "UMLOperation",
+              "_id": "Vista_O0",
+              "_parent": {
+                "$ref": "Vista"
+              },
+              "name": "Vista",
+              "parameters": []
+            },
+            {
+              "_type": "UMLOperation",
+              "_id": "Vista_O1",
+              "_parent": {
+                "$ref": "Vista"
+              },
+              "name": "mostrarMenu",
+              "parameters": [
+                {
+                  "_type": "UMLParameter",
+                  "_id": "Vista_O1_RET",
+                  "_parent": {
+                    "$ref": "Vista_O1"
+                  },
+                  "type": "void",
+                  "direction": "return"
+                }
+              ]
+            },
+            {
+              "_type": "UMLOperation",
+              "_id": "Vista_O2",
+              "_parent": {
+                "$ref": "Vista"
+              },
+              "name": "nuevoFestival",
+              "parameters": [
+                {
+                  "_type": "UMLParameter",
+                  "_id": "Vista_O2_RET",
+                  "_parent": {
+                    "$ref": "Vista_O2"
+                  },
+                  "type": "void",
+                  "direction": "return"
+                }
+              ]
+            },
+            {
+              "_type": "UMLOperation",
+              "_id": "Vista_O3",
+              "_parent": {
+                "$ref": "Vista"
+              },
+              "name": "configurarEscenario",
+              "parameters": [
+                {
+                  "_type": "UMLParameter",
+                  "_id": "Vista_O3_RET",
+                  "_parent": {
+                    "$ref": "Vista_O3"
+                  },
+                  "type": "void",
+                  "direction": "return"
+                }
+              ]
+            },
+            {
+              "_type": "UMLOperation",
+              "_id": "Vista_O4",
+              "_parent": {
+                "$ref": "Vista"
+              },
+              "name": "consultarEscenarios",
+              "parameters": [
+                {
+                  "_type": "UMLParameter",
+                  "_id": "Vista_O4_RET",
+                  "_parent": {
+                    "$ref": "Vista_O4"
+                  },
+                  "type": "void",
+                  "direction": "return"
+                }
+              ]
+            },
+            {
+              "_type": "UMLOperation",
+              "_id": "Vista_O5",
+              "_parent": {
+                "$ref": "Vista"
+              },
+              "name": "consultarUnEscenario",
+              "parameters": [
+                {
+                  "_type": "UMLParameter",
+                  "_id": "Vista_O5_RET",
+                  "_parent": {
+                    "$ref": "Vista_O5"
+                  },
+                  "type": "void",
+                  "direction": "return"
+                }
+              ]
+            },
+            {
+              "_type": "UMLOperation",
+              "_id": "Vista_O6",
+              "_parent": {
+                "$ref": "Vista"
+              },
+              "name": "modificarEscenario",
+              "parameters": [
+                {
+                  "_type": "UMLParameter",
+                  "_id": "Vista_O6_RET",
+                  "_parent": {
+                    "$ref": "Vista_O6"
+                  },
+                  "type": "void",
+                  "direction": "return"
+                }
+              ]
+            },
+            {
+              "_type": "UMLOperation",
+              "_id": "Vista_O7",
+              "_parent": {
+                "$ref": "Vista"
+              },
+              "name": "retirarEscenario",
+              "parameters": [
+                {
+                  "_type": "UMLParameter",
+                  "_id": "Vista_O7_RET",
+                  "_parent": {
+                    "$ref": "Vista_O7"
+                  },
+                  "type": "void",
+                  "direction": "return"
+                }
+              ]
+            },
+            {
+              "_type": "UMLOperation",
+              "_id": "Vista_O8",
+              "_parent": {
+                "$ref": "Vista"
+              },
+              "name": "registrarArtista",
+              "parameters": [
+                {
+                  "_type": "UMLParameter",
+                  "_id": "Vista_O8_RET",
+                  "_parent": {
+                    "$ref": "Vista_O8"
+                  },
+                  "type": "void",
+                  "direction": "return"
+                }
+              ]
+            },
+            {
+              "_type": "UMLOperation",
+              "_id": "Vista_O9",
+              "_parent": {
+                "$ref": "Vista"
+              },
+              "name": "consultarArtistas",
+              "parameters": [
+                {
+                  "_type": "UMLParameter",
+                  "_id": "Vista_O9_RET",
+                  "_parent": {
+                    "$ref": "Vista_O9"
+                  },
+                  "type": "void",
+                  "direction": "return"
+                }
+              ]
+            },
+            {
+              "_type": "UMLOperation",
+              "_id": "Vista_O10",
+              "_parent": {
+                "$ref": "Vista"
+              },
+              "name": "buscarArtista",
+              "parameters": [
+                {
+                  "_type": "UMLParameter",
+                  "_id": "Vista_O10_RET",
+                  "_parent": {
+                    "$ref": "Vista_O10"
+                  },
+                  "type": "void",
+                  "direction": "return"
+                }
+              ]
+            },
+            {
+              "_type": "UMLOperation",
+              "_id": "Vista_O11",
+              "_parent": {
+                "$ref": "Vista"
+              },
+              "name": "modificarArtista",
+              "parameters": [
+                {
+                  "_type": "UMLParameter",
+                  "_id": "Vista_O11_RET",
+                  "_parent": {
+                    "$ref": "Vista_O11"
+                  },
+                  "type": "void",
+                  "direction": "return"
+                }
+              ]
+            },
+            {
+              "_type": "UMLOperation",
+              "_id": "Vista_O12",
+              "_parent": {
+                "$ref": "Vista"
+              },
+              "name": "cancelarParticipacion",
+              "parameters": [
+                {
+                  "_type": "UMLParameter",
+                  "_id": "Vista_O12_RET",
+                  "_parent": {
+                    "$ref": "Vista_O12"
+                  },
+                  "type": "void",
+                  "direction": "return"
+                }
+              ]
+            },
+            {
+              "_type": "UMLOperation",
+              "_id": "Vista_O13",
+              "_parent": {
+                "$ref": "Vista"
+              },
+              "name": "mostrarReporte",
+              "parameters": [
+                {
+                  "_type": "UMLParameter",
+                  "_id": "Vista_O13_RET",
+                  "_parent": {
+                    "$ref": "Vista_O13"
+                  },
+                  "type": "void",
+                  "direction": "return"
+                }
+              ]
+            },
+            {
+              "_type": "UMLOperation",
+              "_id": "Vista_O14",
+              "_parent": {
+                "$ref": "Vista"
+              },
+              "name": "leerEntero",
+              "parameters": [
+                {
+                  "_type": "UMLParameter",
+                  "_id": "Vista_O14_P0",
+                  "_parent": {
+                    "$ref": "Vista_O14"
+                  },
+                  "name": "mensaje",
+                  "type": "String"
+                },
+                {
+                  "_type": "UMLParameter",
+                  "_id": "Vista_O14_RET",
+                  "_parent": {
+                    "$ref": "Vista_O14"
+                  },
+                  "type": "int",
+                  "direction": "return"
+                }
+              ],
+              "visibility": "private"
+            },
+            {
+              "_type": "UMLOperation",
+              "_id": "Vista_O15",
+              "_parent": {
+                "$ref": "Vista"
+              },
+              "name": "hayFestival",
+              "parameters": [
+                {
+                  "_type": "UMLParameter",
+                  "_id": "Vista_O15_RET",
+                  "_parent": {
+                    "$ref": "Vista_O15"
+                  },
+                  "type": "boolean",
+                  "direction": "return"
+                }
+              ],
+              "visibility": "private"
+            }
+          ]
+        },
+        {
+          "_type": "UMLClass",
+          "_id": "Festival",
+          "_parent": {
+            "$ref": "Model1"
+          },
+          "name": "Festival",
+          "attributes": [
+            {
+              "_type": "UMLAttribute",
+              "_id": "Festival_A0",
+              "_parent": {
+                "$ref": "Festival"
+              },
+              "name": "nombre",
+              "type": "String",
+              "visibility": "private"
+            },
+            {
+              "_type": "UMLAttribute",
+              "_id": "Festival_A1",
+              "_parent": {
+                "$ref": "Festival"
+              },
+              "name": "codigoIdentificacion",
+              "type": "String",
+              "visibility": "private"
+            },
+            {
+              "_type": "UMLAttribute",
+              "_id": "Festival_A2",
+              "_parent": {
+                "$ref": "Festival"
+              },
+              "name": "nombreCoordinador",
+              "type": "String",
+              "visibility": "private"
+            },
+            {
+              "_type": "UMLAttribute",
+              "_id": "Festival_A3",
+              "_parent": {
+                "$ref": "Festival"
+              },
+              "name": "MAX_ESCENARIOS",
+              "type": "int",
+              "visibility": "private",
+              "isStatic": true,
+              "isReadOnly": true
+            },
+            {
+              "_type": "UMLAttribute",
+              "_id": "Festival_A4",
+              "_parent": {
+                "$ref": "Festival"
+              },
+              "name": "escenarios",
+              "type": "Escenario[]",
+              "visibility": "private"
+            },
+            {
+              "_type": "UMLAttribute",
+              "_id": "Festival_A5",
+              "_parent": {
+                "$ref": "Festival"
+              },
+              "name": "artistas",
+              "type": "ArrayList<Artista>",
+              "visibility": "private"
+            }
+          ],
+          "operations": [
+            {
+              "_type": "UMLOperation",
+              "_id": "Festival_O0",
+              "_parent": {
+                "$ref": "Festival"
+              },
+              "name": "Festival",
+              "parameters": [
+                {
+                  "_type": "UMLParameter",
+                  "_id": "Festival_O0_P0",
+                  "_parent": {
+                    "$ref": "Festival_O0"
+                  },
+                  "name": "nombre",
+                  "type": "String"
+                },
+                {
+                  "_type": "UMLParameter",
+                  "_id": "Festival_O0_P1",
+                  "_parent": {
+                    "$ref": "Festival_O0"
+                  },
+                  "name": "codigoIdentificacion",
+                  "type": "String"
+                },
+                {
+                  "_type": "UMLParameter",
+                  "_id": "Festival_O0_P2",
+                  "_parent": {
+                    "$ref": "Festival_O0"
+                  },
+                  "name": "nombreCoordinador",
+                  "type": "String"
+                }
+              ]
+            },
+            {
+              "_type": "UMLOperation",
+              "_id": "Festival_O1",
+              "_parent": {
+                "$ref": "Festival"
+              },
+              "name": "getNombre",
+              "parameters": [
+                {
+                  "_type": "UMLParameter",
+                  "_id": "Festival_O1_RET",
+                  "_parent": {
+                    "$ref": "Festival_O1"
+                  },
+                  "type": "String",
+                  "direction": "return"
+                }
+              ]
+            },
+            {
+              "_type": "UMLOperation",
+              "_id": "Festival_O2",
+              "_parent": {
+                "$ref": "Festival"
+              },
+              "name": "getCodigoIdentificacion",
+              "parameters": [
+                {
+                  "_type": "UMLParameter",
+                  "_id": "Festival_O2_RET",
+                  "_parent": {
+                    "$ref": "Festival_O2"
+                  },
+                  "type": "String",
+                  "direction": "return"
+                }
+              ]
+            },
+            {
+              "_type": "UMLOperation",
+              "_id": "Festival_O3",
+              "_parent": {
+                "$ref": "Festival"
+              },
+              "name": "getNombreCoordinador",
+              "parameters": [
+                {
+                  "_type": "UMLParameter",
+                  "_id": "Festival_O3_RET",
+                  "_parent": {
+                    "$ref": "Festival_O3"
+                  },
+                  "type": "String",
+                  "direction": "return"
+                }
+              ]
+            },
+            {
+              "_type": "UMLOperation",
+              "_id": "Festival_O4",
+              "_parent": {
+                "$ref": "Festival"
+              },
+              "name": "configurarEscenario",
+              "parameters": [
+                {
+                  "_type": "UMLParameter",
+                  "_id": "Festival_O4_P0",
+                  "_parent": {
+                    "$ref": "Festival_O4"
+                  },
+                  "name": "posicion",
+                  "type": "int"
+                },
+                {
+                  "_type": "UMLParameter",
+                  "_id": "Festival_O4_P1",
+                  "_parent": {
+                    "$ref": "Festival_O4"
+                  },
+                  "name": "escenario",
+                  "type": "Escenario"
+                },
+                {
+                  "_type": "UMLParameter",
+                  "_id": "Festival_O4_RET",
+                  "_parent": {
+                    "$ref": "Festival_O4"
+                  },
+                  "type": "void",
+                  "direction": "return"
+                }
+              ]
+            },
+            {
+              "_type": "UMLOperation",
+              "_id": "Festival_O5",
+              "_parent": {
+                "$ref": "Festival"
+              },
+              "name": "posicionValida",
+              "parameters": [
+                {
+                  "_type": "UMLParameter",
+                  "_id": "Festival_O5_P0",
+                  "_parent": {
+                    "$ref": "Festival_O5"
+                  },
+                  "name": "posicion",
+                  "type": "int"
+                },
+                {
+                  "_type": "UMLParameter",
+                  "_id": "Festival_O5_RET",
+                  "_parent": {
+                    "$ref": "Festival_O5"
+                  },
+                  "type": "boolean",
+                  "direction": "return"
+                }
+              ],
+              "visibility": "private"
+            },
+            {
+              "_type": "UMLOperation",
+              "_id": "Festival_O6",
+              "_parent": {
+                "$ref": "Festival"
+              },
+              "name": "posicionOcupada",
+              "parameters": [
+                {
+                  "_type": "UMLParameter",
+                  "_id": "Festival_O6_P0",
+                  "_parent": {
+                    "$ref": "Festival_O6"
+                  },
+                  "name": "posicion",
+                  "type": "int"
+                },
+                {
+                  "_type": "UMLParameter",
+                  "_id": "Festival_O6_RET",
+                  "_parent": {
+                    "$ref": "Festival_O6"
+                  },
+                  "type": "boolean",
+                  "direction": "return"
+                }
+              ]
+            },
+            {
+              "_type": "UMLOperation",
+              "_id": "Festival_O7",
+              "_parent": {
+                "$ref": "Festival"
+              },
+              "name": "getEscenario",
+              "parameters": [
+                {
+                  "_type": "UMLParameter",
+                  "_id": "Festival_O7_P0",
+                  "_parent": {
+                    "$ref": "Festival_O7"
+                  },
+                  "name": "posicion",
+                  "type": "int"
+                },
+                {
+                  "_type": "UMLParameter",
+                  "_id": "Festival_O7_RET",
+                  "_parent": {
+                    "$ref": "Festival_O7"
+                  },
+                  "type": "Escenario",
+                  "direction": "return"
+                }
+              ]
+            },
+            {
+              "_type": "UMLOperation",
+              "_id": "Festival_O8",
+              "_parent": {
+                "$ref": "Festival"
+              },
+              "name": "listarEscenarios",
+              "parameters": [
+                {
+                  "_type": "UMLParameter",
+                  "_id": "Festival_O8_RET",
+                  "_parent": {
+                    "$ref": "Festival_O8"
+                  },
+                  "type": "String",
+                  "direction": "return"
+                }
+              ]
+            },
+            {
+              "_type": "UMLOperation",
+              "_id": "Festival_O9",
+              "_parent": {
+                "$ref": "Festival"
+              },
+              "name": "modificarEscenario",
+              "parameters": [
+                {
+                  "_type": "UMLParameter",
+                  "_id": "Festival_O9_P0",
+                  "_parent": {
+                    "$ref": "Festival_O9"
+                  },
+                  "name": "posicion",
+                  "type": "int"
+                },
+                {
+                  "_type": "UMLParameter",
+                  "_id": "Festival_O9_P1",
+                  "_parent": {
+                    "$ref": "Festival_O9"
+                  },
+                  "name": "nuevaCapacidad",
+                  "type": "int"
+                },
+                {
+                  "_type": "UMLParameter",
+                  "_id": "Festival_O9_P2",
+                  "_parent": {
+                    "$ref": "Festival_O9"
+                  },
+                  "name": "nuevoEstado",
+                  "type": "String"
+                },
+                {
+                  "_type": "UMLParameter",
+                  "_id": "Festival_O9_RET",
+                  "_parent": {
+                    "$ref": "Festival_O9"
+                  },
+                  "type": "void",
+                  "direction": "return"
+                }
+              ]
+            },
+            {
+              "_type": "UMLOperation",
+              "_id": "Festival_O10",
+              "_parent": {
+                "$ref": "Festival"
+              },
+              "name": "retirarEscenario",
+              "parameters": [
+                {
+                  "_type": "UMLParameter",
+                  "_id": "Festival_O10_P0",
+                  "_parent": {
+                    "$ref": "Festival_O10"
+                  },
+                  "name": "posicion",
+                  "type": "int"
+                },
+                {
+                  "_type": "UMLParameter",
+                  "_id": "Festival_O10_RET",
+                  "_parent": {
+                    "$ref": "Festival_O10"
+                  },
+                  "type": "void",
+                  "direction": "return"
+                }
+              ]
+            },
+            {
+              "_type": "UMLOperation",
+              "_id": "Festival_O11",
+              "_parent": {
+                "$ref": "Festival"
+              },
+              "name": "contarEscenarios",
+              "parameters": [
+                {
+                  "_type": "UMLParameter",
+                  "_id": "Festival_O11_RET",
+                  "_parent": {
+                    "$ref": "Festival_O11"
+                  },
+                  "type": "int",
+                  "direction": "return"
+                }
+              ]
+            },
+            {
+              "_type": "UMLOperation",
+              "_id": "Festival_O12",
+              "_parent": {
+                "$ref": "Festival"
+              },
+              "name": "espaciosDisponibles",
+              "parameters": [
+                {
+                  "_type": "UMLParameter",
+                  "_id": "Festival_O12_RET",
+                  "_parent": {
+                    "$ref": "Festival_O12"
+                  },
+                  "type": "int",
+                  "direction": "return"
+                }
+              ]
+            },
+            {
+              "_type": "UMLOperation",
+              "_id": "Festival_O13",
+              "_parent": {
+                "$ref": "Festival"
+              },
+              "name": "getEscenarioMayorCapacidad",
+              "parameters": [
+                {
+                  "_type": "UMLParameter",
+                  "_id": "Festival_O13_RET",
+                  "_parent": {
+                    "$ref": "Festival_O13"
+                  },
+                  "type": "Escenario",
+                  "direction": "return"
+                }
+              ]
+            },
+            {
+              "_type": "UMLOperation",
+              "_id": "Festival_O14",
+              "_parent": {
+                "$ref": "Festival"
+              },
+              "name": "registrarArtista",
+              "parameters": [
+                {
+                  "_type": "UMLParameter",
+                  "_id": "Festival_O14_P0",
+                  "_parent": {
+                    "$ref": "Festival_O14"
+                  },
+                  "name": "artista",
+                  "type": "Artista"
+                },
+                {
+                  "_type": "UMLParameter",
+                  "_id": "Festival_O14_RET",
+                  "_parent": {
+                    "$ref": "Festival_O14"
+                  },
+                  "type": "void",
+                  "direction": "return"
+                }
+              ]
+            },
+            {
+              "_type": "UMLOperation",
+              "_id": "Festival_O15",
+              "_parent": {
+                "$ref": "Festival"
+              },
+              "name": "buscarArtista",
+              "parameters": [
+                {
+                  "_type": "UMLParameter",
+                  "_id": "Festival_O15_P0",
+                  "_parent": {
+                    "$ref": "Festival_O15"
+                  },
+                  "name": "codigo",
+                  "type": "String"
+                },
+                {
+                  "_type": "UMLParameter",
+                  "_id": "Festival_O15_RET",
+                  "_parent": {
+                    "$ref": "Festival_O15"
+                  },
+                  "type": "Artista",
+                  "direction": "return"
+                }
+              ]
+            },
+            {
+              "_type": "UMLOperation",
+              "_id": "Festival_O16",
+              "_parent": {
+                "$ref": "Festival"
+              },
+              "name": "existeCodigoArtista",
+              "parameters": [
+                {
+                  "_type": "UMLParameter",
+                  "_id": "Festival_O16_P0",
+                  "_parent": {
+                    "$ref": "Festival_O16"
+                  },
+                  "name": "codigo",
+                  "type": "String"
+                },
+                {
+                  "_type": "UMLParameter",
+                  "_id": "Festival_O16_RET",
+                  "_parent": {
+                    "$ref": "Festival_O16"
+                  },
+                  "type": "boolean",
+                  "direction": "return"
+                }
+              ],
+              "visibility": "private"
+            },
+            {
+              "_type": "UMLOperation",
+              "_id": "Festival_O17",
+              "_parent": {
+                "$ref": "Festival"
+              },
+              "name": "cancelarParticipacion",
+              "parameters": [
+                {
+                  "_type": "UMLParameter",
+                  "_id": "Festival_O17_P0",
+                  "_parent": {
+                    "$ref": "Festival_O17"
+                  },
+                  "name": "codigo",
+                  "type": "String"
+                },
+                {
+                  "_type": "UMLParameter",
+                  "_id": "Festival_O17_RET",
+                  "_parent": {
+                    "$ref": "Festival_O17"
+                  },
+                  "type": "boolean",
+                  "direction": "return"
+                }
+              ]
+            },
+            {
+              "_type": "UMLOperation",
+              "_id": "Festival_O18",
+              "_parent": {
+                "$ref": "Festival"
+              },
+              "name": "listarArtistas",
+              "parameters": [
+                {
+                  "_type": "UMLParameter",
+                  "_id": "Festival_O18_RET",
+                  "_parent": {
+                    "$ref": "Festival_O18"
+                  },
+                  "type": "String",
+                  "direction": "return"
+                }
+              ]
+            },
+            {
+              "_type": "UMLOperation",
+              "_id": "Festival_O19",
+              "_parent": {
+                "$ref": "Festival"
+              },
+              "name": "contarArtistas",
+              "parameters": [
+                {
+                  "_type": "UMLParameter",
+                  "_id": "Festival_O19_RET",
+                  "_parent": {
+                    "$ref": "Festival_O19"
+                  },
+                  "type": "int",
+                  "direction": "return"
+                }
+              ]
+            },
+            {
+              "_type": "UMLOperation",
+              "_id": "Festival_O20",
+              "_parent": {
+                "$ref": "Festival"
+              },
+              "name": "getArtistaMayorDuracion",
+              "parameters": [
+                {
+                  "_type": "UMLParameter",
+                  "_id": "Festival_O20_RET",
+                  "_parent": {
+                    "$ref": "Festival_O20"
+                  },
+                  "type": "Artista",
+                  "direction": "return"
+                }
+              ]
+            },
+            {
+              "_type": "UMLOperation",
+              "_id": "Festival_O21",
+              "_parent": {
+                "$ref": "Festival"
+              },
+              "name": "getArtistaMayorAsistentes",
+              "parameters": [
+                {
+                  "_type": "UMLParameter",
+                  "_id": "Festival_O21_RET",
+                  "_parent": {
+                    "$ref": "Festival_O21"
+                  },
+                  "type": "Artista",
+                  "direction": "return"
+                }
+              ]
+            },
+            {
+              "_type": "UMLOperation",
+              "_id": "Festival_O22",
+              "_parent": {
+                "$ref": "Festival"
+              },
+              "name": "getPromedioDuracion",
+              "parameters": [
+                {
+                  "_type": "UMLParameter",
+                  "_id": "Festival_O22_RET",
+                  "_parent": {
+                    "$ref": "Festival_O22"
+                  },
+                  "type": "double",
+                  "direction": "return"
+                }
+              ]
+            },
+            {
+              "_type": "UMLOperation",
+              "_id": "Festival_O23",
+              "_parent": {
+                "$ref": "Festival"
+              },
+              "name": "generarReporte",
+              "parameters": [
+                {
+                  "_type": "UMLParameter",
+                  "_id": "Festival_O23_RET",
+                  "_parent": {
+                    "$ref": "Festival_O23"
+                  },
+                  "type": "String",
+                  "direction": "return"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "_type": "UMLClass",
+          "_id": "Escenario",
+          "_parent": {
+            "$ref": "Model1"
+          },
+          "name": "Escenario",
+          "attributes": [
+            {
+              "_type": "UMLAttribute",
+              "_id": "Escenario_A0",
+              "_parent": {
+                "$ref": "Escenario"
+              },
+              "name": "codigo",
+              "type": "String",
+              "visibility": "private"
+            },
+            {
+              "_type": "UMLAttribute",
+              "_id": "Escenario_A1",
+              "_parent": {
+                "$ref": "Escenario"
+              },
+              "name": "nombre",
+              "type": "String",
+              "visibility": "private"
+            },
+            {
+              "_type": "UMLAttribute",
+              "_id": "Escenario_A2",
+              "_parent": {
+                "$ref": "Escenario"
+              },
+              "name": "ubicacion",
+              "type": "String",
+              "visibility": "private"
+            },
+            {
+              "_type": "UMLAttribute",
+              "_id": "Escenario_A3",
+              "_parent": {
+                "$ref": "Escenario"
+              },
+              "name": "capacidadMaxima",
+              "type": "int",
+              "visibility": "private"
+            },
+            {
+              "_type": "UMLAttribute",
+              "_id": "Escenario_A4",
+              "_parent": {
+                "$ref": "Escenario"
+              },
+              "name": "estado",
+              "type": "String",
+              "visibility": "private"
+            }
+          ],
+          "operations": [
+            {
+              "_type": "UMLOperation",
+              "_id": "Escenario_O0",
+              "_parent": {
+                "$ref": "Escenario"
+              },
+              "name": "Escenario",
+              "parameters": [
+                {
+                  "_type": "UMLParameter",
+                  "_id": "Escenario_O0_P0",
+                  "_parent": {
+                    "$ref": "Escenario_O0"
+                  },
+                  "name": "codigo",
+                  "type": "String"
+                },
+                {
+                  "_type": "UMLParameter",
+                  "_id": "Escenario_O0_P1",
+                  "_parent": {
+                    "$ref": "Escenario_O0"
+                  },
+                  "name": "nombre",
+                  "type": "String"
+                },
+                {
+                  "_type": "UMLParameter",
+                  "_id": "Escenario_O0_P2",
+                  "_parent": {
+                    "$ref": "Escenario_O0"
+                  },
+                  "name": "ubicacion",
+                  "type": "String"
+                },
+                {
+                  "_type": "UMLParameter",
+                  "_id": "Escenario_O0_P3",
+                  "_parent": {
+                    "$ref": "Escenario_O0"
+                  },
+                  "name": "capacidadMaxima",
+                  "type": "int"
+                },
+                {
+                  "_type": "UMLParameter",
+                  "_id": "Escenario_O0_P4",
+                  "_parent": {
+                    "$ref": "Escenario_O0"
+                  },
+                  "name": "estado",
+                  "type": "String"
+                }
+              ]
+            },
+            {
+              "_type": "UMLOperation",
+              "_id": "Escenario_O1",
+              "_parent": {
+                "$ref": "Escenario"
+              },
+              "name": "getCodigo",
+              "parameters": [
+                {
+                  "_type": "UMLParameter",
+                  "_id": "Escenario_O1_RET",
+                  "_parent": {
+                    "$ref": "Escenario_O1"
+                  },
+                  "type": "String",
+                  "direction": "return"
+                }
+              ]
+            },
+            {
+              "_type": "UMLOperation",
+              "_id": "Escenario_O2",
+              "_parent": {
+                "$ref": "Escenario"
+              },
+              "name": "getNombre",
+              "parameters": [
+                {
+                  "_type": "UMLParameter",
+                  "_id": "Escenario_O2_RET",
+                  "_parent": {
+                    "$ref": "Escenario_O2"
+                  },
+                  "type": "String",
+                  "direction": "return"
+                }
+              ]
+            },
+            {
+              "_type": "UMLOperation",
+              "_id": "Escenario_O3",
+              "_parent": {
+                "$ref": "Escenario"
+              },
+              "name": "getUbicacion",
+              "parameters": [
+                {
+                  "_type": "UMLParameter",
+                  "_id": "Escenario_O3_RET",
+                  "_parent": {
+                    "$ref": "Escenario_O3"
+                  },
+                  "type": "String",
+                  "direction": "return"
+                }
+              ]
+            },
+            {
+              "_type": "UMLOperation",
+              "_id": "Escenario_O4",
+              "_parent": {
+                "$ref": "Escenario"
+              },
+              "name": "getCapacidadMaxima",
+              "parameters": [
+                {
+                  "_type": "UMLParameter",
+                  "_id": "Escenario_O4_RET",
+                  "_parent": {
+                    "$ref": "Escenario_O4"
+                  },
+                  "type": "int",
+                  "direction": "return"
+                }
+              ]
+            },
+            {
+              "_type": "UMLOperation",
+              "_id": "Escenario_O5",
+              "_parent": {
+                "$ref": "Escenario"
+              },
+              "name": "getEstado",
+              "parameters": [
+                {
+                  "_type": "UMLParameter",
+                  "_id": "Escenario_O5_RET",
+                  "_parent": {
+                    "$ref": "Escenario_O5"
+                  },
+                  "type": "String",
+                  "direction": "return"
+                }
+              ]
+            },
+            {
+              "_type": "UMLOperation",
+              "_id": "Escenario_O6",
+              "_parent": {
+                "$ref": "Escenario"
+              },
+              "name": "setCapacidadMaxima",
+              "parameters": [
+                {
+                  "_type": "UMLParameter",
+                  "_id": "Escenario_O6_P0",
+                  "_parent": {
+                    "$ref": "Escenario_O6"
+                  },
+                  "name": "capacidadMaxima",
+                  "type": "int"
+                },
+                {
+                  "_type": "UMLParameter",
+                  "_id": "Escenario_O6_RET",
+                  "_parent": {
+                    "$ref": "Escenario_O6"
+                  },
+                  "type": "void",
+                  "direction": "return"
+                }
+              ]
+            },
+            {
+              "_type": "UMLOperation",
+              "_id": "Escenario_O7",
+              "_parent": {
+                "$ref": "Escenario"
+              },
+              "name": "setEstado",
+              "parameters": [
+                {
+                  "_type": "UMLParameter",
+                  "_id": "Escenario_O7_P0",
+                  "_parent": {
+                    "$ref": "Escenario_O7"
+                  },
+                  "name": "estado",
+                  "type": "String"
+                },
+                {
+                  "_type": "UMLParameter",
+                  "_id": "Escenario_O7_RET",
+                  "_parent": {
+                    "$ref": "Escenario_O7"
+                  },
+                  "type": "void",
+                  "direction": "return"
+                }
+              ]
+            },
+            {
+              "_type": "UMLOperation",
+              "_id": "Escenario_O8",
+              "_parent": {
+                "$ref": "Escenario"
+              },
+              "name": "toString",
+              "parameters": [
+                {
+                  "_type": "UMLParameter",
+                  "_id": "Escenario_O8_RET",
+                  "_parent": {
+                    "$ref": "Escenario_O8"
+                  },
+                  "type": "String",
+                  "direction": "return"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "_type": "UMLClass",
+          "_id": "Artista",
+          "_parent": {
+            "$ref": "Model1"
+          },
+          "name": "Artista",
+          "attributes": [
+            {
+              "_type": "UMLAttribute",
+              "_id": "Artista_A0",
+              "_parent": {
+                "$ref": "Artista"
+              },
+              "name": "codigo",
+              "type": "String",
+              "visibility": "private"
+            },
+            {
+              "_type": "UMLAttribute",
+              "_id": "Artista_A1",
+              "_parent": {
+                "$ref": "Artista"
+              },
+              "name": "nombreArtistico",
+              "type": "String",
+              "visibility": "private"
+            },
+            {
+              "_type": "UMLAttribute",
+              "_id": "Artista_A2",
+              "_parent": {
+                "$ref": "Artista"
+              },
+              "name": "generoMusical",
+              "type": "String",
+              "visibility": "private"
+            },
+            {
+              "_type": "UMLAttribute",
+              "_id": "Artista_A3",
+              "_parent": {
+                "$ref": "Artista"
+              },
+              "name": "duracionMinutos",
+              "type": "int",
+              "visibility": "private"
+            },
+            {
+              "_type": "UMLAttribute",
+              "_id": "Artista_A4",
+              "_parent": {
+                "$ref": "Artista"
+              },
+              "name": "asistentesEstimados",
+              "type": "int",
+              "visibility": "private"
+            }
+          ],
+          "operations": [
+            {
+              "_type": "UMLOperation",
+              "_id": "Artista_O0",
+              "_parent": {
+                "$ref": "Artista"
+              },
+              "name": "Artista",
+              "parameters": [
+                {
+                  "_type": "UMLParameter",
+                  "_id": "Artista_O0_P0",
+                  "_parent": {
+                    "$ref": "Artista_O0"
+                  },
+                  "name": "codigo",
+                  "type": "String"
+                },
+                {
+                  "_type": "UMLParameter",
+                  "_id": "Artista_O0_P1",
+                  "_parent": {
+                    "$ref": "Artista_O0"
+                  },
+                  "name": "nombreArtistico",
+                  "type": "String"
+                },
+                {
+                  "_type": "UMLParameter",
+                  "_id": "Artista_O0_P2",
+                  "_parent": {
+                    "$ref": "Artista_O0"
+                  },
+                  "name": "generoMusical",
+                  "type": "String"
+                },
+                {
+                  "_type": "UMLParameter",
+                  "_id": "Artista_O0_P3",
+                  "_parent": {
+                    "$ref": "Artista_O0"
+                  },
+                  "name": "duracionMinutos",
+                  "type": "int"
+                },
+                {
+                  "_type": "UMLParameter",
+                  "_id": "Artista_O0_P4",
+                  "_parent": {
+                    "$ref": "Artista_O0"
+                  },
+                  "name": "asistentesEstimados",
+                  "type": "int"
+                }
+              ]
+            },
+            {
+              "_type": "UMLOperation",
+              "_id": "Artista_O1",
+              "_parent": {
+                "$ref": "Artista"
+              },
+              "name": "getCodigo",
+              "parameters": [
+                {
+                  "_type": "UMLParameter",
+                  "_id": "Artista_O1_RET",
+                  "_parent": {
+                    "$ref": "Artista_O1"
+                  },
+                  "type": "String",
+                  "direction": "return"
+                }
+              ]
+            },
+            {
+              "_type": "UMLOperation",
+              "_id": "Artista_O2",
+              "_parent": {
+                "$ref": "Artista"
+              },
+              "name": "getNombreArtistico",
+              "parameters": [
+                {
+                  "_type": "UMLParameter",
+                  "_id": "Artista_O2_RET",
+                  "_parent": {
+                    "$ref": "Artista_O2"
+                  },
+                  "type": "String",
+                  "direction": "return"
+                }
+              ]
+            },
+            {
+              "_type": "UMLOperation",
+              "_id": "Artista_O3",
+              "_parent": {
+                "$ref": "Artista"
+              },
+              "name": "getGeneroMusical",
+              "parameters": [
+                {
+                  "_type": "UMLParameter",
+                  "_id": "Artista_O3_RET",
+                  "_parent": {
+                    "$ref": "Artista_O3"
+                  },
+                  "type": "String",
+                  "direction": "return"
+                }
+              ]
+            },
+            {
+              "_type": "UMLOperation",
+              "_id": "Artista_O4",
+              "_parent": {
+                "$ref": "Artista"
+              },
+              "name": "getDuracionMinutos",
+              "parameters": [
+                {
+                  "_type": "UMLParameter",
+                  "_id": "Artista_O4_RET",
+                  "_parent": {
+                    "$ref": "Artista_O4"
+                  },
+                  "type": "int",
+                  "direction": "return"
+                }
+              ]
+            },
+            {
+              "_type": "UMLOperation",
+              "_id": "Artista_O5",
+              "_parent": {
+                "$ref": "Artista"
+              },
+              "name": "getAsistentesEstimados",
+              "parameters": [
+                {
+                  "_type": "UMLParameter",
+                  "_id": "Artista_O5_RET",
+                  "_parent": {
+                    "$ref": "Artista_O5"
+                  },
+                  "type": "int",
+                  "direction": "return"
+                }
+              ]
+            },
+            {
+              "_type": "UMLOperation",
+              "_id": "Artista_O6",
+              "_parent": {
+                "$ref": "Artista"
+              },
+              "name": "setNombreArtistico",
+              "parameters": [
+                {
+                  "_type": "UMLParameter",
+                  "_id": "Artista_O6_P0",
+                  "_parent": {
+                    "$ref": "Artista_O6"
+                  },
+                  "name": "nombreArtistico",
+                  "type": "String"
+                },
+                {
+                  "_type": "UMLParameter",
+                  "_id": "Artista_O6_RET",
+                  "_parent": {
+                    "$ref": "Artista_O6"
+                  },
+                  "type": "void",
+                  "direction": "return"
+                }
+              ]
+            },
+            {
+              "_type": "UMLOperation",
+              "_id": "Artista_O7",
+              "_parent": {
+                "$ref": "Artista"
+              },
+              "name": "setGeneroMusical",
+              "parameters": [
+                {
+                  "_type": "UMLParameter",
+                  "_id": "Artista_O7_P0",
+                  "_parent": {
+                    "$ref": "Artista_O7"
+                  },
+                  "name": "generoMusical",
+                  "type": "String"
+                },
+                {
+                  "_type": "UMLParameter",
+                  "_id": "Artista_O7_RET",
+                  "_parent": {
+                    "$ref": "Artista_O7"
+                  },
+                  "type": "void",
+                  "direction": "return"
+                }
+              ]
+            },
+            {
+              "_type": "UMLOperation",
+              "_id": "Artista_O8",
+              "_parent": {
+                "$ref": "Artista"
+              },
+              "name": "setDuracionMinutos",
+              "parameters": [
+                {
+                  "_type": "UMLParameter",
+                  "_id": "Artista_O8_P0",
+                  "_parent": {
+                    "$ref": "Artista_O8"
+                  },
+                  "name": "duracionMinutos",
+                  "type": "int"
+                },
+                {
+                  "_type": "UMLParameter",
+                  "_id": "Artista_O8_RET",
+                  "_parent": {
+                    "$ref": "Artista_O8"
+                  },
+                  "type": "void",
+                  "direction": "return"
+                }
+              ]
+            },
+            {
+              "_type": "UMLOperation",
+              "_id": "Artista_O9",
+              "_parent": {
+                "$ref": "Artista"
+              },
+              "name": "setAsistentesEstimados",
+              "parameters": [
+                {
+                  "_type": "UMLParameter",
+                  "_id": "Artista_O9_P0",
+                  "_parent": {
+                    "$ref": "Artista_O9"
+                  },
+                  "name": "asistentesEstimados",
+                  "type": "int"
+                },
+                {
+                  "_type": "UMLParameter",
+                  "_id": "Artista_O9_RET",
+                  "_parent": {
+                    "$ref": "Artista_O9"
+                  },
+                  "type": "void",
+                  "direction": "return"
+                }
+              ]
+            },
+            {
+              "_type": "UMLOperation",
+              "_id": "Artista_O10",
+              "_parent": {
+                "$ref": "Artista"
+              },
+              "name": "toString",
+              "parameters": [
+                {
+                  "_type": "UMLParameter",
+                  "_id": "Artista_O10_RET",
+                  "_parent": {
+                    "$ref": "Artista_O10"
+                  },
+                  "type": "String",
+                  "direction": "return"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "_type": "UMLDependency",
+          "_id": "D01",
+          "_parent": {
+            "$ref": "Model1"
+          },
+          "source": {
+            "$ref": "Main"
+          },
+          "target": {
+            "$ref": "Vista"
+          }
+        },
+        {
+          "_type": "UMLAssociation",
+          "_id": "R01",
+          "_parent": {
+            "$ref": "Model1"
+          },
+          "end1": {
+            "_type": "UMLAssociationEnd",
+            "_id": "R01_E1",
+            "_parent": {
+              "$ref": "R01"
+            },
+            "reference": {
+              "$ref": "Vista"
+            },
+            "multiplicity": "1"
+          },
+          "end2": {
+            "_type": "UMLAssociationEnd",
+            "_id": "R01_E2",
+            "_parent": {
+              "$ref": "R01"
+            },
+            "reference": {
+              "$ref": "Festival"
+            },
+            "multiplicity": "0..1",
+            "navigable": "navigable"
+          }
+        },
+        {
+          "_type": "UMLAssociation",
+          "_id": "R02",
+          "_parent": {
+            "$ref": "Model1"
+          },
+          "end1": {
+            "_type": "UMLAssociationEnd",
+            "_id": "R02_E1",
+            "_parent": {
+              "$ref": "R02"
+            },
+            "reference": {
+              "$ref": "Escenario"
+            },
+            "multiplicity": "0..5"
+          },
+          "end2": {
+            "_type": "UMLAssociationEnd",
+            "_id": "R02_E2",
+            "_parent": {
+              "$ref": "R02"
+            },
+            "reference": {
+              "$ref": "Festival"
+            },
+            "multiplicity": "1",
+            "aggregation": "composite"
+          }
+        },
+        {
+          "_type": "UMLAssociation",
+          "_id": "R03",
+          "_parent": {
+            "$ref": "Model1"
+          },
+          "end1": {
+            "_type": "UMLAssociationEnd",
+            "_id": "R03_E1",
+            "_parent": {
+              "$ref": "R03"
+            },
+            "reference": {
+              "$ref": "Artista"
+            },
+            "multiplicity": "0..*"
+          },
+          "end2": {
+            "_type": "UMLAssociationEnd",
+            "_id": "R03_E2",
+            "_parent": {
+              "$ref": "R03"
+            },
+            "reference": {
+              "$ref": "Festival"
+            },
+            "multiplicity": "1",
+            "aggregation": "composite"
+          }
+        },
+        {
+          "_type": "UMLClassDiagram",
+          "_id": "Diagram1",
+          "_parent": {
+            "$ref": "Model1"
+          },
+          "name": "Diagrama de clases FestivalMusical",
+          "defaultDiagram": true,
+          "ownedViews": [
+            {
+              "_type": "UMLClassView",
+              "_id": "Main_V",
+              "_parent": {
+                "$ref": "Diagram1"
+              },
+              "model": {
+                "$ref": "Main"
+              },
+              "lineColor": "#495057",
+              "fillColor": "#E9ECEF",
+              "font": "Arial;13;0",
+              "parentStyle": false,
+              "left": 794.0,
+              "top": 40,
+              "width": 213.0,
+              "height": 50,
+              "subViews": [
+                {
+                  "_type": "UMLNameCompartmentView",
+                  "_id": "Main_V_NC",
+                  "_parent": {
+                    "$ref": "Main_V"
+                  },
+                  "model": {
+                    "$ref": "Main"
+                  },
+                  "lineColor": "#495057",
+                  "fillColor": "#E9ECEF",
+                  "font": "Arial;13;0",
+                  "parentStyle": true,
+                  "left": 794.0,
+                  "top": 40,
+                  "width": 213.0,
+                  "height": 25,
+                  "subViews": [
+                    {
+                      "_type": "LabelView",
+                      "_id": "Main_V_NC_NM",
+                      "_parent": {
+                        "$ref": "Main_V_NC"
+                      },
+                      "lineColor": "#000000",
+                      "fillColor": "#ffffff",
+                      "font": "Arial;13;1",
+                      "parentStyle": true,
+                      "left": 794.0,
+                      "top": 46,
+                      "width": 213.0,
+                      "height": 13,
+                      "horizontalAlignment": 1,
+                      "text": "Main"
+                    }
+                  ],
+                  "nameLabel": {
+                    "$ref": "Main_V_NC_NM"
+                  }
+                },
+                {
+                  "_type": "UMLOperationCompartmentView",
+                  "_id": "Main_V_OC",
+                  "_parent": {
+                    "$ref": "Main_V"
+                  },
+                  "model": {
+                    "$ref": "Main"
+                  },
+                  "lineColor": "#495057",
+                  "fillColor": "#E9ECEF",
+                  "font": "Arial;13;0",
+                  "parentStyle": true,
+                  "left": 794.0,
+                  "top": 65,
+                  "width": 213.0,
+                  "height": 25,
+                  "subViews": [
+                    {
+                      "_type": "LabelView",
+                      "_id": "Main_V_OC_0",
+                      "_parent": {
+                        "$ref": "Main_V_OC"
+                      },
+                      "lineColor": "#000000",
+                      "fillColor": "#ffffff",
+                      "font": "Arial;13;0",
+                      "parentStyle": true,
+                      "left": 794.0,
+                      "top": 70,
+                      "width": 213.0,
+                      "height": 13,
+                      "horizontalAlignment": 0,
+                      "text": "+main(args: String[]): void",
+                      "underline": true
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "_type": "UMLClassView",
+              "_id": "Vista_V",
+              "_parent": {
+                "$ref": "Diagram1"
+              },
+              "model": {
+                "$ref": "Vista"
+              },
+              "lineColor": "#0E9CC4",
+              "fillColor": "#D4F1F9",
+              "font": "Arial;13;0",
+              "parentStyle": false,
+              "left": 773.0,
+              "top": 160,
+              "width": 255.0,
+              "height": 315,
+              "subViews": [
+                {
+                  "_type": "UMLNameCompartmentView",
+                  "_id": "Vista_V_NC",
+                  "_parent": {
+                    "$ref": "Vista_V"
+                  },
+                  "model": {
+                    "$ref": "Vista"
+                  },
+                  "lineColor": "#0E9CC4",
+                  "fillColor": "#D4F1F9",
+                  "font": "Arial;13;0",
+                  "parentStyle": true,
+                  "left": 773.0,
+                  "top": 160,
+                  "width": 255.0,
+                  "height": 25,
+                  "subViews": [
+                    {
+                      "_type": "LabelView",
+                      "_id": "Vista_V_NC_NM",
+                      "_parent": {
+                        "$ref": "Vista_V_NC"
+                      },
+                      "lineColor": "#000000",
+                      "fillColor": "#ffffff",
+                      "font": "Arial;13;1",
+                      "parentStyle": true,
+                      "left": 773.0,
+                      "top": 166,
+                      "width": 255.0,
+                      "height": 13,
+                      "horizontalAlignment": 1,
+                      "text": "Vista"
+                    }
+                  ],
+                  "nameLabel": {
+                    "$ref": "Vista_V_NC_NM"
+                  }
+                },
+                {
+                  "_type": "UMLAttributeCompartmentView",
+                  "_id": "Vista_V_AC",
+                  "_parent": {
+                    "$ref": "Vista_V"
+                  },
+                  "model": {
+                    "$ref": "Vista"
+                  },
+                  "lineColor": "#0E9CC4",
+                  "fillColor": "#D4F1F9",
+                  "font": "Arial;13;0",
+                  "parentStyle": true,
+                  "left": 773.0,
+                  "top": 185,
+                  "width": 255.0,
+                  "height": 40,
+                  "subViews": [
+                    {
+                      "_type": "LabelView",
+                      "_id": "Vista_V_AC_0",
+                      "_parent": {
+                        "$ref": "Vista_V_AC"
+                      },
+                      "lineColor": "#000000",
+                      "fillColor": "#ffffff",
+                      "font": "Arial;13;0",
+                      "parentStyle": true,
+                      "left": 773.0,
+                      "top": 190,
+                      "width": 255.0,
+                      "height": 13,
+                      "horizontalAlignment": 0,
+                      "text": "-festival: Festival"
+                    },
+                    {
+                      "_type": "LabelView",
+                      "_id": "Vista_V_AC_1",
+                      "_parent": {
+                        "$ref": "Vista_V_AC"
+                      },
+                      "lineColor": "#000000",
+                      "fillColor": "#ffffff",
+                      "font": "Arial;13;0",
+                      "parentStyle": true,
+                      "left": 773.0,
+                      "top": 205,
+                      "width": 255.0,
+                      "height": 13,
+                      "horizontalAlignment": 0,
+                      "text": "-scanner: Scanner"
+                    }
+                  ]
+                },
+                {
+                  "_type": "UMLOperationCompartmentView",
+                  "_id": "Vista_V_OC",
+                  "_parent": {
+                    "$ref": "Vista_V"
+                  },
+                  "model": {
+                    "$ref": "Vista"
+                  },
+                  "lineColor": "#0E9CC4",
+                  "fillColor": "#D4F1F9",
+                  "font": "Arial;13;0",
+                  "parentStyle": true,
+                  "left": 773.0,
+                  "top": 225,
+                  "width": 255.0,
+                  "height": 250,
+                  "subViews": [
+                    {
+                      "_type": "LabelView",
+                      "_id": "Vista_V_OC_0",
+                      "_parent": {
+                        "$ref": "Vista_V_OC"
+                      },
+                      "lineColor": "#000000",
+                      "fillColor": "#ffffff",
+                      "font": "Arial;13;0",
+                      "parentStyle": true,
+                      "left": 773.0,
+                      "top": 230,
+                      "width": 255.0,
+                      "height": 13,
+                      "horizontalAlignment": 0,
+                      "text": "+Vista()"
+                    },
+                    {
+                      "_type": "LabelView",
+                      "_id": "Vista_V_OC_1",
+                      "_parent": {
+                        "$ref": "Vista_V_OC"
+                      },
+                      "lineColor": "#000000",
+                      "fillColor": "#ffffff",
+                      "font": "Arial;13;0",
+                      "parentStyle": true,
+                      "left": 773.0,
+                      "top": 245,
+                      "width": 255.0,
+                      "height": 13,
+                      "horizontalAlignment": 0,
+                      "text": "+mostrarMenu(): void"
+                    },
+                    {
+                      "_type": "LabelView",
+                      "_id": "Vista_V_OC_2",
+                      "_parent": {
+                        "$ref": "Vista_V_OC"
+                      },
+                      "lineColor": "#000000",
+                      "fillColor": "#ffffff",
+                      "font": "Arial;13;0",
+                      "parentStyle": true,
+                      "left": 773.0,
+                      "top": 260,
+                      "width": 255.0,
+                      "height": 13,
+                      "horizontalAlignment": 0,
+                      "text": "+nuevoFestival(): void"
+                    },
+                    {
+                      "_type": "LabelView",
+                      "_id": "Vista_V_OC_3",
+                      "_parent": {
+                        "$ref": "Vista_V_OC"
+                      },
+                      "lineColor": "#000000",
+                      "fillColor": "#ffffff",
+                      "font": "Arial;13;0",
+                      "parentStyle": true,
+                      "left": 773.0,
+                      "top": 275,
+                      "width": 255.0,
+                      "height": 13,
+                      "horizontalAlignment": 0,
+                      "text": "+configurarEscenario(): void"
+                    },
+                    {
+                      "_type": "LabelView",
+                      "_id": "Vista_V_OC_4",
+                      "_parent": {
+                        "$ref": "Vista_V_OC"
+                      },
+                      "lineColor": "#000000",
+                      "fillColor": "#ffffff",
+                      "font": "Arial;13;0",
+                      "parentStyle": true,
+                      "left": 773.0,
+                      "top": 290,
+                      "width": 255.0,
+                      "height": 13,
+                      "horizontalAlignment": 0,
+                      "text": "+consultarEscenarios(): void"
+                    },
+                    {
+                      "_type": "LabelView",
+                      "_id": "Vista_V_OC_5",
+                      "_parent": {
+                        "$ref": "Vista_V_OC"
+                      },
+                      "lineColor": "#000000",
+                      "fillColor": "#ffffff",
+                      "font": "Arial;13;0",
+                      "parentStyle": true,
+                      "left": 773.0,
+                      "top": 305,
+                      "width": 255.0,
+                      "height": 13,
+                      "horizontalAlignment": 0,
+                      "text": "+consultarUnEscenario(): void"
+                    },
+                    {
+                      "_type": "LabelView",
+                      "_id": "Vista_V_OC_6",
+                      "_parent": {
+                        "$ref": "Vista_V_OC"
+                      },
+                      "lineColor": "#000000",
+                      "fillColor": "#ffffff",
+                      "font": "Arial;13;0",
+                      "parentStyle": true,
+                      "left": 773.0,
+                      "top": 320,
+                      "width": 255.0,
+                      "height": 13,
+                      "horizontalAlignment": 0,
+                      "text": "+modificarEscenario(): void"
+                    },
+                    {
+                      "_type": "LabelView",
+                      "_id": "Vista_V_OC_7",
+                      "_parent": {
+                        "$ref": "Vista_V_OC"
+                      },
+                      "lineColor": "#000000",
+                      "fillColor": "#ffffff",
+                      "font": "Arial;13;0",
+                      "parentStyle": true,
+                      "left": 773.0,
+                      "top": 335,
+                      "width": 255.0,
+                      "height": 13,
+                      "horizontalAlignment": 0,
+                      "text": "+retirarEscenario(): void"
+                    },
+                    {
+                      "_type": "LabelView",
+                      "_id": "Vista_V_OC_8",
+                      "_parent": {
+                        "$ref": "Vista_V_OC"
+                      },
+                      "lineColor": "#000000",
+                      "fillColor": "#ffffff",
+                      "font": "Arial;13;0",
+                      "parentStyle": true,
+                      "left": 773.0,
+                      "top": 350,
+                      "width": 255.0,
+                      "height": 13,
+                      "horizontalAlignment": 0,
+                      "text": "+registrarArtista(): void"
+                    },
+                    {
+                      "_type": "LabelView",
+                      "_id": "Vista_V_OC_9",
+                      "_parent": {
+                        "$ref": "Vista_V_OC"
+                      },
+                      "lineColor": "#000000",
+                      "fillColor": "#ffffff",
+                      "font": "Arial;13;0",
+                      "parentStyle": true,
+                      "left": 773.0,
+                      "top": 365,
+                      "width": 255.0,
+                      "height": 13,
+                      "horizontalAlignment": 0,
+                      "text": "+consultarArtistas(): void"
+                    },
+                    {
+                      "_type": "LabelView",
+                      "_id": "Vista_V_OC_10",
+                      "_parent": {
+                        "$ref": "Vista_V_OC"
+                      },
+                      "lineColor": "#000000",
+                      "fillColor": "#ffffff",
+                      "font": "Arial;13;0",
+                      "parentStyle": true,
+                      "left": 773.0,
+                      "top": 380,
+                      "width": 255.0,
+                      "height": 13,
+                      "horizontalAlignment": 0,
+                      "text": "+buscarArtista(): void"
+                    },
+                    {
+                      "_type": "LabelView",
+                      "_id": "Vista_V_OC_11",
+                      "_parent": {
+                        "$ref": "Vista_V_OC"
+                      },
+                      "lineColor": "#000000",
+                      "fillColor": "#ffffff",
+                      "font": "Arial;13;0",
+                      "parentStyle": true,
+                      "left": 773.0,
+                      "top": 395,
+                      "width": 255.0,
+                      "height": 13,
+                      "horizontalAlignment": 0,
+                      "text": "+modificarArtista(): void"
+                    },
+                    {
+                      "_type": "LabelView",
+                      "_id": "Vista_V_OC_12",
+                      "_parent": {
+                        "$ref": "Vista_V_OC"
+                      },
+                      "lineColor": "#000000",
+                      "fillColor": "#ffffff",
+                      "font": "Arial;13;0",
+                      "parentStyle": true,
+                      "left": 773.0,
+                      "top": 410,
+                      "width": 255.0,
+                      "height": 13,
+                      "horizontalAlignment": 0,
+                      "text": "+cancelarParticipacion(): void"
+                    },
+                    {
+                      "_type": "LabelView",
+                      "_id": "Vista_V_OC_13",
+                      "_parent": {
+                        "$ref": "Vista_V_OC"
+                      },
+                      "lineColor": "#000000",
+                      "fillColor": "#ffffff",
+                      "font": "Arial;13;0",
+                      "parentStyle": true,
+                      "left": 773.0,
+                      "top": 425,
+                      "width": 255.0,
+                      "height": 13,
+                      "horizontalAlignment": 0,
+                      "text": "+mostrarReporte(): void"
+                    },
+                    {
+                      "_type": "LabelView",
+                      "_id": "Vista_V_OC_14",
+                      "_parent": {
+                        "$ref": "Vista_V_OC"
+                      },
+                      "lineColor": "#000000",
+                      "fillColor": "#ffffff",
+                      "font": "Arial;13;0",
+                      "parentStyle": true,
+                      "left": 773.0,
+                      "top": 440,
+                      "width": 255.0,
+                      "height": 13,
+                      "horizontalAlignment": 0,
+                      "text": "-leerEntero(mensaje: String): int"
+                    },
+                    {
+                      "_type": "LabelView",
+                      "_id": "Vista_V_OC_15",
+                      "_parent": {
+                        "$ref": "Vista_V_OC"
+                      },
+                      "lineColor": "#000000",
+                      "fillColor": "#ffffff",
+                      "font": "Arial;13;0",
+                      "parentStyle": true,
+                      "left": 773.0,
+                      "top": 455,
+                      "width": 255.0,
+                      "height": 13,
+                      "horizontalAlignment": 0,
+                      "text": "-hayFestival(): boolean"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "_type": "UMLClassView",
+              "_id": "Festival_V",
+              "_parent": {
+                "$ref": "Diagram1"
+              },
+              "model": {
+                "$ref": "Festival"
+              },
+              "lineColor": "#1E8449",
+              "fillColor": "#D9F2E1",
+              "font": "Arial;13;0",
+              "parentStyle": false,
+              "left": 601.5,
+              "top": 660,
+              "width": 598.0,
+              "height": 495,
+              "subViews": [
+                {
+                  "_type": "UMLNameCompartmentView",
+                  "_id": "Festival_V_NC",
+                  "_parent": {
+                    "$ref": "Festival_V"
+                  },
+                  "model": {
+                    "$ref": "Festival"
+                  },
+                  "lineColor": "#1E8449",
+                  "fillColor": "#D9F2E1",
+                  "font": "Arial;13;0",
+                  "parentStyle": true,
+                  "left": 601.5,
+                  "top": 660,
+                  "width": 598.0,
+                  "height": 25,
+                  "subViews": [
+                    {
+                      "_type": "LabelView",
+                      "_id": "Festival_V_NC_NM",
+                      "_parent": {
+                        "$ref": "Festival_V_NC"
+                      },
+                      "lineColor": "#000000",
+                      "fillColor": "#ffffff",
+                      "font": "Arial;13;1",
+                      "parentStyle": true,
+                      "left": 601.5,
+                      "top": 666,
+                      "width": 598.0,
+                      "height": 13,
+                      "horizontalAlignment": 1,
+                      "text": "Festival"
+                    }
+                  ],
+                  "nameLabel": {
+                    "$ref": "Festival_V_NC_NM"
+                  }
+                },
+                {
+                  "_type": "UMLAttributeCompartmentView",
+                  "_id": "Festival_V_AC",
+                  "_parent": {
+                    "$ref": "Festival_V"
+                  },
+                  "model": {
+                    "$ref": "Festival"
+                  },
+                  "lineColor": "#1E8449",
+                  "fillColor": "#D9F2E1",
+                  "font": "Arial;13;0",
+                  "parentStyle": true,
+                  "left": 601.5,
+                  "top": 685,
+                  "width": 598.0,
+                  "height": 100,
+                  "subViews": [
+                    {
+                      "_type": "LabelView",
+                      "_id": "Festival_V_AC_0",
+                      "_parent": {
+                        "$ref": "Festival_V_AC"
+                      },
+                      "lineColor": "#000000",
+                      "fillColor": "#ffffff",
+                      "font": "Arial;13;0",
+                      "parentStyle": true,
+                      "left": 601.5,
+                      "top": 690,
+                      "width": 598.0,
+                      "height": 13,
+                      "horizontalAlignment": 0,
+                      "text": "-nombre: String"
+                    },
+                    {
+                      "_type": "LabelView",
+                      "_id": "Festival_V_AC_1",
+                      "_parent": {
+                        "$ref": "Festival_V_AC"
+                      },
+                      "lineColor": "#000000",
+                      "fillColor": "#ffffff",
+                      "font": "Arial;13;0",
+                      "parentStyle": true,
+                      "left": 601.5,
+                      "top": 705,
+                      "width": 598.0,
+                      "height": 13,
+                      "horizontalAlignment": 0,
+                      "text": "-codigoIdentificacion: String"
+                    },
+                    {
+                      "_type": "LabelView",
+                      "_id": "Festival_V_AC_2",
+                      "_parent": {
+                        "$ref": "Festival_V_AC"
+                      },
+                      "lineColor": "#000000",
+                      "fillColor": "#ffffff",
+                      "font": "Arial;13;0",
+                      "parentStyle": true,
+                      "left": 601.5,
+                      "top": 720,
+                      "width": 598.0,
+                      "height": 13,
+                      "horizontalAlignment": 0,
+                      "text": "-nombreCoordinador: String"
+                    },
+                    {
+                      "_type": "LabelView",
+                      "_id": "Festival_V_AC_3",
+                      "_parent": {
+                        "$ref": "Festival_V_AC"
+                      },
+                      "lineColor": "#000000",
+                      "fillColor": "#ffffff",
+                      "font": "Arial;13;0",
+                      "parentStyle": true,
+                      "left": 601.5,
+                      "top": 735,
+                      "width": 598.0,
+                      "height": 13,
+                      "horizontalAlignment": 0,
+                      "text": "-MAX_ESCENARIOS: int {readOnly}",
+                      "underline": true
+                    },
+                    {
+                      "_type": "LabelView",
+                      "_id": "Festival_V_AC_4",
+                      "_parent": {
+                        "$ref": "Festival_V_AC"
+                      },
+                      "lineColor": "#000000",
+                      "fillColor": "#ffffff",
+                      "font": "Arial;13;0",
+                      "parentStyle": true,
+                      "left": 601.5,
+                      "top": 750,
+                      "width": 598.0,
+                      "height": 13,
+                      "horizontalAlignment": 0,
+                      "text": "-escenarios: Escenario[]"
+                    },
+                    {
+                      "_type": "LabelView",
+                      "_id": "Festival_V_AC_5",
+                      "_parent": {
+                        "$ref": "Festival_V_AC"
+                      },
+                      "lineColor": "#000000",
+                      "fillColor": "#ffffff",
+                      "font": "Arial;13;0",
+                      "parentStyle": true,
+                      "left": 601.5,
+                      "top": 765,
+                      "width": 598.0,
+                      "height": 13,
+                      "horizontalAlignment": 0,
+                      "text": "-artistas: ArrayList<Artista>"
+                    }
+                  ]
+                },
+                {
+                  "_type": "UMLOperationCompartmentView",
+                  "_id": "Festival_V_OC",
+                  "_parent": {
+                    "$ref": "Festival_V"
+                  },
+                  "model": {
+                    "$ref": "Festival"
+                  },
+                  "lineColor": "#1E8449",
+                  "fillColor": "#D9F2E1",
+                  "font": "Arial;13;0",
+                  "parentStyle": true,
+                  "left": 601.5,
+                  "top": 785,
+                  "width": 598.0,
+                  "height": 370,
+                  "subViews": [
+                    {
+                      "_type": "LabelView",
+                      "_id": "Festival_V_OC_0",
+                      "_parent": {
+                        "$ref": "Festival_V_OC"
+                      },
+                      "lineColor": "#000000",
+                      "fillColor": "#ffffff",
+                      "font": "Arial;13;0",
+                      "parentStyle": true,
+                      "left": 601.5,
+                      "top": 790,
+                      "width": 598.0,
+                      "height": 13,
+                      "horizontalAlignment": 0,
+                      "text": "+Festival(nombre: String, codigoIdentificacion: String, nombreCoordinador: String)"
+                    },
+                    {
+                      "_type": "LabelView",
+                      "_id": "Festival_V_OC_1",
+                      "_parent": {
+                        "$ref": "Festival_V_OC"
+                      },
+                      "lineColor": "#000000",
+                      "fillColor": "#ffffff",
+                      "font": "Arial;13;0",
+                      "parentStyle": true,
+                      "left": 601.5,
+                      "top": 805,
+                      "width": 598.0,
+                      "height": 13,
+                      "horizontalAlignment": 0,
+                      "text": "+getNombre(): String"
+                    },
+                    {
+                      "_type": "LabelView",
+                      "_id": "Festival_V_OC_2",
+                      "_parent": {
+                        "$ref": "Festival_V_OC"
+                      },
+                      "lineColor": "#000000",
+                      "fillColor": "#ffffff",
+                      "font": "Arial;13;0",
+                      "parentStyle": true,
+                      "left": 601.5,
+                      "top": 820,
+                      "width": 598.0,
+                      "height": 13,
+                      "horizontalAlignment": 0,
+                      "text": "+getCodigoIdentificacion(): String"
+                    },
+                    {
+                      "_type": "LabelView",
+                      "_id": "Festival_V_OC_3",
+                      "_parent": {
+                        "$ref": "Festival_V_OC"
+                      },
+                      "lineColor": "#000000",
+                      "fillColor": "#ffffff",
+                      "font": "Arial;13;0",
+                      "parentStyle": true,
+                      "left": 601.5,
+                      "top": 835,
+                      "width": 598.0,
+                      "height": 13,
+                      "horizontalAlignment": 0,
+                      "text": "+getNombreCoordinador(): String"
+                    },
+                    {
+                      "_type": "LabelView",
+                      "_id": "Festival_V_OC_4",
+                      "_parent": {
+                        "$ref": "Festival_V_OC"
+                      },
+                      "lineColor": "#000000",
+                      "fillColor": "#ffffff",
+                      "font": "Arial;13;0",
+                      "parentStyle": true,
+                      "left": 601.5,
+                      "top": 850,
+                      "width": 598.0,
+                      "height": 13,
+                      "horizontalAlignment": 0,
+                      "text": "+configurarEscenario(posicion: int, escenario: Escenario): void"
+                    },
+                    {
+                      "_type": "LabelView",
+                      "_id": "Festival_V_OC_5",
+                      "_parent": {
+                        "$ref": "Festival_V_OC"
+                      },
+                      "lineColor": "#000000",
+                      "fillColor": "#ffffff",
+                      "font": "Arial;13;0",
+                      "parentStyle": true,
+                      "left": 601.5,
+                      "top": 865,
+                      "width": 598.0,
+                      "height": 13,
+                      "horizontalAlignment": 0,
+                      "text": "-posicionValida(posicion: int): boolean"
+                    },
+                    {
+                      "_type": "LabelView",
+                      "_id": "Festival_V_OC_6",
+                      "_parent": {
+                        "$ref": "Festival_V_OC"
+                      },
+                      "lineColor": "#000000",
+                      "fillColor": "#ffffff",
+                      "font": "Arial;13;0",
+                      "parentStyle": true,
+                      "left": 601.5,
+                      "top": 880,
+                      "width": 598.0,
+                      "height": 13,
+                      "horizontalAlignment": 0,
+                      "text": "+posicionOcupada(posicion: int): boolean"
+                    },
+                    {
+                      "_type": "LabelView",
+                      "_id": "Festival_V_OC_7",
+                      "_parent": {
+                        "$ref": "Festival_V_OC"
+                      },
+                      "lineColor": "#000000",
+                      "fillColor": "#ffffff",
+                      "font": "Arial;13;0",
+                      "parentStyle": true,
+                      "left": 601.5,
+                      "top": 895,
+                      "width": 598.0,
+                      "height": 13,
+                      "horizontalAlignment": 0,
+                      "text": "+getEscenario(posicion: int): Escenario"
+                    },
+                    {
+                      "_type": "LabelView",
+                      "_id": "Festival_V_OC_8",
+                      "_parent": {
+                        "$ref": "Festival_V_OC"
+                      },
+                      "lineColor": "#000000",
+                      "fillColor": "#ffffff",
+                      "font": "Arial;13;0",
+                      "parentStyle": true,
+                      "left": 601.5,
+                      "top": 910,
+                      "width": 598.0,
+                      "height": 13,
+                      "horizontalAlignment": 0,
+                      "text": "+listarEscenarios(): String"
+                    },
+                    {
+                      "_type": "LabelView",
+                      "_id": "Festival_V_OC_9",
+                      "_parent": {
+                        "$ref": "Festival_V_OC"
+                      },
+                      "lineColor": "#000000",
+                      "fillColor": "#ffffff",
+                      "font": "Arial;13;0",
+                      "parentStyle": true,
+                      "left": 601.5,
+                      "top": 925,
+                      "width": 598.0,
+                      "height": 13,
+                      "horizontalAlignment": 0,
+                      "text": "+modificarEscenario(posicion: int, nuevaCapacidad: int, nuevoEstado: String): void"
+                    },
+                    {
+                      "_type": "LabelView",
+                      "_id": "Festival_V_OC_10",
+                      "_parent": {
+                        "$ref": "Festival_V_OC"
+                      },
+                      "lineColor": "#000000",
+                      "fillColor": "#ffffff",
+                      "font": "Arial;13;0",
+                      "parentStyle": true,
+                      "left": 601.5,
+                      "top": 940,
+                      "width": 598.0,
+                      "height": 13,
+                      "horizontalAlignment": 0,
+                      "text": "+retirarEscenario(posicion: int): void"
+                    },
+                    {
+                      "_type": "LabelView",
+                      "_id": "Festival_V_OC_11",
+                      "_parent": {
+                        "$ref": "Festival_V_OC"
+                      },
+                      "lineColor": "#000000",
+                      "fillColor": "#ffffff",
+                      "font": "Arial;13;0",
+                      "parentStyle": true,
+                      "left": 601.5,
+                      "top": 955,
+                      "width": 598.0,
+                      "height": 13,
+                      "horizontalAlignment": 0,
+                      "text": "+contarEscenarios(): int"
+                    },
+                    {
+                      "_type": "LabelView",
+                      "_id": "Festival_V_OC_12",
+                      "_parent": {
+                        "$ref": "Festival_V_OC"
+                      },
+                      "lineColor": "#000000",
+                      "fillColor": "#ffffff",
+                      "font": "Arial;13;0",
+                      "parentStyle": true,
+                      "left": 601.5,
+                      "top": 970,
+                      "width": 598.0,
+                      "height": 13,
+                      "horizontalAlignment": 0,
+                      "text": "+espaciosDisponibles(): int"
+                    },
+                    {
+                      "_type": "LabelView",
+                      "_id": "Festival_V_OC_13",
+                      "_parent": {
+                        "$ref": "Festival_V_OC"
+                      },
+                      "lineColor": "#000000",
+                      "fillColor": "#ffffff",
+                      "font": "Arial;13;0",
+                      "parentStyle": true,
+                      "left": 601.5,
+                      "top": 985,
+                      "width": 598.0,
+                      "height": 13,
+                      "horizontalAlignment": 0,
+                      "text": "+getEscenarioMayorCapacidad(): Escenario"
+                    },
+                    {
+                      "_type": "LabelView",
+                      "_id": "Festival_V_OC_14",
+                      "_parent": {
+                        "$ref": "Festival_V_OC"
+                      },
+                      "lineColor": "#000000",
+                      "fillColor": "#ffffff",
+                      "font": "Arial;13;0",
+                      "parentStyle": true,
+                      "left": 601.5,
+                      "top": 1000,
+                      "width": 598.0,
+                      "height": 13,
+                      "horizontalAlignment": 0,
+                      "text": "+registrarArtista(artista: Artista): void"
+                    },
+                    {
+                      "_type": "LabelView",
+                      "_id": "Festival_V_OC_15",
+                      "_parent": {
+                        "$ref": "Festival_V_OC"
+                      },
+                      "lineColor": "#000000",
+                      "fillColor": "#ffffff",
+                      "font": "Arial;13;0",
+                      "parentStyle": true,
+                      "left": 601.5,
+                      "top": 1015,
+                      "width": 598.0,
+                      "height": 13,
+                      "horizontalAlignment": 0,
+                      "text": "+buscarArtista(codigo: String): Artista"
+                    },
+                    {
+                      "_type": "LabelView",
+                      "_id": "Festival_V_OC_16",
+                      "_parent": {
+                        "$ref": "Festival_V_OC"
+                      },
+                      "lineColor": "#000000",
+                      "fillColor": "#ffffff",
+                      "font": "Arial;13;0",
+                      "parentStyle": true,
+                      "left": 601.5,
+                      "top": 1030,
+                      "width": 598.0,
+                      "height": 13,
+                      "horizontalAlignment": 0,
+                      "text": "-existeCodigoArtista(codigo: String): boolean"
+                    },
+                    {
+                      "_type": "LabelView",
+                      "_id": "Festival_V_OC_17",
+                      "_parent": {
+                        "$ref": "Festival_V_OC"
+                      },
+                      "lineColor": "#000000",
+                      "fillColor": "#ffffff",
+                      "font": "Arial;13;0",
+                      "parentStyle": true,
+                      "left": 601.5,
+                      "top": 1045,
+                      "width": 598.0,
+                      "height": 13,
+                      "horizontalAlignment": 0,
+                      "text": "+cancelarParticipacion(codigo: String): boolean"
+                    },
+                    {
+                      "_type": "LabelView",
+                      "_id": "Festival_V_OC_18",
+                      "_parent": {
+                        "$ref": "Festival_V_OC"
+                      },
+                      "lineColor": "#000000",
+                      "fillColor": "#ffffff",
+                      "font": "Arial;13;0",
+                      "parentStyle": true,
+                      "left": 601.5,
+                      "top": 1060,
+                      "width": 598.0,
+                      "height": 13,
+                      "horizontalAlignment": 0,
+                      "text": "+listarArtistas(): String"
+                    },
+                    {
+                      "_type": "LabelView",
+                      "_id": "Festival_V_OC_19",
+                      "_parent": {
+                        "$ref": "Festival_V_OC"
+                      },
+                      "lineColor": "#000000",
+                      "fillColor": "#ffffff",
+                      "font": "Arial;13;0",
+                      "parentStyle": true,
+                      "left": 601.5,
+                      "top": 1075,
+                      "width": 598.0,
+                      "height": 13,
+                      "horizontalAlignment": 0,
+                      "text": "+contarArtistas(): int"
+                    },
+                    {
+                      "_type": "LabelView",
+                      "_id": "Festival_V_OC_20",
+                      "_parent": {
+                        "$ref": "Festival_V_OC"
+                      },
+                      "lineColor": "#000000",
+                      "fillColor": "#ffffff",
+                      "font": "Arial;13;0",
+                      "parentStyle": true,
+                      "left": 601.5,
+                      "top": 1090,
+                      "width": 598.0,
+                      "height": 13,
+                      "horizontalAlignment": 0,
+                      "text": "+getArtistaMayorDuracion(): Artista"
+                    },
+                    {
+                      "_type": "LabelView",
+                      "_id": "Festival_V_OC_21",
+                      "_parent": {
+                        "$ref": "Festival_V_OC"
+                      },
+                      "lineColor": "#000000",
+                      "fillColor": "#ffffff",
+                      "font": "Arial;13;0",
+                      "parentStyle": true,
+                      "left": 601.5,
+                      "top": 1105,
+                      "width": 598.0,
+                      "height": 13,
+                      "horizontalAlignment": 0,
+                      "text": "+getArtistaMayorAsistentes(): Artista"
+                    },
+                    {
+                      "_type": "LabelView",
+                      "_id": "Festival_V_OC_22",
+                      "_parent": {
+                        "$ref": "Festival_V_OC"
+                      },
+                      "lineColor": "#000000",
+                      "fillColor": "#ffffff",
+                      "font": "Arial;13;0",
+                      "parentStyle": true,
+                      "left": 601.5,
+                      "top": 1120,
+                      "width": 598.0,
+                      "height": 13,
+                      "horizontalAlignment": 0,
+                      "text": "+getPromedioDuracion(): double"
+                    },
+                    {
+                      "_type": "LabelView",
+                      "_id": "Festival_V_OC_23",
+                      "_parent": {
+                        "$ref": "Festival_V_OC"
+                      },
+                      "lineColor": "#000000",
+                      "fillColor": "#ffffff",
+                      "font": "Arial;13;0",
+                      "parentStyle": true,
+                      "left": 601.5,
+                      "top": 1135,
+                      "width": 598.0,
+                      "height": 13,
+                      "horizontalAlignment": 0,
+                      "text": "+generarReporte(): String"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "_type": "UMLClassView",
+              "_id": "Escenario_V",
+              "_parent": {
+                "$ref": "Diagram1"
+              },
+              "model": {
+                "$ref": "Escenario"
+              },
+              "lineColor": "#E07B12",
+              "fillColor": "#FDE7CC",
+              "font": "Arial;13;0",
+              "parentStyle": false,
+              "left": 60,
+              "top": 1325,
+              "width": 717.0,
+              "height": 255,
+              "subViews": [
+                {
+                  "_type": "UMLNameCompartmentView",
+                  "_id": "Escenario_V_NC",
+                  "_parent": {
+                    "$ref": "Escenario_V"
+                  },
+                  "model": {
+                    "$ref": "Escenario"
+                  },
+                  "lineColor": "#E07B12",
+                  "fillColor": "#FDE7CC",
+                  "font": "Arial;13;0",
+                  "parentStyle": true,
+                  "left": 60,
+                  "top": 1325,
+                  "width": 717.0,
+                  "height": 25,
+                  "subViews": [
+                    {
+                      "_type": "LabelView",
+                      "_id": "Escenario_V_NC_NM",
+                      "_parent": {
+                        "$ref": "Escenario_V_NC"
+                      },
+                      "lineColor": "#000000",
+                      "fillColor": "#ffffff",
+                      "font": "Arial;13;1",
+                      "parentStyle": true,
+                      "left": 60,
+                      "top": 1331,
+                      "width": 717.0,
+                      "height": 13,
+                      "horizontalAlignment": 1,
+                      "text": "Escenario"
+                    }
+                  ],
+                  "nameLabel": {
+                    "$ref": "Escenario_V_NC_NM"
+                  }
+                },
+                {
+                  "_type": "UMLAttributeCompartmentView",
+                  "_id": "Escenario_V_AC",
+                  "_parent": {
+                    "$ref": "Escenario_V"
+                  },
+                  "model": {
+                    "$ref": "Escenario"
+                  },
+                  "lineColor": "#E07B12",
+                  "fillColor": "#FDE7CC",
+                  "font": "Arial;13;0",
+                  "parentStyle": true,
+                  "left": 60,
+                  "top": 1350,
+                  "width": 717.0,
+                  "height": 85,
+                  "subViews": [
+                    {
+                      "_type": "LabelView",
+                      "_id": "Escenario_V_AC_0",
+                      "_parent": {
+                        "$ref": "Escenario_V_AC"
+                      },
+                      "lineColor": "#000000",
+                      "fillColor": "#ffffff",
+                      "font": "Arial;13;0",
+                      "parentStyle": true,
+                      "left": 60,
+                      "top": 1355,
+                      "width": 717.0,
+                      "height": 13,
+                      "horizontalAlignment": 0,
+                      "text": "-codigo: String"
+                    },
+                    {
+                      "_type": "LabelView",
+                      "_id": "Escenario_V_AC_1",
+                      "_parent": {
+                        "$ref": "Escenario_V_AC"
+                      },
+                      "lineColor": "#000000",
+                      "fillColor": "#ffffff",
+                      "font": "Arial;13;0",
+                      "parentStyle": true,
+                      "left": 60,
+                      "top": 1370,
+                      "width": 717.0,
+                      "height": 13,
+                      "horizontalAlignment": 0,
+                      "text": "-nombre: String"
+                    },
+                    {
+                      "_type": "LabelView",
+                      "_id": "Escenario_V_AC_2",
+                      "_parent": {
+                        "$ref": "Escenario_V_AC"
+                      },
+                      "lineColor": "#000000",
+                      "fillColor": "#ffffff",
+                      "font": "Arial;13;0",
+                      "parentStyle": true,
+                      "left": 60,
+                      "top": 1385,
+                      "width": 717.0,
+                      "height": 13,
+                      "horizontalAlignment": 0,
+                      "text": "-ubicacion: String"
+                    },
+                    {
+                      "_type": "LabelView",
+                      "_id": "Escenario_V_AC_3",
+                      "_parent": {
+                        "$ref": "Escenario_V_AC"
+                      },
+                      "lineColor": "#000000",
+                      "fillColor": "#ffffff",
+                      "font": "Arial;13;0",
+                      "parentStyle": true,
+                      "left": 60,
+                      "top": 1400,
+                      "width": 717.0,
+                      "height": 13,
+                      "horizontalAlignment": 0,
+                      "text": "-capacidadMaxima: int"
+                    },
+                    {
+                      "_type": "LabelView",
+                      "_id": "Escenario_V_AC_4",
+                      "_parent": {
+                        "$ref": "Escenario_V_AC"
+                      },
+                      "lineColor": "#000000",
+                      "fillColor": "#ffffff",
+                      "font": "Arial;13;0",
+                      "parentStyle": true,
+                      "left": 60,
+                      "top": 1415,
+                      "width": 717.0,
+                      "height": 13,
+                      "horizontalAlignment": 0,
+                      "text": "-estado: String"
+                    }
+                  ]
+                },
+                {
+                  "_type": "UMLOperationCompartmentView",
+                  "_id": "Escenario_V_OC",
+                  "_parent": {
+                    "$ref": "Escenario_V"
+                  },
+                  "model": {
+                    "$ref": "Escenario"
+                  },
+                  "lineColor": "#E07B12",
+                  "fillColor": "#FDE7CC",
+                  "font": "Arial;13;0",
+                  "parentStyle": true,
+                  "left": 60,
+                  "top": 1435,
+                  "width": 717.0,
+                  "height": 145,
+                  "subViews": [
+                    {
+                      "_type": "LabelView",
+                      "_id": "Escenario_V_OC_0",
+                      "_parent": {
+                        "$ref": "Escenario_V_OC"
+                      },
+                      "lineColor": "#000000",
+                      "fillColor": "#ffffff",
+                      "font": "Arial;13;0",
+                      "parentStyle": true,
+                      "left": 60,
+                      "top": 1440,
+                      "width": 717.0,
+                      "height": 13,
+                      "horizontalAlignment": 0,
+                      "text": "+Escenario(codigo: String, nombre: String, ubicacion: String, capacidadMaxima: int, estado: String)"
+                    },
+                    {
+                      "_type": "LabelView",
+                      "_id": "Escenario_V_OC_1",
+                      "_parent": {
+                        "$ref": "Escenario_V_OC"
+                      },
+                      "lineColor": "#000000",
+                      "fillColor": "#ffffff",
+                      "font": "Arial;13;0",
+                      "parentStyle": true,
+                      "left": 60,
+                      "top": 1455,
+                      "width": 717.0,
+                      "height": 13,
+                      "horizontalAlignment": 0,
+                      "text": "+getCodigo(): String"
+                    },
+                    {
+                      "_type": "LabelView",
+                      "_id": "Escenario_V_OC_2",
+                      "_parent": {
+                        "$ref": "Escenario_V_OC"
+                      },
+                      "lineColor": "#000000",
+                      "fillColor": "#ffffff",
+                      "font": "Arial;13;0",
+                      "parentStyle": true,
+                      "left": 60,
+                      "top": 1470,
+                      "width": 717.0,
+                      "height": 13,
+                      "horizontalAlignment": 0,
+                      "text": "+getNombre(): String"
+                    },
+                    {
+                      "_type": "LabelView",
+                      "_id": "Escenario_V_OC_3",
+                      "_parent": {
+                        "$ref": "Escenario_V_OC"
+                      },
+                      "lineColor": "#000000",
+                      "fillColor": "#ffffff",
+                      "font": "Arial;13;0",
+                      "parentStyle": true,
+                      "left": 60,
+                      "top": 1485,
+                      "width": 717.0,
+                      "height": 13,
+                      "horizontalAlignment": 0,
+                      "text": "+getUbicacion(): String"
+                    },
+                    {
+                      "_type": "LabelView",
+                      "_id": "Escenario_V_OC_4",
+                      "_parent": {
+                        "$ref": "Escenario_V_OC"
+                      },
+                      "lineColor": "#000000",
+                      "fillColor": "#ffffff",
+                      "font": "Arial;13;0",
+                      "parentStyle": true,
+                      "left": 60,
+                      "top": 1500,
+                      "width": 717.0,
+                      "height": 13,
+                      "horizontalAlignment": 0,
+                      "text": "+getCapacidadMaxima(): int"
+                    },
+                    {
+                      "_type": "LabelView",
+                      "_id": "Escenario_V_OC_5",
+                      "_parent": {
+                        "$ref": "Escenario_V_OC"
+                      },
+                      "lineColor": "#000000",
+                      "fillColor": "#ffffff",
+                      "font": "Arial;13;0",
+                      "parentStyle": true,
+                      "left": 60,
+                      "top": 1515,
+                      "width": 717.0,
+                      "height": 13,
+                      "horizontalAlignment": 0,
+                      "text": "+getEstado(): String"
+                    },
+                    {
+                      "_type": "LabelView",
+                      "_id": "Escenario_V_OC_6",
+                      "_parent": {
+                        "$ref": "Escenario_V_OC"
+                      },
+                      "lineColor": "#000000",
+                      "fillColor": "#ffffff",
+                      "font": "Arial;13;0",
+                      "parentStyle": true,
+                      "left": 60,
+                      "top": 1530,
+                      "width": 717.0,
+                      "height": 13,
+                      "horizontalAlignment": 0,
+                      "text": "+setCapacidadMaxima(capacidadMaxima: int): void"
+                    },
+                    {
+                      "_type": "LabelView",
+                      "_id": "Escenario_V_OC_7",
+                      "_parent": {
+                        "$ref": "Escenario_V_OC"
+                      },
+                      "lineColor": "#000000",
+                      "fillColor": "#ffffff",
+                      "font": "Arial;13;0",
+                      "parentStyle": true,
+                      "left": 60,
+                      "top": 1545,
+                      "width": 717.0,
+                      "height": 13,
+                      "horizontalAlignment": 0,
+                      "text": "+setEstado(estado: String): void"
+                    },
+                    {
+                      "_type": "LabelView",
+                      "_id": "Escenario_V_OC_8",
+                      "_parent": {
+                        "$ref": "Escenario_V_OC"
+                      },
+                      "lineColor": "#000000",
+                      "fillColor": "#ffffff",
+                      "font": "Arial;13;0",
+                      "parentStyle": true,
+                      "left": 60,
+                      "top": 1560,
+                      "width": 717.0,
+                      "height": 13,
+                      "horizontalAlignment": 0,
+                      "text": "+toString(): String"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "_type": "UMLClassView",
+              "_id": "Artista_V",
+              "_parent": {
+                "$ref": "Diagram1"
+              },
+              "model": {
+                "$ref": "Artista"
+              },
+              "lineColor": "#7048A8",
+              "fillColor": "#E8DFF5",
+              "font": "Arial;13;0",
+              "parentStyle": false,
+              "left": 877.0,
+              "top": 1325,
+              "width": 864.0,
+              "height": 285,
+              "subViews": [
+                {
+                  "_type": "UMLNameCompartmentView",
+                  "_id": "Artista_V_NC",
+                  "_parent": {
+                    "$ref": "Artista_V"
+                  },
+                  "model": {
+                    "$ref": "Artista"
+                  },
+                  "lineColor": "#7048A8",
+                  "fillColor": "#E8DFF5",
+                  "font": "Arial;13;0",
+                  "parentStyle": true,
+                  "left": 877.0,
+                  "top": 1325,
+                  "width": 864.0,
+                  "height": 25,
+                  "subViews": [
+                    {
+                      "_type": "LabelView",
+                      "_id": "Artista_V_NC_NM",
+                      "_parent": {
+                        "$ref": "Artista_V_NC"
+                      },
+                      "lineColor": "#000000",
+                      "fillColor": "#ffffff",
+                      "font": "Arial;13;1",
+                      "parentStyle": true,
+                      "left": 877.0,
+                      "top": 1331,
+                      "width": 864.0,
+                      "height": 13,
+                      "horizontalAlignment": 1,
+                      "text": "Artista"
+                    }
+                  ],
+                  "nameLabel": {
+                    "$ref": "Artista_V_NC_NM"
+                  }
+                },
+                {
+                  "_type": "UMLAttributeCompartmentView",
+                  "_id": "Artista_V_AC",
+                  "_parent": {
+                    "$ref": "Artista_V"
+                  },
+                  "model": {
+                    "$ref": "Artista"
+                  },
+                  "lineColor": "#7048A8",
+                  "fillColor": "#E8DFF5",
+                  "font": "Arial;13;0",
+                  "parentStyle": true,
+                  "left": 877.0,
+                  "top": 1350,
+                  "width": 864.0,
+                  "height": 85,
+                  "subViews": [
+                    {
+                      "_type": "LabelView",
+                      "_id": "Artista_V_AC_0",
+                      "_parent": {
+                        "$ref": "Artista_V_AC"
+                      },
+                      "lineColor": "#000000",
+                      "fillColor": "#ffffff",
+                      "font": "Arial;13;0",
+                      "parentStyle": true,
+                      "left": 877.0,
+                      "top": 1355,
+                      "width": 864.0,
+                      "height": 13,
+                      "horizontalAlignment": 0,
+                      "text": "-codigo: String"
+                    },
+                    {
+                      "_type": "LabelView",
+                      "_id": "Artista_V_AC_1",
+                      "_parent": {
+                        "$ref": "Artista_V_AC"
+                      },
+                      "lineColor": "#000000",
+                      "fillColor": "#ffffff",
+                      "font": "Arial;13;0",
+                      "parentStyle": true,
+                      "left": 877.0,
+                      "top": 1370,
+                      "width": 864.0,
+                      "height": 13,
+                      "horizontalAlignment": 0,
+                      "text": "-nombreArtistico: String"
+                    },
+                    {
+                      "_type": "LabelView",
+                      "_id": "Artista_V_AC_2",
+                      "_parent": {
+                        "$ref": "Artista_V_AC"
+                      },
+                      "lineColor": "#000000",
+                      "fillColor": "#ffffff",
+                      "font": "Arial;13;0",
+                      "parentStyle": true,
+                      "left": 877.0,
+                      "top": 1385,
+                      "width": 864.0,
+                      "height": 13,
+                      "horizontalAlignment": 0,
+                      "text": "-generoMusical: String"
+                    },
+                    {
+                      "_type": "LabelView",
+                      "_id": "Artista_V_AC_3",
+                      "_parent": {
+                        "$ref": "Artista_V_AC"
+                      },
+                      "lineColor": "#000000",
+                      "fillColor": "#ffffff",
+                      "font": "Arial;13;0",
+                      "parentStyle": true,
+                      "left": 877.0,
+                      "top": 1400,
+                      "width": 864.0,
+                      "height": 13,
+                      "horizontalAlignment": 0,
+                      "text": "-duracionMinutos: int"
+                    },
+                    {
+                      "_type": "LabelView",
+                      "_id": "Artista_V_AC_4",
+                      "_parent": {
+                        "$ref": "Artista_V_AC"
+                      },
+                      "lineColor": "#000000",
+                      "fillColor": "#ffffff",
+                      "font": "Arial;13;0",
+                      "parentStyle": true,
+                      "left": 877.0,
+                      "top": 1415,
+                      "width": 864.0,
+                      "height": 13,
+                      "horizontalAlignment": 0,
+                      "text": "-asistentesEstimados: int"
+                    }
+                  ]
+                },
+                {
+                  "_type": "UMLOperationCompartmentView",
+                  "_id": "Artista_V_OC",
+                  "_parent": {
+                    "$ref": "Artista_V"
+                  },
+                  "model": {
+                    "$ref": "Artista"
+                  },
+                  "lineColor": "#7048A8",
+                  "fillColor": "#E8DFF5",
+                  "font": "Arial;13;0",
+                  "parentStyle": true,
+                  "left": 877.0,
+                  "top": 1435,
+                  "width": 864.0,
+                  "height": 175,
+                  "subViews": [
+                    {
+                      "_type": "LabelView",
+                      "_id": "Artista_V_OC_0",
+                      "_parent": {
+                        "$ref": "Artista_V_OC"
+                      },
+                      "lineColor": "#000000",
+                      "fillColor": "#ffffff",
+                      "font": "Arial;13;0",
+                      "parentStyle": true,
+                      "left": 877.0,
+                      "top": 1440,
+                      "width": 864.0,
+                      "height": 13,
+                      "horizontalAlignment": 0,
+                      "text": "+Artista(codigo: String, nombreArtistico: String, generoMusical: String, duracionMinutos: int, asistentesEstimados: int)"
+                    },
+                    {
+                      "_type": "LabelView",
+                      "_id": "Artista_V_OC_1",
+                      "_parent": {
+                        "$ref": "Artista_V_OC"
+                      },
+                      "lineColor": "#000000",
+                      "fillColor": "#ffffff",
+                      "font": "Arial;13;0",
+                      "parentStyle": true,
+                      "left": 877.0,
+                      "top": 1455,
+                      "width": 864.0,
+                      "height": 13,
+                      "horizontalAlignment": 0,
+                      "text": "+getCodigo(): String"
+                    },
+                    {
+                      "_type": "LabelView",
+                      "_id": "Artista_V_OC_2",
+                      "_parent": {
+                        "$ref": "Artista_V_OC"
+                      },
+                      "lineColor": "#000000",
+                      "fillColor": "#ffffff",
+                      "font": "Arial;13;0",
+                      "parentStyle": true,
+                      "left": 877.0,
+                      "top": 1470,
+                      "width": 864.0,
+                      "height": 13,
+                      "horizontalAlignment": 0,
+                      "text": "+getNombreArtistico(): String"
+                    },
+                    {
+                      "_type": "LabelView",
+                      "_id": "Artista_V_OC_3",
+                      "_parent": {
+                        "$ref": "Artista_V_OC"
+                      },
+                      "lineColor": "#000000",
+                      "fillColor": "#ffffff",
+                      "font": "Arial;13;0",
+                      "parentStyle": true,
+                      "left": 877.0,
+                      "top": 1485,
+                      "width": 864.0,
+                      "height": 13,
+                      "horizontalAlignment": 0,
+                      "text": "+getGeneroMusical(): String"
+                    },
+                    {
+                      "_type": "LabelView",
+                      "_id": "Artista_V_OC_4",
+                      "_parent": {
+                        "$ref": "Artista_V_OC"
+                      },
+                      "lineColor": "#000000",
+                      "fillColor": "#ffffff",
+                      "font": "Arial;13;0",
+                      "parentStyle": true,
+                      "left": 877.0,
+                      "top": 1500,
+                      "width": 864.0,
+                      "height": 13,
+                      "horizontalAlignment": 0,
+                      "text": "+getDuracionMinutos(): int"
+                    },
+                    {
+                      "_type": "LabelView",
+                      "_id": "Artista_V_OC_5",
+                      "_parent": {
+                        "$ref": "Artista_V_OC"
+                      },
+                      "lineColor": "#000000",
+                      "fillColor": "#ffffff",
+                      "font": "Arial;13;0",
+                      "parentStyle": true,
+                      "left": 877.0,
+                      "top": 1515,
+                      "width": 864.0,
+                      "height": 13,
+                      "horizontalAlignment": 0,
+                      "text": "+getAsistentesEstimados(): int"
+                    },
+                    {
+                      "_type": "LabelView",
+                      "_id": "Artista_V_OC_6",
+                      "_parent": {
+                        "$ref": "Artista_V_OC"
+                      },
+                      "lineColor": "#000000",
+                      "fillColor": "#ffffff",
+                      "font": "Arial;13;0",
+                      "parentStyle": true,
+                      "left": 877.0,
+                      "top": 1530,
+                      "width": 864.0,
+                      "height": 13,
+                      "horizontalAlignment": 0,
+                      "text": "+setNombreArtistico(nombreArtistico: String): void"
+                    },
+                    {
+                      "_type": "LabelView",
+                      "_id": "Artista_V_OC_7",
+                      "_parent": {
+                        "$ref": "Artista_V_OC"
+                      },
+                      "lineColor": "#000000",
+                      "fillColor": "#ffffff",
+                      "font": "Arial;13;0",
+                      "parentStyle": true,
+                      "left": 877.0,
+                      "top": 1545,
+                      "width": 864.0,
+                      "height": 13,
+                      "horizontalAlignment": 0,
+                      "text": "+setGeneroMusical(generoMusical: String): void"
+                    },
+                    {
+                      "_type": "LabelView",
+                      "_id": "Artista_V_OC_8",
+                      "_parent": {
+                        "$ref": "Artista_V_OC"
+                      },
+                      "lineColor": "#000000",
+                      "fillColor": "#ffffff",
+                      "font": "Arial;13;0",
+                      "parentStyle": true,
+                      "left": 877.0,
+                      "top": 1560,
+                      "width": 864.0,
+                      "height": 13,
+                      "horizontalAlignment": 0,
+                      "text": "+setDuracionMinutos(duracionMinutos: int): void"
+                    },
+                    {
+                      "_type": "LabelView",
+                      "_id": "Artista_V_OC_9",
+                      "_parent": {
+                        "$ref": "Artista_V_OC"
+                      },
+                      "lineColor": "#000000",
+                      "fillColor": "#ffffff",
+                      "font": "Arial;13;0",
+                      "parentStyle": true,
+                      "left": 877.0,
+                      "top": 1575,
+                      "width": 864.0,
+                      "height": 13,
+                      "horizontalAlignment": 0,
+                      "text": "+setAsistentesEstimados(asistentesEstimados: int): void"
+                    },
+                    {
+                      "_type": "LabelView",
+                      "_id": "Artista_V_OC_10",
+                      "_parent": {
+                        "$ref": "Artista_V_OC"
+                      },
+                      "lineColor": "#000000",
+                      "fillColor": "#ffffff",
+                      "font": "Arial;13;0",
+                      "parentStyle": true,
+                      "left": 877.0,
+                      "top": 1590,
+                      "width": 864.0,
+                      "height": 13,
+                      "horizontalAlignment": 0,
+                      "text": "+toString(): String"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "_type": "UMLDependencyView",
+              "_id": "D01_V",
+              "_parent": {
+                "$ref": "Diagram1"
+              },
+              "model": {
+                "$ref": "D01"
+              },
+              "lineColor": "#D62828",
+              "font": "Arial;13;0",
+              "parentStyle": false,
+              "head": {
+                "$ref": "Vista_V"
+              },
+              "tail": {
+                "$ref": "Main_V"
+              },
+              "points": "900:90;900:140;900:160",
+              "subViews": []
+            },
+            {
+              "_type": "UMLAssociationView",
+              "_id": "R01_V",
+              "_parent": {
+                "$ref": "Diagram1"
+              },
+              "model": {
+                "$ref": "R01"
+              },
+              "lineColor": "#0E9CC4",
+              "font": "Arial;13;0",
+              "parentStyle": false,
+              "head": {
+                "$ref": "Festival_V"
+              },
+              "tail": {
+                "$ref": "Vista_V"
+              },
+              "points": "900:475;900:660",
+              "tailMultiplicityLabel": {
+                "$ref": "R01_V_TM"
+              },
+              "headMultiplicityLabel": {
+                "$ref": "R01_V_HM"
+              },
+              "subViews": [
+                {
+                  "_type": "LabelView",
+                  "_id": "R01_V_TM",
+                  "_parent": {
+                    "$ref": "R01_V"
+                  },
+                  "lineColor": "#000000",
+                  "fillColor": "#ffffff",
+                  "font": "Arial;13;0",
+                  "parentStyle": true,
+                  "left": 906.0,
+                  "top": 483.0,
+                  "width": 40,
+                  "height": 13,
+                  "horizontalAlignment": 1,
+                  "text": "1"
+                },
+                {
+                  "_type": "LabelView",
+                  "_id": "R01_V_HM",
+                  "_parent": {
+                    "$ref": "R01_V"
+                  },
+                  "lineColor": "#000000",
+                  "fillColor": "#ffffff",
+                  "font": "Arial;13;0",
+                  "parentStyle": true,
+                  "left": 870.0,
+                  "top": 642.0,
+                  "width": 40,
+                  "height": 13,
+                  "horizontalAlignment": 1,
+                  "text": "0..1"
+                }
+              ]
+            },
+            {
+              "_type": "UMLAssociationView",
+              "_id": "R02_V",
+              "_parent": {
+                "$ref": "Diagram1"
+              },
+              "model": {
+                "$ref": "R02"
+              },
+              "lineColor": "#1E8449",
+              "font": "Arial;13;0",
+              "parentStyle": false,
+              "head": {
+                "$ref": "Festival_V"
+              },
+              "tail": {
+                "$ref": "Escenario_V"
+              },
+              "points": "418:1325;418:1245;682:1245;682:1155",
+              "tailMultiplicityLabel": {
+                "$ref": "R02_V_TM"
+              },
+              "headMultiplicityLabel": {
+                "$ref": "R02_V_HM"
+              },
+              "subViews": [
+                {
+                  "_type": "LabelView",
+                  "_id": "R02_V_TM",
+                  "_parent": {
+                    "$ref": "R02_V"
+                  },
+                  "lineColor": "#000000",
+                  "fillColor": "#ffffff",
+                  "font": "Arial;13;0",
+                  "parentStyle": true,
+                  "left": 424.0,
+                  "top": 1307.0,
+                  "width": 40,
+                  "height": 13,
+                  "horizontalAlignment": 1,
+                  "text": "0..5"
+                },
+                {
+                  "_type": "LabelView",
+                  "_id": "R02_V_HM",
+                  "_parent": {
+                    "$ref": "R02_V"
+                  },
+                  "lineColor": "#000000",
+                  "fillColor": "#ffffff",
+                  "font": "Arial;13;0",
+                  "parentStyle": true,
+                  "left": 652.0,
+                  "top": 1137.0,
+                  "width": 40,
+                  "height": 13,
+                  "horizontalAlignment": 1,
+                  "text": "1"
+                }
+              ]
+            },
+            {
+              "_type": "UMLAssociationView",
+              "_id": "R03_V",
+              "_parent": {
+                "$ref": "Diagram1"
+              },
+              "model": {
+                "$ref": "R03"
+              },
+              "lineColor": "#1E8449",
+              "font": "Arial;13;0",
+              "parentStyle": false,
+              "head": {
+                "$ref": "Festival_V"
+              },
+              "tail": {
+                "$ref": "Artista_V"
+              },
+              "points": "1309:1325;1309:1245;1120:1245;1120:1155",
+              "tailMultiplicityLabel": {
+                "$ref": "R03_V_TM"
+              },
+              "headMultiplicityLabel": {
+                "$ref": "R03_V_HM"
+              },
+              "subViews": [
+                {
+                  "_type": "LabelView",
+                  "_id": "R03_V_TM",
+                  "_parent": {
+                    "$ref": "R03_V"
+                  },
+                  "lineColor": "#000000",
+                  "fillColor": "#ffffff",
+                  "font": "Arial;13;0",
+                  "parentStyle": true,
+                  "left": 1315.0,
+                  "top": 1307.0,
+                  "width": 40,
+                  "height": 13,
+                  "horizontalAlignment": 1,
+                  "text": "0..*"
+                },
+                {
+                  "_type": "LabelView",
+                  "_id": "R03_V_HM",
+                  "_parent": {
+                    "$ref": "R03_V"
+                  },
+                  "lineColor": "#000000",
+                  "fillColor": "#ffffff",
+                  "font": "Arial;13;0",
+                  "parentStyle": true,
+                  "left": 1090.0,
+                  "top": 1137.0,
+                  "width": 40,
+                  "height": 13,
+                  "horizontalAlignment": 1,
+                  "text": "1"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "documentVersion": "2.2.0"
+}
