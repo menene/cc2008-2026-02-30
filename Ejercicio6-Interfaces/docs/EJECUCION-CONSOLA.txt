@@ -1,0 +1,217 @@
+EJERCICIO 6 | Catálogo de 10 integraciones | MODO SIMULADO
+
+1. Listar activas y conexión
+2. Buscar configuración por id
+3. Ordenar catálogo por latencia
+4. Solicitar reintegro
+5. Solicitar cobro
+6. Consultar envío
+7. Generar guía o FEL
+0. Salir
+Seleccione una opción:
+PAG-001 | Tarjeta Alfa | 120.0 ms | activa | conectada
+PAG-002 | Tarjeta Beta | 95.0 ms | activa | conectada
+PAG-003 | Transferencia Uno | 180.0 ms | activa | conectada
+PAG-004 | Billetera Río | 75.0 ms | activa | conectada
+PAG-005 | Billetera Sur | 90.0 ms | activa | conectada
+LOG-001 | Envíos Express | 245.0 ms | activa | conectada
+LOG-002 | Logística Central | 210.0 ms | activa | desconectada
+CON-001 | Seguimiento Global | 160.0 ms | activa | conectada
+FEL-001 | FEL Uno | 300.0 ms | activa | conectada
+FEL-002 | FEL Dos | 285.0 ms | activa | conectada
+Integraciones activas: 10
+
+1. Listar activas y conexión
+2. Buscar configuración por id
+3. Ordenar catálogo por latencia
+4. Solicitar reintegro
+5. Solicitar cobro
+6. Consultar envío
+7. Generar guía o FEL
+0. Salir
+Seleccione una opción:
+Id (ejemplo PAG-001):
+Id: LOG-002
+Nombre: Logística Central
+Endpoint: https://log-002.example.test/api
+Autenticación (solo tipo): OAuth2 (simulado)
+Timeout: 5000 ms
+Latencia: 210.0 ms
+Activa: true
+Conectada: false
+
+1. Listar activas y conexión
+2. Buscar configuración por id
+3. Ordenar catálogo por latencia
+4. Solicitar reintegro
+5. Solicitar cobro
+6. Consultar envío
+7. Generar guía o FEL
+0. Salir
+Seleccione una opción:
+Id (ejemplo PAG-001):
+Integración no encontrada.
+
+1. Listar activas y conexión
+2. Buscar configuración por id
+3. Ordenar catálogo por latencia
+4. Solicitar reintegro
+5. Solicitar cobro
+6. Consultar envío
+7. Generar guía o FEL
+0. Salir
+Seleccione una opción:
+Catálogo completo ordenado por latencia ascendente:
+PAG-004 | Billetera Río | 75.0 ms | activa | conectada
+PAG-005 | Billetera Sur | 90.0 ms | activa | conectada
+PAG-002 | Tarjeta Beta | 95.0 ms | activa | conectada
+PAG-001 | Tarjeta Alfa | 120.0 ms | activa | conectada
+CON-001 | Seguimiento Global | 160.0 ms | activa | conectada
+PAG-003 | Transferencia Uno | 180.0 ms | activa | conectada
+LOG-002 | Logística Central | 210.0 ms | activa | desconectada
+LOG-001 | Envíos Express | 245.0 ms | activa | conectada
+FEL-002 | FEL Dos | 285.0 ms | activa | conectada
+FEL-001 | FEL Uno | 300.0 ms | activa | conectada
+
+1. Listar activas y conexión
+2. Buscar configuración por id
+3. Ordenar catálogo por latencia
+4. Solicitar reintegro
+5. Solicitar cobro
+6. Consultar envío
+7. Generar guía o FEL
+0. Salir
+Seleccione una opción:
+Id de integración:
+Monto positivo (punto decimal, ejemplo 25.50):
+Referencia de operación:
+IGNORADA | La integración LOG-001 no admite reintegros; el checkout continúa. | Referencia: R-LOG
+
+1. Listar activas y conexión
+2. Buscar configuración por id
+3. Ordenar catálogo por latencia
+4. Solicitar reintegro
+5. Solicitar cobro
+6. Consultar envío
+7. Generar guía o FEL
+0. Salir
+Seleccione una opción:
+Id de integración:
+Monto positivo (punto decimal, ejemplo 25.50):
+Referencia de operación:
+EXITOSA | [AUDITORÍA PAG-001] Reintegro simulado por tarjeta: 15.0 | Motivo: Solicitud del administrador | Referencia: R-PAG
+
+1. Listar activas y conexión
+2. Buscar configuración por id
+3. Ordenar catálogo por latencia
+4. Solicitar reintegro
+5. Solicitar cobro
+6. Consultar envío
+7. Generar guía o FEL
+0. Salir
+Seleccione una opción:
+Id de integración:
+Monto positivo (punto decimal, ejemplo 25.50):
+Referencia de operación:
+EXITOSA | [AUDITORÍA PAG-003] Cobro simulado por transferencia bancaria: 21.5 | Referencia: C-1
+
+1. Listar activas y conexión
+2. Buscar configuración por id
+3. Ordenar catálogo por latencia
+4. Solicitar reintegro
+5. Solicitar cobro
+6. Consultar envío
+7. Generar guía o FEL
+0. Salir
+Seleccione una opción:
+Id de integración (LOG-001 o CON-001):
+Referencia del envío:
+EXITOSA | Seguimiento simulado en Seguimiento Global: envío en tránsito | Referencia: ENV-1
+
+1. Listar activas y conexión
+2. Buscar configuración por id
+3. Ordenar catálogo por latencia
+4. Solicitar reintegro
+5. Solicitar cobro
+6. Consultar envío
+7. Generar guía o FEL
+0. Salir
+Seleccione una opción:
+Id de integración (LOG-001 o FEL-001):
+Referencia del documento:
+<FEL simulada="true"><Referencia>F-1</Referencia></FEL>
+
+1. Listar activas y conexión
+2. Buscar configuración por id
+3. Ordenar catálogo por latencia
+4. Solicitar reintegro
+5. Solicitar cobro
+6. Consultar envío
+7. Generar guía o FEL
+0. Salir
+Seleccione una opción:
+Id de integración (LOG-001 o FEL-001):
+Referencia del documento:
+<GuiaEnvio simulada="true"><Referencia>ENV-1</Referencia></GuiaEnvio>
+
+1. Listar activas y conexión
+2. Buscar configuración por id
+3. Ordenar catálogo por latencia
+4. Solicitar reintegro
+5. Solicitar cobro
+6. Consultar envío
+7. Generar guía o FEL
+0. Salir
+Seleccione una opción:
+Id de integración (LOG-001 o CON-001):
+Referencia del envío:
+FALLIDA | Integración desconectada.
+
+1. Listar activas y conexión
+2. Buscar configuración por id
+3. Ordenar catálogo por latencia
+4. Solicitar reintegro
+5. Solicitar cobro
+6. Consultar envío
+7. Generar guía o FEL
+0. Salir
+Seleccione una opción:
+Id de integración:
+Monto positivo (punto decimal, ejemplo 25.50):
+Referencia de operación:
+FALLIDA | El monto debe ser positivo y finito. | Referencia: R-NAN
+
+1. Listar activas y conexión
+2. Buscar configuración por id
+3. Ordenar catálogo por latencia
+4. Solicitar reintegro
+5. Solicitar cobro
+6. Consultar envío
+7. Generar guía o FEL
+0. Salir
+Seleccione una opción:
+Id de integración:
+Monto positivo (punto decimal, ejemplo 25.50):
+Monto inválido. Use un número con punto decimal. Operación cancelada.
+
+1. Listar activas y conexión
+2. Buscar configuración por id
+3. Ordenar catálogo por latencia
+4. Solicitar reintegro
+5. Solicitar cobro
+6. Consultar envío
+7. Generar guía o FEL
+0. Salir
+Seleccione una opción:
+Opción inválida. Ingrese un número de 0 a 7.
+
+1. Listar activas y conexión
+2. Buscar configuración por id
+3. Ordenar catálogo por latencia
+4. Solicitar reintegro
+5. Solicitar cobro
+6. Consultar envío
+7. Generar guía o FEL
+0. Salir
+Seleccione una opción:
+Sesión finalizada.
