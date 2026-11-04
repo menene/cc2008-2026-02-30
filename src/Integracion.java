@@ -51,6 +51,11 @@ public abstract class Integracion implements Comparable<Integracion> {
         return nombre;
     }
 
+    public boolean coincideNombre(String nombreBuscado) {
+        return nombreBuscado != null
+                && nombre.equalsIgnoreCase(nombreBuscado.trim());
+    }
+
     public EstadoConexion getEstadoConexion() {
         return estadoConexion;
     }
