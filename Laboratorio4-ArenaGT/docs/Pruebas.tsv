@@ -1,0 +1,39 @@
+Crear dos equipos y tres eventos sin fecha	Faro 0, Sol 0 / SIN_PROGRAMAR / SIN_PROGRAMAR / 	Faro 0, Sol 0 / SIN_PROGRAMAR / SIN_PROGRAMAR / 
+Equipo con código vacío	El campo código es obligatorio. Estado intacto.	El campo código es obligatorio. Estado intacto.
+Código repetido con espacios: ' S '	Código de equipo repetido: S Estado intacto.	Código de equipo repetido: S Estado intacto.
+Nombre vacío	El campo nombre es obligatorio. Estado intacto.	El campo nombre es obligatorio. Estado intacto.
+Empresa vacía	El campo empresa es obligatorio. Estado intacto.	El campo empresa es obligatorio. Estado intacto.
+Evento sin id	El campo id de evento es obligatorio. Estado intacto.	El campo id de evento es obligatorio. Estado intacto.
+Exhibición sin título	El campo título es obligatorio. Estado intacto.	El campo título es obligatorio. Estado intacto.
+Id compartido por dos tipos	Id de evento repetido: F1 Estado intacto.	Id de evento repetido: F1 Estado intacto.
+Fútbol: F contra F	El encuentro requiere dos equipos distintos. Estado intacto.	El encuentro requiere dos equipos distintos. Estado intacto.
+Baloncesto: F contra Z	Equipo desconocido: Z Estado intacto.	Equipo desconocido: Z Estado intacto.
+Buscar Z después de altas inválidas	Evento desconocido: Z Estado intacto.	Evento desconocido: Z Estado intacto.
+Resultado para X	Este evento no admite resultados. Estado intacto.	Este evento no admite resultados. Estado intacto.
+F1 todavía sin fecha: 2-2	Primero debe programar el encuentro. Estado intacto.	Primero debe programar el encuentro. Estado intacto.
+Mezclar eventos; horas límite 0 y 23	F1 2026-11-12/0/A, X 2026-11-12/0/B, B1 2026-11-13/23/A	F1 2026-11-12/0/A, X 2026-11-12/0/B, B1 2026-11-13/23/A
+Mover X a la reserva de F1	Sede ocupada por F1. Estado intacto.	Sede ocupada por F1. Estado intacto.
+Mover B1 a otra sede a la hora de F1	Un equipo ya juega a esa hora en F1. Estado intacto.	Un equipo ya juega a esa hora en F1. Estado intacto.
+Hora -1	La hora debe estar entre 0 y 23. Estado intacto.	La hora debe estar entre 0 y 23. Estado intacto.
+Hora 24	La hora debe estar entre 0 y 23. Estado intacto.	La hora debe estar entre 0 y 23. Estado intacto.
+Fecha nula	La fecha es obligatoria. Estado intacto.	La fecha es obligatoria. Estado intacto.
+Sede vacía	El campo sede es obligatorio. Estado intacto.	El campo sede es obligatorio. Estado intacto.
+Reprogramar B1, repetir su reserva y mover X	F1 2026-11-12/0/A, B1 2026-11-12/1/A, X 2026-11-12/2/A	F1 2026-11-12/0/A, B1 2026-11-12/1/A, X 2026-11-12/2/A
+F1: -1 a 0	Los marcadores deben ser enteros no negativos. Estado intacto.	Los marcadores deben ser enteros no negativos. Estado intacto.
+B1: 3 a -1	Los marcadores deben ser enteros no negativos. Estado intacto.	Los marcadores deben ser enteros no negativos. Estado intacto.
+B1: 70 a 70	En baloncesto no se permite empate. Estado intacto.	En baloncesto no se permite empate. Estado intacto.
+F1: empate 2-2 y desempate por nombre	Faro 1, Sol 1 / FINALIZADO	Faro 1, Sol 1 / FINALIZADO
+Repetir resultado de F1	El encuentro ya está finalizado. Estado intacto.	El encuentro ya está finalizado. Estado intacto.
+Mover F1 finalizado	Un encuentro finalizado no se puede reprogramar. Estado intacto.	Un encuentro finalizado no se puede reprogramar. Estado intacto.
+B1: Sol 74, Faro 78 (1 y 2 puntos)	Faro 3, Sol 2	Faro 3, Sol 2
+V: Faro 0, Sol 3 (0 y 3 puntos)	Sol 5, Faro 3	Sol 5, Faro 3
+Arranque: tabla de cuatro equipos	Luna, Faro, Río, Sol	Luna, Faro, Río, Sol
+Arranque: calendario y marcadores	E1 2–2, X1, E2 78–74, E3; E4 sin fecha	E1 2–2, X1, E2 78–74, E3; E4 sin fecha
+Menú: 9	Opción desconocida; tabla y calendario intactos	Opción desconocida; tabla y calendario intactos
+Menú: 2 / 3	Deporte desconocido; tabla y calendario intactos	Deporte desconocido; tabla y calendario intactos
+Menú: 4 / E3 / 2026-02-30	fecha válida; tabla y calendario intactos	fecha válida; tabla y calendario intactos
+Menú: 4 / E3 / 2026-11-15 / nueve	número entero; tabla y calendario intactos	número entero; tabla y calendario intactos
+Menú: 5 / E3 / 2 / x	número entero; tabla y calendario intactos	número entero; tabla y calendario intactos
+Menú: 5 / E3 / 2147483648	número entero; tabla y calendario intactos	número entero; tabla y calendario intactos
+Menú: altas N, B5 y X2; programar y registrar 8-3	Nube 2; X2 y B5 visibles	Nube 2; X2 y B5 visibles
+Total aprobado: 38
